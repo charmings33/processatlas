@@ -1149,6 +1149,72 @@
 
         function queryKey(q) { return (q || "").toLowerCase().replace(/[^a-z0-9]+/g, ""); }
 
+        // Structural search without a backend. The service picks the focus
+        // nodes with the embedding index and falls back to keyword matching;
+        // only the fallback can run here, but the subgraph rule that follows is
+        // the server's own: the matched nodes, their six strongest
+        // co-occurrence partners each, and every dependency partner.
+        let staticFullGraph = null;
+
+        async function staticGraph() {
+            if (!staticFullGraph) staticFullGraph = await (await fetch(STATIC_BASE + "graph.json")).json();
+            return staticFullGraph;
+        }
+
+        async function staticFocus(query) {
+            const g = await staticGraph();
+            const terms = (query || "").toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2);
+            if (!terms.length) return null;
+            const scored = [];
+            for (const n of g.nodes) {
+                const id = (n.data.id || "").toLowerCase();
+                const label = (n.data.label || "").toLowerCase();
+                const words = label.split(/[^a-z0-9]+/);
+                let score = 0;
+                for (const t of terms) {
+                    if (id === t) score += 6;
+                    else if (words.includes(t)) score += 3;
+                    else if (label.includes(t)) score += 2;
+                    else if (id.includes(t)) score += 1;
+                }
+                if (score) scored.push([score, n.data.activation_freq || 0, n.data.id]);
+            }
+            if (!scored.length) return null;
+            scored.sort((a, b) => b[0] - a[0] || b[1] - a[1]);
+            const path = scored.slice(0, 5).map(x => x[2]);
+            const pathSet = new Set(path);
+            const include = new Set(path);
+            const keptCooc = [], keptKeys = new Set();
+            for (const pn of path) {
+                let added = 0;
+                for (const e of g.edges) {                  // already weight-sorted
+                    if (added >= 6) break;
+                    const d = e.data;
+                    if (d.type !== "coOccursWith") continue;
+                    if (d.source !== pn && d.target !== pn) continue;
+                    include.add(d.source); include.add(d.target);
+                    const key = [d.source, d.target].sort().join("|");
+                    if (!keptKeys.has(key)) { keptKeys.add(key); keptCooc.push(e); }
+                    added += 1;
+                }
+            }
+            const deps = g.edges.filter(e => e.data.type !== "coOccursWith");
+            for (const e of deps) {
+                if (pathSet.has(e.data.source) || pathSet.has(e.data.target)) {
+                    include.add(e.data.source); include.add(e.data.target);
+                }
+            }
+            const edges = deps.concat(keptCooc)
+                .filter(e => include.has(e.data.source) && include.has(e.data.target));
+            return {
+                nodes: g.nodes.filter(n => include.has(n.data.id)),
+                edges: edges,
+                path: path,
+                total_cooccurrence_edges: g.total_cooccurrence_edges,
+                search_mode: "keyword (offline build)"
+            };
+        }
+
         async function api(path, body) {
             if (!STATIC_MODE) {
                 const opts = (body === undefined) ? {} : {
@@ -1163,8 +1229,11 @@
                 if (!staticQueryIndex) staticQueryIndex = await (await fetch(STATIC_BASE + "queries/index.json")).json();
                 const file = staticQueryIndex[queryKey(body && body.query)];
                 if (!file) {
-                    if (path === "/graph") return fetch(STATIC_BASE + "graph.json");
-                    return jsonResponse({ detail: "This public build carries the example answers only. Generating a new one needs the retrieval index and an LLM, which no static page can host: pick a question from the Examples menu, or run the Atlas yourself from the released code and data." }, 501);
+                    if (path === "/graph") {
+                        const focused = await staticFocus(body && body.query);
+                        return focused ? jsonResponse(focused) : fetch(STATIC_BASE + "graph.json");
+                    }
+                    return jsonResponse({ detail: "No stored answer for this question. The graph beside it is filtered to the enablers your words match, with their dependencies and strongest co-occurrences, which this page can compute on its own. Writing a grounded answer cannot be done here: it needs the retrieval index and a language model. The Examples menu holds five answered questions, and the released code answers any question against this same graph." }, 501);
                 }
                 const baked = await (await fetch(STATIC_BASE + "queries/" + file)).json();
                 return jsonResponse(path === "/graph" ? baked.graph : baked.answer);
@@ -1357,6 +1426,7 @@
                             // SOLID + arrowhead, black. The two edge layers are
                             // now separated by texture and direction alone
                             // (solid+arrow vs. dotted+no arrow), not by hue.
+                            // NG, 2026-09-05, on the published page.
                             "line-color": "#000000",
                             // Pinned solid deliberately. The old
                             // `edge[validated = false]` rule sat after this one
@@ -1746,7 +1816,10 @@
                 // the promise is kept so the button stays locked until it ends.
                 answerDone = fetchAnswer(query);
 
-                // Mark path edges AFTER graph is rendered
+                // Mark path edges AFTER graph is rendered. Edge marking needs a
+                // pair, but the Relevant Enablers list below must follow every
+                // result, including a single-node one: gating the whole block on
+                // length > 1 left the previous query's enablers on screen.
                 if (data.path && data.path.length > 1 && cy) {
                     for (let i = 0; i < data.path.length - 1; i++) {
                         const edges = cy.edges().stdFilter(e =>
@@ -1756,6 +1829,9 @@
                         edges.forEach(e => e.data("path_edge", true));
                     }
 
+                }
+
+                if (data.path && data.path.length && cy) {
                     // Show path in sidebar
                     const pathSection = document.getElementById("pathNodesSection");
                     const pathList = document.getElementById("pathNodesList");
