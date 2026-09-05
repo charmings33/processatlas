@@ -32,14 +32,17 @@
         .header {
             background: white;
             border-bottom: 1px solid #e0e0e0;
-            padding: 16px 24px;
+            /* 20px to match .main-content: at 24px, with .header-content also
+               capped at 1600px, the header sat 20px inside the content row on
+               each side and the two never lined up, on screen or in a PDF */
+            padding: 16px 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             z-index: 100;
         }
 
         .header-content {
-            max-width: 1600px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -2088,6 +2091,13 @@
                     const w = Math.round(el.getBoundingClientRect().width);
                     if (!w) return "";
                     const sel = el.id ? `#${el.id}` : `.graph-row > *:nth-child(${i + 1})`;
+                    // Pin the two side columns only. Pinning all three made the
+                    // row 4px wider than the page could hold, so the content
+                    // overflowed and stopped lining up with the header; the
+                    // graph column takes whatever is left instead.
+                    if (el.classList.contains("graph-column")) {
+                        return `${sel}{flex:1 1 0 !important;min-width:0 !important;}`;
+                    }
                     return `${sel}{width:${w}px !important;min-width:${w}px !important;` +
                            `max-width:${w}px !important;flex:0 0 ${w}px !important;}`;
                 }).join("\n");
