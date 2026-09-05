@@ -249,10 +249,32 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             padding: 12px 16px;
             display: grid;
-            grid-template-columns: 1.35fr 1fr;
+            /* nodes and their categories, the edge legend, and the linked info
+               that used to be a third top-level column. Linked Info holds five
+               enablers at most, so a full-height column beside the graph was
+               mostly empty space the graph could use. */
+            grid-template-columns: 1.5fr 1.1fr;
             gap: 20px;
-            max-height: 210px;
+            /* taller than the old 210px: the category accordion moved in here
+               from a full-height column of its own. 340 fits all eight
+               categories closed, so the common case needs no scrolling; the
+               columns still scroll once a category is expanded. */
+            max-height: 340px;
             font-size: 11px;
+        }
+
+        .details-strip.with-details {
+            grid-template-columns: 1.5fr 1.1fr 1.1fr;
+        }
+
+        .strip-subtitle {
+            margin-top: 10px;
+        }
+
+        #detailsColumn .details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .details-strip .sidebar-section-title {
@@ -288,9 +310,7 @@
         }
 
         .legend-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            display: block;
             align-content: start;
         }
 
@@ -306,6 +326,7 @@
         .strip-col {
             overflow-y: auto;
             min-height: 0;
+            align-content: start;
         }
 
 
@@ -1008,7 +1029,6 @@
 
                 <div class="details-strip">
                     <div class="strip-col legend-grid">
-                        <div>
                             <div class="sidebar-section-title">
                                 Nodes
                                 <span class="count" id="nodeCount">0</span>
@@ -1027,8 +1047,13 @@
                                     Co-occurrence
                                 </label>
                             </div>
-                            <div class="category-legend" id="categoryLegend"></div>
-                        </div>
+                            <div class="sidebar-section-title strip-subtitle">
+                                Enablers by category
+                                <span class="count" id="allNodesCount">0</span>
+                            </div>
+                            <div id="nodesList"></div>
+                    </div>
+                    <div class="strip-col">
                         <div>
                             <div class="sidebar-section-title">
                                 Edges
@@ -1047,12 +1072,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="strip-col">
-                        <div class="sidebar-section-title">
-                            Enablers by Category
-                            <span class="count" id="allNodesCount">0</span>
+                    <div class="strip-col" id="detailsColumn" style="display: none;">
+                        <div class="sidebar-section-title details-header">
+                            <span>Linked Info</span>
+                            <button class="details-close" onclick="closeDetailsColumn()" title="Close">&times;</button>
                         </div>
-                        <div id="nodesList"></div>
+                        <div id="nodeDetailsPanel"></div>
+                        <div class="sidebar-section" id="pathNodesSection" style="display: none;">
+                            <div class="sidebar-section-title strip-subtitle">
+                                Relevant Enablers
+                                <span class="count" id="pathCount">0</span>
+                            </div>
+                            <div id="pathNodesList"></div>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -1085,22 +1117,6 @@
                     </div>
                 </div>
 
-                <div class="sidebar details-column" id="detailsColumn" style="display: none;">
-                    <div class="sidebar-header details-header">
-                        <span>Linked Info</span>
-                        <button class="details-close" onclick="closeDetailsColumn()" title="Close">×</button>
-                    </div>
-                    <div class="sidebar-content">
-                        <div id="nodeDetailsPanel"></div>
-                        <div class="sidebar-section" id="pathNodesSection" style="display: none;">
-                            <div class="sidebar-section-title">
-                                Relevant Enablers
-                                <span class="count" id="pathCount">0</span>
-                            </div>
-                            <div id="pathNodesList"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -1134,7 +1150,11 @@
 
         function openDetailsColumn() {
             const col = document.getElementById("detailsColumn");
-            if (col) col.style.display = "flex";
+            if (col) col.style.display = "block";
+            // the strip is a grid, so the third track has to be added and
+            // removed with the column or the other two keep its width
+            const strip = col && col.closest(".details-strip");
+            if (strip) strip.classList.add("with-details");
         }
 
         function closeDetailsColumn() {
@@ -1146,7 +1166,11 @@
             const pathSection = document.getElementById("pathNodesSection");
             const hasEnablers = pathSection && pathSection.style.display !== "none";
             const col = document.getElementById("detailsColumn");
-            if (col && !hasEnablers) col.style.display = "none";
+            if (col && !hasEnablers) {
+                col.style.display = "none";
+                const strip = col.closest(".details-strip");
+                if (strip) strip.classList.remove("with-details");
+            }
         }
 
         function toggleSidebar() {
@@ -1717,17 +1741,10 @@
             const catCount = document.getElementById("categoryCount");
             if (catCount) catCount.textContent = categories.size;
 
-            const legend = document.getElementById("categoryLegend");
-            legend.innerHTML = "";
-            Array.from(categories).sort().forEach(cat => {
-                const color = categoryColors[cat] || "#999";
-                legend.innerHTML += `
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: ${color};"></div>
-                        <span>${cat}</span>
-                    </div>
-                `;
-            });
+            // The colour swatches used to live here as a second list of the
+            // same eight categories that the accordion below already labels,
+            // colours and counts. One list, in the left column, under the
+            // label controls it belongs with.
         }
 
         function updateNodesList(data) {
