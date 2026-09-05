@@ -100,9 +100,7 @@
 
         .header h1 {
             font-size: 24px;
-            background: linear-gradient(135deg, #00a6d6, #0082a8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #1a1a1a;
             margin: 0;
         }
 
@@ -425,7 +423,7 @@
             padding: 16px;
             border-bottom: 1px solid #e0e0e0;
             font-weight: 600;
-            color: #00a6d6;
+            color: #1a1a1a;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -484,7 +482,7 @@
         .stat-value {
             font-size: 24px;
             font-weight: 700;
-            color: #00a6d6;
+            color: #1a1a1a;
         }
 
         .stat-label {
@@ -645,7 +643,7 @@
 
         .node-details-label {
             font-weight: 600;
-            color: #0082a8;
+            color: #1a1a1a;
             margin-bottom: 6px;
             word-break: break-word;
         }
@@ -663,7 +661,7 @@
         }
 
         .answer-box {
-            background: #f0f7ff;
+            background: transparent;
             border-left: 3px solid #00a6d6;
             padding: 10px 12px;
             border-radius: 2px;
@@ -678,7 +676,7 @@
             cursor: pointer;
             list-style: none;
             font-weight: 600;
-            color: #0082a8;
+            color: #1a1a1a;
             font-size: 12px;
             padding: 4px 0;
             user-select: none;
@@ -692,11 +690,11 @@
             display: block;
             font-weight: 700;
             font-size: 13px;
-            color: #0082a8;
+            color: #1a1a1a;
         }
 
         .answer-box code {
-            background: rgba(0, 130, 168, 0.1);
+            background: rgba(0, 0, 0, 0.07);
             padding: 0 3px;
             border-radius: 3px;
             font-size: 11px;
@@ -706,12 +704,14 @@
             /* opt-in only: set data-theme="dark" on <html> to enable */
             :root[data-theme="dark"] {
             .answer-box {
-                background: #1a3a45;
+                background: transparent;
                 color: #e0e0e0;
             }
             /* #0082a8 on #1a3a45 is ~2.7:1 — below the 4.5:1 WCAG AA floor,
                which made headings and citation links unreadable on dark. */
-            .answer-box .md-heading,
+            .answer-box .md-heading {
+                color: #e0e0e0;
+            }
             .answer-box .cite-link,
             .cite-link {
                 color: #7fd4ec;
@@ -2103,7 +2103,7 @@
                 // do not stretch the graph column to the sidebar's height: the graph
                 // card keeps the browser's proportions, the legend strip sits right under it
                 ".graph-row { align-items: flex-start !important; }" +
-                ".header h1 { background: none !important; -webkit-text-fill-color: #00a6d6 !important; color: #00a6d6 !important; }" +
+                ".header h1 { background: none !important; -webkit-text-fill-color: #1a1a1a !important; color: #1a1a1a !important; }" +
                 // Chromium writes box-shadows into PDFs as transparency groups, which
                 // macOS Preview drops. A hairline border renders identically everywhere.
                 ".header, .details-strip, .graph-canvas-wrap, .sidebar { box-shadow: none !important; border: 1px solid #e3e6ea !important; }" +
