@@ -2077,6 +2077,20 @@
                 .replace(/\sstroke-dasharray="[^"]*"/g, "");
             const styles = Array.from(document.querySelectorAll("style"))
                 .map(s => s.textContent).join("\n");
+            // Pin the three columns to the widths they have on screen. Flex is
+            // resolved differently by a print engine: the graph column claimed
+            // the whole page width and pushed the answer and Linked Info below
+            // it, so the export stopped matching the browser and ran onto a
+            // second page. Measured widths make both export paths deterministic
+            // and identical, which is the point of exporting at all.
+            const columnCss = Array.from(document.querySelectorAll(".graph-row > *"))
+                .map((el, i) => {
+                    const w = Math.round(el.getBoundingClientRect().width);
+                    if (!w) return "";
+                    const sel = el.id ? `#${el.id}` : `.graph-row > *:nth-child(${i + 1})`;
+                    return `${sel}{width:${w}px !important;min-width:${w}px !important;` +
+                           `max-width:${w}px !important;flex:0 0 ${w}px !important;}`;
+                }).join("\n");
             const clone = document.querySelector(".layout-container").cloneNode(true);
             clone.querySelector("#graph-container").innerHTML = svg;
             // a textarea's typed value is form state, not markup — cloneNode drops it
@@ -2111,7 +2125,15 @@
                 "#graph-container { position: static !important; height: auto !important; inset: auto !important; }" +
                 // do not stretch the graph column to the sidebar's height: the graph
                 // card keeps the browser's proportions, the legend strip sits right under it
-                ".graph-row { align-items: flex-start !important; }" +
+                // The viewer stacks its columns below 1024px. A print engine
+                // evaluates media queries against the paper width, not our
+                // @page size, so that rule fired during printing and the export
+                // came out stacked and multi-page while the same document laid
+                // out correctly on screen. Forced back to a row here.
+                ".graph-row { align-items: flex-start !important; display: flex !important;" +
+                "  flex-direction: row !important; flex-wrap: nowrap !important; }" +
+                ".sidebar { height: auto !important; }" +
+                columnCss +
                 ".header h1 { background: none !important; -webkit-text-fill-color: #1a1a1a !important; color: #1a1a1a !important; }" +
                 // Chromium writes box-shadows into PDFs as transparency groups, which
                 // macOS Preview drops. A hairline border renders identically everywhere.
@@ -2144,14 +2166,31 @@
                     // must be laid out at the real page width: a 1px frame
                     // collapses the grid and the measured page comes out narrow
                     const pageW = document.documentElement.clientWidth;
+                    // tall as well as wide: the app's containers size from the
+                    // viewport, so a short frame lays the document out
+                    // differently from the printed page and measures short.
+                    // At 1200px the measured height came out 1194px and the
+                    // export ran to three pages; the content needs room to
+                    // reach its natural height before it is measured.
                     frame.style.cssText = "position:fixed;left:-20000px;top:0;border:0;" +
-                                          `width:${pageW}px;height:1200px;`;
+                                          `width:${pageW}px;height:6000px;`;
                     document.body.appendChild(frame);
                     const doc = frame.contentDocument;
                     doc.open(); doc.write(html); doc.close();
-                    await new Promise(r => setTimeout(r, 400));   // let it lay out
+                    // fonts and the inlined SVG must settle before measuring
+                    await new Promise(r => setTimeout(r, 900));
+                    if (doc.fonts && doc.fonts.ready) { try { await doc.fonts.ready; } catch (e) {} }
                     const w = Math.max(pageW, Math.ceil(doc.documentElement.scrollWidth));
-                    const h = Math.ceil(doc.body.scrollHeight) + 40;
+                    // measure the content, not the frame: body fills whatever
+                    // height the frame has, so scrollHeight reported 6000px and
+                    // the page came out four times too tall. The container's
+                    // own bottom edge is the real end of the document.
+                    const root = doc.querySelector(".layout-container");
+                    const bottom = root ? root.getBoundingClientRect().bottom : doc.body.scrollHeight;
+                    // A little slack only. The earlier upward bias existed to
+                    // survive the responsive stacking above; with the layout
+                    // pinned, the frame measures the printed height correctly.
+                    const h = Math.ceil(bottom) + 56;
                     const page = doc.createElement("style");
                     page.textContent = `@page { size: ${w}px ${h}px; margin: 0; }`;
                     doc.head.appendChild(page);
