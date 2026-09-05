@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: If you use this dataset, please cite it and the paper it supports.
+title: "JPRX: a knowledge graph of Japanese robotic construction processes (anonymised release)"
+type: dataset
+authors:
+  - family-names: Ng
+    given-names: Charmaine Ming Shan
+  - family-names: Dillenburger
+    given-names: Benjamin
+  - family-names: Hu
+    given-names: Rongbo
+license: CC-BY-4.0
+# doi: 10.5281/zenodo.XXXXXXX   # fill in after the Zenodo deposit

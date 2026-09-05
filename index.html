@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Atlas</title>
+    <script src="vendor/cytoscape.min.js"></script>
+    <script src="vendor/layout-base.js"></script>
+    <script src="vendor/cose-base.js"></script>
+    <script src="vendor/cytoscape-fcose.js"></script>
+    <script src="vendor/cytoscape-svg.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f7fa;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .layout-container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 16px 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .public-note {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #6b6f76;
+            margin-top: 6px;
+            max-width: 980px;
+            border-left: 3px solid #d9dde2;
+            padding-left: 10px;
+        }
+        .public-note strong { color: #4a4f57; }
+
+        .about-link {
+            margin-left: 12px;
+            color: #00a6d6;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .about-link:hover {
+            text-decoration: underline;
+        }
+
+        .about-panel {
+            max-width: 1600px;
+            margin: 12px auto 0;
+            padding: 12px 16px;
+            background: #f0f7ff;
+            border-left: 3px solid #00a6d6;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.65;
+            color: #444;
+        }
+
+        .about-panel p {
+            max-width: 980px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .about-panel {
+                background: #1a3a45;
+                color: #ccc;
+            }
+            }
+        }
+
+        .header h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, #00a6d6, #0082a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 640px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-box select {
+            max-width: 140px;
+            padding: 10px 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #666;
+            background: white;
+            cursor: pointer;
+        }
+
+        .search-box select:focus {
+            outline: none;
+            border-color: #00a6d6;
+        }
+
+        .sidebar-search {
+            flex-direction: column;
+            max-width: none;
+            flex: none;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .sidebar-search select {
+            max-width: none;
+            width: 100%;
+        }
+
+        .sidebar-search .search-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .sidebar-search {
+                border-color: #404040;
+            }
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .search-box select {
+                background: #1a1a1a;
+                border-color: #404040;
+                color: #e0e0e0;
+            }
+            }
+        }
+
+        .search-box input,
+        .search-box textarea {
+            flex: 1;
+            padding: 10px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus,
+        .search-box textarea:focus {
+            outline: none;
+            border-color: #00a6d6;
+            box-shadow: 0 0 0 3px rgba(0, 166, 214, 0.1);
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00a6d6, #0082a8);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-box button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 166, 214, 0.3);
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 20px;
+            padding: 20px;
+            min-height: 0;
+        }
+
+        .graph-row {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            min-height: 0;
+        }
+
+        .graph-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-height: 0;
+            min-width: 0;
+        }
+
+        .details-strip {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 12px 16px;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 20px;
+            max-height: 210px;
+            font-size: 11px;
+        }
+
+        .details-strip .sidebar-section-title {
+            font-size: 10px;
+            margin-bottom: 6px;
+        }
+
+        .details-strip .legend-item,
+        .details-strip .edge-item,
+        .details-strip .node-item {
+            font-size: 11px;
+        }
+
+        .details-strip .node-item,
+        .details-strip .accordion-header {
+            padding: 5px 8px;
+        }
+
+        .details-strip .accordion-header {
+            font-size: 11px;
+        }
+
+        .details-strip .stat-value {
+            font-size: 18px;
+        }
+
+        .details-strip .stats-container {
+            padding: 8px;
+        }
+
+        .details-strip .legend-item {
+            padding: 1px 4px;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            align-content: start;
+        }
+
+        .stats-container.single {
+            grid-template-columns: 1fr;
+        }
+
+        .details-strip .category-legend {
+            flex-flow: column;
+            gap: 2px;
+        }
+
+        .strip-col {
+            overflow-y: auto;
+            min-height: 0;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .details-strip {
+                background: #242424;
+            }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .details-strip {
+                grid-template-columns: 1fr 1fr;
+                max-height: none;
+            }
+        }
+
+        .graph-canvas-wrap {
+            flex: 1;
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        /* Cytoscape owns this element exclusively — overlays are siblings so
+           graph re-renders can never remove them */
+        #graph-container {
+            position: absolute;
+            inset: 0;
+        }
+
+        .sidebar-toggle {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            z-index: 50;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background: white;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-toggle:hover {
+            background: #f0f0f0;
+            border-color: #00a6d6;
+            color: #00a6d6;
+        }
+
+        .controls-overlay {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 50;
+        }
+
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background: white;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .control-btn:hover {
+            background: #f0f0f0;
+            border-color: #00a6d6;
+            color: #00a6d6;
+        }
+
+        .sidebar {
+            width: 380px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar.hidden {
+            display: none;
+        }
+
+        .details-column {
+            width: 300px;
+        }
+
+        .details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .details-close {
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            line-height: 1;
+            color: #999;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+
+        .details-close:hover {
+            color: #00a6d6;
+        }
+
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-weight: 600;
+            color: #00a6d6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+
+        /* Relevant Enablers sits in the Linked Info column: breathing room
+           below the header when no node card is shown, and below the card
+           when one is. */
+        #detailsColumn #pathNodesSection {
+            margin-top: 12px;
+        }
+        #nodeDetailsPanel .node-details {
+            margin-bottom: 22px;
+        }
+
+        .sidebar-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .count {
+            font-weight: 400;
+            color: #999;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+            background: #f5f7fa;
+            padding: 12px;
+            border-radius: 4px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00a6d6;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        .category-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        .legend-item:hover {
+            background: #f0f0f0;
+        }
+
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .edge-legend {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+
+        .edge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        /* Swatches use explicit gradients rather than CSS `dotted`/`dashed`,
+           whose stroke lengths are browser-defined — these reproduce the
+           canvas dash patterns exactly so the legend cannot drift from it. */
+        .edge-line {
+            width: 24px;
+            height: 2px;
+            flex: none;
+        }
+
+        .edge-line.dependency {
+            background: #c2691a;
+        }
+
+        .edge-line.correlation {
+            background: repeating-linear-gradient(90deg,
+                #4a5fb0 0 2px, transparent 2px 7px);
+        }
+
+        .edge-line.unvalidated {
+            background: repeating-linear-gradient(90deg,
+                #4a5fb0 0 9px, transparent 9px 13px);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 4px;
+            background: #f5f7fa;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .accordion-header:hover {
+            background: #e8f0f5;
+        }
+
+        .accordion-header .count {
+            margin-left: auto;
+        }
+
+        .accordion-arrow {
+            font-size: 10px;
+            transition: transform 0.2s;
+        }
+
+        .accordion-group.open .accordion-arrow {
+            transform: rotate(90deg);
+        }
+
+        .accordion-body {
+            display: none;
+            padding-left: 8px;
+            margin-bottom: 4px;
+        }
+
+        .accordion-group.open .accordion-body {
+            display: block;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .accordion-header {
+                background: #2a2a2a;
+                color: #e0e0e0;
+            }
+            .accordion-header:hover {
+                background: #1a3a45;
+            }
+            }
+        }
+
+        .node-item {
+            background: #f5f7fa;
+            border-left: 3px solid transparent;
+            padding: 8px 10px;
+            border-radius: 2px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .node-item:hover {
+            background: #e8f5e9;
+            border-left-color: #00a6d6;
+        }
+
+        .node-details {
+            background: #e8f5e9;
+            border-left: 3px solid #00a6d6;
+            padding: 12px;
+            border-radius: 2px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .node-details-label {
+            font-weight: 600;
+            color: #0082a8;
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+
+        .node-details-item {
+            margin-bottom: 4px;
+            color: #555;
+        }
+
+        .node-details-item-label {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .answer-box {
+            background: #f0f7ff;
+            border-left: 3px solid #00a6d6;
+            padding: 10px 12px;
+            border-radius: 2px;
+            font-size: 12px;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .answer-more { margin-top: 6px; }
+        .answer-more > summary {
+            cursor: pointer;
+            list-style: none;
+            font-weight: 600;
+            color: #0082a8;
+            font-size: 12px;
+            padding: 4px 0;
+            user-select: none;
+        }
+        .answer-more > summary::-webkit-details-marker { display: none; }
+        .answer-more > summary::before { content: "▸ "; }
+        .answer-more[open] > summary::before { content: "▾ "; }
+        .answer-more[open] > summary { margin-bottom: 4px; }
+
+        .answer-box .md-heading {
+            display: block;
+            font-weight: 700;
+            font-size: 13px;
+            color: #0082a8;
+        }
+
+        .answer-box code {
+            background: rgba(0, 130, 168, 0.1);
+            padding: 0 3px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .answer-box {
+                background: #1a3a45;
+                color: #e0e0e0;
+            }
+            /* #0082a8 on #1a3a45 is ~2.7:1 — below the 4.5:1 WCAG AA floor,
+               which made headings and citation links unreadable on dark. */
+            .answer-box .md-heading,
+            .answer-box .cite-link,
+            .cite-link {
+                color: #7fd4ec;
+            }
+            .answer-box code {
+                background: rgba(127, 212, 236, 0.16);
+            }
+            .source-cite {
+                color: #b9c7cc;
+            }
+            }
+        }
+
+        .cite-link {
+            color: #0082a8;
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .sources-title {
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(0, 130, 168, 0.25);
+            font-size: 11px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .source-item {
+            margin-top: 6px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .source-cite {
+            color: #777;
+            font-size: 10.5px;
+            margin-top: 2px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .cite-link { color: #4dd0e1; }
+            .sources-title { color: #aaa; }
+            .source-cite { color: #999; }
+            }
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 100;
+            background: white;
+            padding: 32px 48px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .loading.visible {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #00a6d6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .graph-row {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            body {
+                background: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .header, .sidebar, .graph-canvas-wrap, #graph-container {
+                background: #242424;
+                border-color: #404040;
+            }
+
+            .search-box input,
+            .search-box textarea {
+                background: #1a1a1a;
+                border-color: #404040;
+                color: #e0e0e0;
+            }
+
+            .node-item {
+                background: #2a2a2a;
+                border-left-color: #404040;
+                color: #e0e0e0;
+            }
+
+            .node-item:hover {
+                background: #1a3a45;
+            }
+
+            .node-details {
+                background: #1a3a45;
+                border-left-color: #00a6d6;
+            }
+
+            .stats-container {
+                background: #2a2a2a;
+            }
+
+            .control-btn {
+                background: #2a2a2a;
+                border-color: #404040;
+                color: #e0e0e0;
+            }
+
+            .control-btn:hover {
+                background: #1a3a45;
+                border-color: #00a6d6;
+                color: #00a6d6;
+            }
+
+            .category-legend, .legend-item {
+                color: #e0e0e0;
+            }
+
+            .legend-item:hover {
+                background: #2a2a2a;
+            }
+            }
+        }
+
+        .sidebar-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebar-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+        .sidebar-content::-webkit-scrollbar-thumb {
+            background: #d0d0d0;
+            border-radius: 3px;
+        }
+        .sidebar-content::-webkit-scrollbar-thumb:hover {
+            background: #b0b0b0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* opt-in only: set data-theme="dark" on <html> to enable */
+            :root[data-theme="dark"] {
+            .sidebar-content::-webkit-scrollbar-track {
+                background: #1a1a1a;
+            }
+            .sidebar-content::-webkit-scrollbar-thumb {
+                background: #404040;
+            }
+            .sidebar-content::-webkit-scrollbar-thumb:hover {
+                background: #606060;
+            }
+            }
+        }
+        .label-mode-row { display:flex; align-items:center; gap:6px; margin:6px 0 2px;
+                          font-size:11px; color:#555; }
+        .label-mode-row select { font:inherit; padding:1px 4px; }
+        .nid { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+               font-size: .85em; opacity: .6; margin-right: .5em; }
+            /* Print: Cmd+P gives a clean PDF of the whole interface (answer text
+           stays vector; the graph canvas prints as bitmap — use the SVG button
+           for a vector graph). */
+        @media print {
+            .control-btn, .zoom-controls, select#exampleSelect, #searchBtn { display: none !important; }
+            body { background: #ffffff; }
+        }
+        </style>
+</head>
+<body>
+    <div class="layout-container">
+        <div class="header">
+            <div class="header-content">
+                <div>
+                    <h1>Process Atlas</h1>
+                    <p style="font-size: 13px; color: #666; margin-top: 4px;">
+                        <strong>Default view:</strong> the full graph — all enablers with all correlations and dependencies. <strong>Search:</strong> shows only the enablers relevant to your query, path highlighted.
+                        <a id="aboutLink" class="about-link" onclick="toggleAbout()">About this project ▸</a>
+                    </p>
+                    <p id="publicNote" class="public-note" hidden>
+                        <strong>Public release.</strong> This is the anonymised graph: company and robot
+                        identities are removed and firms appear as pseudonyms (Firm_NNN), so co-development
+                        structure stays analysable while identities do not. Attribute combinations are
+                        released unchanged, so a well-known process may still be recognisable.
+                        The example answers were generated once and stored with
+                        their sources, since a page without a backend cannot run the retrieval and the
+                        language model. Details, licence and citation are in the README of the release.
+                    </p>
+                </div>
+            </div>
+            <div id="aboutPanel" class="about-panel" style="display: none;">
+                <p>
+                    <strong>AI-grounded querying of a robotic construction knowledge graph.</strong>
+                    This prototype demonstrates how large language models can be made <em>accountable</em> to
+                    structured research data. It operates on a knowledge graph of robotic construction and
+                    digital fabrication in Japan, comprising 140 enablers from a relational ontology
+                    (Ng et&nbsp;al., 2022), 50 documented cases, and a census of 217 construction robots.
+                    Natural-language questions are answered through a hybrid AI pipeline: neural embedding
+                    retrieval identifies the relevant entities, graph traversal supplies their exact
+                    relations, and a large language model composes the answer under a strict grounding
+                    constraint, in which every claim carries a citation that links back to a specific edge
+                    in the graph, together with its literature source and evidence level. The interface
+                    makes this epistemic structure visible. Statistically derived co-occurrences and
+                    literature-cited dependencies are rendered as distinct layers, so users can see which
+                    parts of an answer rest on asserted mechanisms and which on correlation. AI also
+                    participates in growing the graph itself, proposing new dependency edges that remain
+                    visibly flagged as unvalidated until reviewed. This deliberate human-in-the-loop design
+                    lets AI accelerate knowledge work while verification and provenance remain in human hands.
+                </p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="graph-row">
+                <div class="graph-column">
+                <div class="graph-canvas-wrap">
+                    <div id="graph-container"></div>
+                    <div class="controls-overlay">
+                        <button class="control-btn" title="Zoom In" onclick="zoomGraph(1.2)">+</button>
+                        <button class="control-btn" title="Zoom Out" onclick="zoomGraph(0.83)">−</button>
+                        <button class="control-btn" title="Fit to View" onclick="fitGraph()">⊡</button>
+                        <button class="control-btn" title="Export current graph as SVG (vector)" onclick="exportSvg()">SVG</button>
+                        <button id="exportPdfBtn" class="control-btn" title="Export graph + answer as print-ready PDF" onclick="exportPdf()">PDF</button>
+                        <button class="control-btn" title="Reset" onclick="resetGraph()">↺</button>
+                    </div>
+                    <button class="sidebar-toggle" title="Toggle Info Panel" onclick="toggleSidebar()">ℹ️</button>
+                    <div class="loading" id="loading">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading knowledge graph...</div>
+                    </div>
+                </div>
+
+                <div class="details-strip">
+                    <div class="strip-col legend-grid">
+                        <div>
+                            <div class="sidebar-section-title">
+                                Nodes
+                                <span class="count" id="nodeCount">0</span>
+                            </div>
+                            <div class="label-mode-row">
+                                <label for="labelMode">Labels</label>
+                                <select id="labelMode" onchange="applyLabelMode()">
+                                    <option value="both" selected>ID + name</option>
+                                    <option value="id">ID only</option>
+                                    <option value="name">Name only</option>
+                                </select>
+                            </div>
+                            <div class="label-mode-row">
+                                <label for="showCooc">
+                                    <input type="checkbox" id="showCooc" checked onchange="applyEdgeFilter()">
+                                    Co-occurrence
+                                </label>
+                            </div>
+                            <div class="category-legend" id="categoryLegend"></div>
+                        </div>
+                        <div>
+                            <div class="sidebar-section-title">
+                                Edges
+                                <span class="count" id="edgeCount">0</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line dependency"></div>
+                                <span><strong>Solid, arrow</strong> — dependency: asserted, literature-cited, directional</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line correlation"></div>
+                                <span><strong>Dotted, no arrow</strong> — co-occurrence: statistical, symmetric</span>
+                            </div>
+                            <div class="edge-item">
+                                <span><strong>Dashed ring</strong> — enabler activated in none of the 50 cases (no edges)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strip-col">
+                        <div class="sidebar-section-title">
+                            Enablers by Category
+                            <span class="count" id="allNodesCount">0</span>
+                        </div>
+                        <div id="nodesList"></div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="sidebar-header">Grounded Answer</div>
+                    <div class="search-box sidebar-search">
+                        <select id="exampleSelect" onchange="pickExample(this)" title="Example questions">
+                            <option value="">Examples…</option>
+                            <option value="What does prefabrication depend on, and what is the evidence?">What does prefabrication depend on, and what is the evidence?</option>
+                            <option value="How to design for manufacture and assembly (DfMA) using robotics?">How to design for manufacture and assembly (DfMA) using robotics?</option>
+                            <option value="How to improve site safety when using robotics?">How to improve site safety when using robotics?</option>
+                            <option value="What becomes possible once a product range is highly standardised?">What becomes possible once a product range is highly standardised?</option>
+                            <option value="How can concrete construction become circular?">How can concrete construction become circular?</option>
+                        </select>
+                        <div class="search-row">
+                            <textarea id="queryInput" rows="3" placeholder="Ask the knowledge graph…"
+                                      onkeydown="if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); searchQuery(); }"></textarea>
+                            <button id="searchBtn" onclick="searchQuery()">Search</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="sidebar-section" id="answerSection" style="display: none;">
+                            <div id="answerContent" class="answer-box"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sidebar details-column" id="detailsColumn" style="display: none;">
+                    <div class="sidebar-header details-header">
+                        <span>Linked Info</span>
+                        <button class="details-close" onclick="closeDetailsColumn()" title="Close">×</button>
+                    </div>
+                    <div class="sidebar-content">
+                        <div id="nodeDetailsPanel"></div>
+                        <div class="sidebar-section" id="pathNodesSection" style="display: none;">
+                            <div class="sidebar-section-title">
+                                Relevant Enablers
+                                <span class="count" id="pathCount">0</span>
+                            </div>
+                            <div id="pathNodesList"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>window.JPRX_STATIC = true; window.JPRX_STATIC_BASE = "data/";</script>
+    <script>
+        const categoryColors = {
+            "Process": "#0e74b1",
+            "Value": "#cb79a7",
+            "Risk": "#787878",
+            "Attribute": "#eee450",
+            "Resource": "#5eb5e5",
+            "Condition": "#049d74",
+            "Actor": "#e5a027",
+            "Artefact": "#d36027"
+        };
+
+        let cy = null;
+        let currentGraphData = null;
+        let sidebarVisible = true;
+
+        // Cola auto-registers when loaded via script tag
+
+        function toggleAbout() {
+            const panel = document.getElementById("aboutPanel");
+            const link = document.getElementById("aboutLink");
+            const open = panel.style.display !== "none";
+            panel.style.display = open ? "none" : "block";
+            if (link) link.textContent = open ? "About this project ▸" : "About this project ▾";
+        }
+
+        function openDetailsColumn() {
+            const col = document.getElementById("detailsColumn");
+            if (col) col.style.display = "flex";
+        }
+
+        function closeDetailsColumn() {
+            // The third column holds the Relevant Enablers list as well as the
+            // node card, so "close" clears the card and only hides the column
+            // when there are no enablers to show.
+            const panel = document.getElementById("nodeDetailsPanel");
+            if (panel) panel.innerHTML = "";
+            const pathSection = document.getElementById("pathNodesSection");
+            const hasEnablers = pathSection && pathSection.style.display !== "none";
+            const col = document.getElementById("detailsColumn");
+            if (col && !hasEnablers) col.style.display = "none";
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebarVisible = !sidebarVisible;
+            if (sidebarVisible) {
+                sidebar.classList.remove("hidden");
+            } else {
+                sidebar.classList.add("hidden");
+            }
+        }
+
+        // ---- Static mode --------------------------------------------------
+        // The public Atlas is this same page served without a backend:
+        // scripts/build_static_atlas.py bakes the endpoint responses to JSON
+        // and sets window.JPRX_STATIC. api() resolves those files instead of
+        // calling the service, so every call site below is identical in both
+        // deployments and the two never drift apart.
+        const STATIC_MODE = typeof window.JPRX_STATIC !== "undefined" && window.JPRX_STATIC;
+        const STATIC_BASE = (typeof window.JPRX_STATIC_BASE !== "undefined") ? window.JPRX_STATIC_BASE : "data/";
+        let staticQueryIndex = null;
+
+        function jsonResponse(obj, status = 200) {
+            return new Response(JSON.stringify(obj), { status, headers: { "Content-Type": "application/json" } });
+        }
+
+        function queryKey(q) { return (q || "").toLowerCase().replace(/[^a-z0-9]+/g, ""); }
+
+        async function api(path, body) {
+            if (!STATIC_MODE) {
+                const opts = (body === undefined) ? {} : {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(body)
+                };
+                return fetch(path, opts);
+            }
+            if (path === "/graph" && (!body || !body.query)) return fetch(STATIC_BASE + "graph.json");
+            if (path === "/graph" || path === "/graph-answer") {
+                if (!staticQueryIndex) staticQueryIndex = await (await fetch(STATIC_BASE + "queries/index.json")).json();
+                const file = staticQueryIndex[queryKey(body && body.query)];
+                if (!file) {
+                    if (path === "/graph") return fetch(STATIC_BASE + "graph.json");
+                    return jsonResponse({ detail: "This public build carries the example answers only. Generating a new one needs the retrieval index and an LLM, which no static page can host: pick a question from the Examples menu, or run the Atlas yourself from the released code and data." }, 501);
+                }
+                const baked = await (await fetch(STATIC_BASE + "queries/" + file)).json();
+                return jsonResponse(path === "/graph" ? baked.graph : baked.answer);
+            }
+            if (path.startsWith("/node-info/")) {
+                const id = decodeURIComponent(path.slice("/node-info/".length));
+                const all = await (await fetch(STATIC_BASE + "node-info.json")).json();
+                const rec = all[id] || all[id.split(":").pop()];
+                return rec ? jsonResponse(rec) : jsonResponse({ detail: "not found" }, 404);
+            }
+            return jsonResponse({ detail: "unavailable in the static build" }, 501);
+        }
+
+        // the print-ready PDF is rendered by server-side Chromium; the static
+        // build keeps the client-side SVG export instead
+        if (STATIC_MODE) {
+            const note = document.getElementById("publicNote");
+            if (note) note.hidden = false;
+        }
+
+        async function initGraph() {
+            const loading = document.getElementById("loading");
+            if (loading) loading.classList.add("visible");
+
+            try {
+                const response = await api("/graph", {});
+
+                if (!response.ok) throw new Error("Failed to load graph");
+
+                currentGraphData = await response.json();
+                await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+                renderGraph(currentGraphData);
+                updateStats(currentGraphData);
+                updateLegends(currentGraphData);
+                updateNodesList(currentGraphData);
+            } catch (error) {
+                console.error("Error loading graph:", error);
+                const loading = document.getElementById("loading");
+                if (loading) {
+                    loading.innerHTML = `<div class="loading-text">Error loading graph: ${error.message}</div>`;
+                    loading.classList.add("visible");
+                }
+            }
+        }
+
+        // In query mode the server returns every co-occurrence edge among the
+        // selected nodes with no cap, so a few solid dependency arrows can sit
+        // under hundreds of dotted correlation lines. Switching the correlation
+        // layer off leaves the cited dependency skeleton legible. Display-only:
+        // the edges stay in the graph, they are just not drawn.
+        function applyEdgeFilter() {
+            if (typeof cy === "undefined" || !cy) return;
+            const el = document.getElementById("showCooc");
+            const show = !el || el.checked;
+            cy.edges('[type="coOccursWith"]').style("display", show ? "element" : "none");
+        }
+
+        // Label mode: the graph is dense (140 nodes, 8k+ edges), so the ID and
+        // the full name together can crowd small nodes. Let the reader choose.
+        // "both" puts the ID on its own line above the name. Declared at script
+        // scope because the <select> uses an inline onchange handler.
+        const LABEL_MODES = {
+            both: (ele) => `${ele.data("id")}\n${ele.data("label")}`,
+            id:   (ele) => ele.data("id"),
+            name: (ele) => ele.data("label"),
+        };
+        function labelMode() {
+            const el = document.getElementById("labelMode");
+            return (el && LABEL_MODES[el.value]) ? el.value : "both";
+        }
+        function applyLabelMode() {
+            if (typeof cy === "undefined" || !cy) return;
+            const fn = LABEL_MODES[labelMode()];
+            cy.nodes().forEach(n => n.style("label", fn(n)));
+        }
+
+        function renderGraph(data) {
+            // Resolve category names to actual colors (Cytoscape can't map strings to colors itself)
+            data.nodes.forEach(n => {
+                n.data.color = categoryColors[n.data.category] || "#999";
+            });
+            const elements = [...data.nodes, ...data.edges];
+
+
+            // Destroy existing instance if any
+            if (cy) {
+                try {
+                    cy.destroy();
+                    cy = null;
+                } catch (e) {
+                    console.warn("Error destroying cy:", e);
+                    cy = null;
+                }
+            }
+
+            try {
+                cy = cytoscape({
+                    container: document.getElementById("graph-container"),
+                    elements: elements,
+                    style: [
+                    {
+                        selector: "node",
+                        style: {
+                            // ID above the name, matching how the paper cites
+                            // enablers ("PR2 - Prefabrication/off-site").
+                            "content": (ele) => LABEL_MODES[labelMode()](ele),
+                            "background-color": "data(color)",
+                            "width": "mapData(size, 3, 10, 30, 80)",
+                            "height": "mapData(size, 3, 10, 30, 80)",
+                            "text-valign": "center",
+                            "text-halign": "center",
+                            "font-size": "10.5px",
+                            "text-wrap": "wrap",
+                            "text-max-width": "80px",
+                            "color": "#222",
+                            "font-weight": "bold",
+                            "border-width": "2px",
+                            "border-color": "#fff",
+                            "text-background-color": "#fff",
+                            "text-background-padding": "2px",
+                            "text-background-opaque": true
+                        }
+                    },
+                    {
+                        selector: "node:selected",
+                        style: {
+                            "border-color": "#00a6d6",
+                            "border-width": "3px"
+                        }
+                    },
+                    {
+                        selector: "node[path_node]",
+                        style: {
+                            "border-color": "#00a6d6",
+                            "border-width": "3px"
+                        }
+                    },
+                    {
+                        selector: "node.hl",
+                        style: {
+                            "border-color": "#00a6d6",
+                            "border-width": "6px",
+                            "overlay-color": "#00a6d6",
+                            "overlay-opacity": 0.2,
+                            "overlay-padding": 8
+                        }
+                    },
+                    {
+                        selector: "edge",
+                        style: {
+                            "target-arrow-shape": "triangle",
+                            "line-color": "#ccc",
+                            "target-arrow-color": "#ccc"
+                        }
+                    },
+                    {
+                        selector: 'edge[type="coOccursWith"]',
+                        style: {
+                            "line-color": "#4a5fb0",
+                            // DOTS. [1,5] with round caps reads as a bead chain —
+                            // categorically different from the long dash used for
+                            // unvalidated edges (14:1 stroke-length ratio). The old
+                            // [4,2] vs [6,3] were the same texture at two scales,
+                            // which is why they were indistinguishable.
+                            "line-style": "dashed",
+                            "line-dash-pattern": [1, 5],
+                            "line-cap": "round",
+                            "target-arrow-shape": "none",
+                            "curve-style": "bezier",
+                            // strong correlations stand out, weak ones fade back —
+                            // but the floor is now high enough that the dots are
+                            // actually perceptible (was 0.6px @ 0.15 opacity)
+                            "opacity": "mapData(weight, 1, 25, 0.32, 0.75)",
+                            "width": "mapData(weight, 1, 25, 1.3, 2.4)",
+                            "z-index": 1
+                        }
+                    },
+                    {
+                        selector: 'edge[type="coOccursWith"]:selected',
+                        style: {
+                            "opacity": 1,
+                            "width": "2px"
+                        }
+                    },
+                    {
+                        // every dependency relation type (all seven since 2026-08-27); only
+                        // co-occurrence is the non-dependency edge
+                        selector: 'edge[type != "coOccursWith"]',
+                        style: {
+                            // SOLID + arrowhead. Chroma raised from #d4a574, which
+                            // failed the chroma floor (read as gray) and sat at
+                            // 2.17:1 against the surface, below the 3:1 minimum.
+                            "line-color": "#c2691a",
+                            // Pinned solid deliberately. The old
+                            // `edge[validated = false]` rule sat after this one
+                            // and Cytoscape matched it against validated: null
+                            // (falsey), so every CITED dependency was being drawn
+                            // with the [14,6] long dash meant for the unvalidated
+                            // proposals -- which is why solid lines read as
+                            // dashed. That rule is gone; the server no longer
+                            // sends unvalidated edges at all.
+                            "line-style": "solid",
+                            "line-dash-pattern": [1, 0],
+                            "width": "2.8px",
+                            "target-arrow-shape": "triangle",
+                            "target-arrow-color": "#c2691a",
+                            // Default arrow-scale is 1, which on a ~2px edge is a
+                            // ~7px head -- invisible at full-graph zoom, so the
+                            // directionality that distinguishes this layer from
+                            // symmetric co-occurrence was not readable.
+                            "arrow-scale": 2.2,
+                            "opacity": 1,
+                            "curve-style": "bezier",
+                            "content": "data(label)",
+                            // The label used to sit ON the line inside an opaque
+                            // white box, which cut every dependency edge in half
+                            // and made solid lines read as dashed. Rotate it along
+                            // the edge and lift it clear instead, so the stroke
+                            // stays continuous.
+                            "text-rotation": "autorotate",
+                            "text-margin-y": -8,
+                            "text-background-opacity": 0,
+                            "color": "#8a4a12",
+                            "font-size": "9px",
+                            "font-weight": "normal",
+                            "z-index": 10
+                        }
+                    },
+                    {
+                        selector: "edge[path_edge]",
+                        style: {
+                            "width": "3px",
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        selector: "node.isolated",
+                        style: {
+                            "border-width": 3,
+                            "border-style": "dashed",
+                            "border-color": "#8a8a8a",
+                            "background-opacity": 0.55
+                        }
+                    },
+                    {
+                        selector: "edge:selected",
+                        style: {
+                            "opacity": 1,
+                            "width": "3px"
+                        }
+                    }
+                ],
+                layout: { name: "preset" },
+                wheelSensitivity: 0.1
+                    });
+
+                    // fcose: spectral init + force refinement — isotropic
+                    // spacing (no post-layout stretching needed), handles the
+                    // full 7k-edge graph far faster than cola
+                    const fcoseLayout = cy.layout({
+                        name: "fcose",
+                        quality: "default",
+                        animate: false,
+                        randomize: true,
+                        padding: 60,
+                        nodeDimensionsIncludeLabels: true,
+                        packComponents: true,
+                        nodeRepulsion: 50000,
+                        // Dependencies (cited, directional) bind tighter than
+                        // statistical co-occurrences; near-zero coocc elasticity
+                        // so the 7k correlations can't collapse the center
+                        idealEdgeLength: e => e.data("type") === "coOccursWith" ? 220 : 100,
+                        edgeElasticity: e => e.data("type") === "coOccursWith" ? 0.02 : 0.45,
+                        numIter: 4000
+                    });
+                    fcoseLayout.one("layoutstop", () => {
+                        // Enablers activated in no case have no edges, so fcose
+                        // flings them off as separate components. Park them in
+                        // a labelled row just below the main cluster instead —
+                        // they are a finding (the research-practice gap), not noise.
+                        const isolated = cy.nodes().filter(n => n.degree(false) === 0);
+                        const connected = cy.nodes().filter(n => n.degree(false) > 0);
+                        if (isolated.length && connected.length) {
+                            const bb = connected.boundingBox();
+                            isolated.forEach((n, i) => {
+                                n.position({ x: bb.x1 + 60 + i * 150, y: bb.y2 + 110 });
+                                n.addClass("isolated");
+                            });
+                        }
+                        cy.fit(cy.elements(), 40);
+                    });
+                    fcoseLayout.run();
+
+                    // Wire up interactions
+                    if (cy) {
+                        cy.on("tap", "node", (evt) => {
+                            const node = evt.target;
+                            showNodeDetails(node.data());
+                            cy.elements().unselect();
+                            node.select();
+                        });
+
+                        cy.on("tap", "edge", (evt) => {
+                            const edge = evt.target;
+                            showEdgeDetails(edge.data());
+                            cy.elements().unselect();
+                            edge.select();
+                        });
+
+                        cy.on("tap", (evt) => {
+                            if (evt.target === cy) {
+                                cy.elements().unselect();
+                                closeDetailsColumn();
+                            }
+                        });
+                    }
+
+                    const loadingEl = document.getElementById("loading");
+                    if (loadingEl) loadingEl.classList.remove("visible");
+                } catch (e) {
+                    console.error("Error rendering graph:", e);
+                    const loadingEl = document.getElementById("loading");
+                    if (loadingEl) {
+                        loadingEl.innerHTML = `<div class="loading-text">Error: ${e.message}</div>`;
+                        loadingEl.classList.add("visible");
+                    }
+                }
+        }
+
+        function showNodeDetails(nodeData) {
+            const panel = document.getElementById("nodeDetailsPanel");
+            const connectedEdges = cy.edges().stdFilter(e =>
+                e.source().id() === nodeData.id || e.target().id() === nodeData.id
+            );
+
+            panel.innerHTML = `
+                <div class="node-details">
+                    <div class="node-details-label">${nodeData.label || nodeData.id}</div>
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">ID</div>
+                        ${nodeData.id}
+                    </div>
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Category</div>
+                        ${nodeData.category || "Unknown"}
+                    </div>
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Activation Frequency</div>
+                        ${nodeData.activation_freq || 0}
+                    </div>
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Connected Edges</div>
+                        ${connectedEdges.length}
+                    </div>
+                </div>
+            `;
+            panel.style.display = "block";
+            openDetailsColumn();
+        }
+
+        function showEdgeDetails(edgeData) {
+            const panel = document.getElementById("nodeDetailsPanel");
+            if (!panel) return;
+
+            const srcNode = cy.getElementById(edgeData.source);
+            const tgtNode = cy.getElementById(edgeData.target);
+            const srcLabel = srcNode.length ? `${edgeData.source} ${srcNode.data("label")}` : edgeData.source;
+            const tgtLabel = tgtNode.length ? `${edgeData.target} ${tgtNode.data("label")}` : edgeData.target;
+
+            const isDependency = edgeData.type !== "coOccursWith";
+
+            let html = `
+                <div class="node-details">
+                    <div class="node-details-label">${srcLabel} → ${tgtLabel}</div>
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Relation</div>
+                        ${edgeData.label} (${isDependency ? "asserted dependency" : "statistical co-occurrence"})
+                    </div>`;
+
+            if (isDependency) {
+                if (edgeData.validated === false) {
+                    html += `
+                    <div class="node-details-item" style="color: #b26a00; font-weight: 600;">
+                        ⚠ AI-proposed — citation not yet validated by a human
+                    </div>`;
+                } else if (edgeData.validated === true) {
+                    html += `
+                    <div class="node-details-item" style="color: #2e7d32; font-weight: 600;">
+                        ✓ Human-validated
+                    </div>`;
+                }
+                if (edgeData.comment) {
+                    html += `
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Mechanism</div>
+                        ${edgeData.comment}
+                    </div>`;
+                }
+                if (edgeData.evidence) {
+                    html += `
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Evidence Level</div>
+                        ${edgeData.evidence}
+                    </div>`;
+                }
+                if (edgeData.citation) {
+                    html += `
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Citation</div>
+                        ${edgeData.citation}
+                    </div>`;
+                }
+                if (!edgeData.citation && !edgeData.evidence) {
+                    html += `
+                    <div class="node-details-item" style="color: #b26a00;">
+                        No provenance recorded for this edge.
+                    </div>`;
+                }
+            } else if (edgeData.weight) {
+                html += `
+                    <div class="node-details-item">
+                        <div class="node-details-item-label">Co-occurrence Weight</div>
+                        appears together in ${edgeData.weight} cases
+                    </div>`;
+            }
+
+            html += `</div>`;
+            panel.innerHTML = html;
+            panel.style.display = "block";
+            openDetailsColumn();
+        }
+
+        function updateStats(data) {
+            applyEdgeFilter();
+            document.getElementById("nodeCount").textContent = data.nodes.length;
+            // Split the count: a bare total reads as wrong against the paper,
+            // which reports the co-occurrence layer (8,447) and the dependency
+            // layer (40) as separate things.
+            const coocN = data.edges.filter(e => e.data.type === "coOccursWith").length;
+            const depN = data.edges.length - coocN;
+            const ec = document.getElementById("edgeCount");
+            ec.textContent = `${coocN.toLocaleString()} + ${depN}`;
+            ec.title = `${coocN.toLocaleString()} co-occurrence + ${depN} dependency = ${data.edges.length} total`;
+        }
+
+        function updateLegends(data) {
+            const categories = new Set(data.nodes.map(n => n.data.category).filter(Boolean));
+            const catCount = document.getElementById("categoryCount");
+            if (catCount) catCount.textContent = categories.size;
+
+            const legend = document.getElementById("categoryLegend");
+            legend.innerHTML = "";
+            Array.from(categories).sort().forEach(cat => {
+                const color = categoryColors[cat] || "#999";
+                legend.innerHTML += `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: ${color};"></div>
+                        <span>${cat}</span>
+                    </div>
+                `;
+            });
+        }
+
+        function updateNodesList(data) {
+            const list = document.getElementById("nodesList");
+            if (!list) return;
+
+            // Group nodes by category
+            const byCategory = {};
+            data.nodes.forEach(n => {
+                const cat = n.data.category || "Other";
+                (byCategory[cat] = byCategory[cat] || []).push(n.data);
+            });
+
+            list.innerHTML = Object.keys(byCategory).sort().map(cat => {
+                const color = categoryColors[cat] || "#999";
+                const items = byCategory[cat]
+                    .sort((a, b) => a.label.localeCompare(b.label))
+                    .map(d => `<div class="node-item" onclick="selectNode('${d.id}')" onmouseenter="hoverNode('${d.id}', true)" onmouseleave="hoverNode('${d.id}', false)" title="${d.id} - ${d.label}"><span class="nid">${d.id}</span>${d.label}</div>`)
+                    .join("");
+                return `
+                    <div class="accordion-group">
+                        <button class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+                            <span class="accordion-arrow">▶</span>
+                            <div class="legend-color" style="background: ${color};"></div>
+                            <span>${cat}</span>
+                            <span class="count">${byCategory[cat].length}</span>
+                        </button>
+                        <div class="accordion-body">${items}</div>
+                    </div>`;
+            }).join("");
+
+            document.getElementById("allNodesCount").textContent = data.nodes.length;
+        }
+
+        function focusEles(eles, padding = 100, maxZoom = 1.3) {
+            // fit, but never zoom in so far that a node fills the canvas
+            cy.fit(eles, padding);
+            if (cy.zoom() > maxZoom) {
+                cy.zoom({ level: maxZoom, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } });
+            }
+        }
+
+        function hoverNode(id, on) {
+            if (!cy) return;
+            const node = cy.getElementById(id);
+            if (!node || !node.length) return;
+            if (on) node.addClass("hl");
+            else node.removeClass("hl");
+        }
+
+        function selectNode(id) {
+            const node = cy.getElementById(id);
+            if (node && node.length) {
+                cy.elements().unselect();
+                node.select();
+                focusEles(node.closedNeighborhood(), 80);
+                showNodeDetails(node.data());
+            }
+        }
+
+        function pickExample(sel) {
+            if (!sel.value) return;
+            document.getElementById("queryInput").value = sel.value;
+            sel.selectedIndex = 0;
+            searchQuery();
+        }
+
+        // A search is two phases: the /graph fetch (fast) and the /graph-answer
+        // Claude call (slow, intentionally not awaited so the graph paints
+        // early). The lock has to cover BOTH, or the button frees up while the
+        // answer is still generating and repeat clicks pile up requests.
+        let searchInFlight = false;
+
+        function setSearchBusy(busy) {
+            searchInFlight = busy;
+            const btn = document.getElementById("searchBtn");
+            if (!btn) return;
+            btn.disabled = busy;
+            btn.textContent = busy ? "Searching…" : "Search";
+            btn.style.cursor = busy ? "progress" : "";
+            btn.style.opacity = busy ? "0.6" : "";
+        }
+
+        async function searchQuery() {
+            if (searchInFlight) return;   // ignore repeat clicks and Enter presses
+            const query = document.getElementById("queryInput").value;
+            if (!query.trim()) return;
+            setSearchBusy(true);
+            let answerDone = null;
+
+            const loading = document.getElementById("loading");
+            if (loading) {
+                loading.textContent = "";
+                loading.innerHTML = '<div class="loading-spinner"></div><div class="loading-text">Searching...</div>';
+                loading.classList.add("visible");
+            }
+
+            try {
+                const response = await api("/graph", { query });
+
+                if (!response.ok) throw new Error("Failed to search");
+
+                const data = await response.json();
+                if (!data || !data.nodes || !data.edges) throw new Error("Invalid response data");
+
+                currentGraphData = data;
+
+                // Let the browser paint the spinner before the synchronous
+                // cola layout blocks the main thread
+                await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+                // Render graph first (creates new cy instance)
+                renderGraph(data);
+                updateStats(data);
+
+                // Cited RAG answer loads asynchronously alongside the graph.
+                // Not awaited here (the graph should paint immediately), but
+                // the promise is kept so the button stays locked until it ends.
+                answerDone = fetchAnswer(query);
+
+                // Mark path edges AFTER graph is rendered
+                if (data.path && data.path.length > 1 && cy) {
+                    for (let i = 0; i < data.path.length - 1; i++) {
+                        const edges = cy.edges().stdFilter(e =>
+                            (e.source().id() === data.path[i] && e.target().id() === data.path[i+1]) ||
+                            (e.source().id() === data.path[i+1] && e.target().id() === data.path[i])
+                        );
+                        edges.forEach(e => e.data("path_edge", true));
+                    }
+
+                    // Show path in sidebar
+                    const pathSection = document.getElementById("pathNodesSection");
+                    const pathList = document.getElementById("pathNodesList");
+                    const pathCount = document.getElementById("pathCount");
+
+                    if (pathList) {
+                        pathList.innerHTML = data.path
+                            .map(id => {
+                                const node = data.nodes.find(n => n.data.id === id);
+                                const label = node ? node.data.label : id;
+                                return `<div class="node-item" onclick="selectNode('${id}')" onmouseenter="hoverNode('${id}', true)" onmouseleave="hoverNode('${id}', false)"><span class="nid">${id}</span>${label}</div>`;
+                            })
+                            .join("");
+                    }
+                    if (pathCount) pathCount.textContent = data.path.length;
+                    if (pathSection) pathSection.style.display = "block";
+                    openDetailsColumn();   // Relevant Enablers live in the third column now
+                }
+            } catch (error) {
+                console.error("Search error:", error);
+                alert("Error searching: " + error.message);
+            } finally {
+                // Release only once the answer settles too. If the graph phase
+                // threw before fetchAnswer ran, answerDone is null and this
+                // resolves immediately.
+                Promise.resolve(answerDone)
+                    .catch(() => {})
+                    .then(() => setSearchBusy(false));
+            }
+        }
+
+        let answerSources = [];
+
+        function escapeHtml(s) {
+            return s.replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+        }
+
+        async function fetchAnswer(query) {
+            const section = document.getElementById("answerSection");
+            const content = document.getElementById("answerContent");
+            if (!section || !content) return;
+            section.style.display = "block";
+            content.textContent = "Generating grounded answer…";
+            try {
+                const resp = await api("/graph-answer", { query });
+                if (!resp.ok) {
+                    const err = await resp.json().catch(() => ({}));
+                    throw new Error(err.detail || `HTTP ${resp.status}`);
+                }
+                const data = await resp.json();
+                answerSources = data.sources || [];
+
+                let html = escapeHtml(data.answer || "(no answer)");
+
+                // Minimal markdown: headings, bold, inline code
+                html = html.replace(/^#{1,4}\s+(.+)$/gm, '<span class="md-heading">$1</span>');
+                html = html.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>");
+                html = html.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+
+                // Generated markdown sometimes omits the separator around a bold
+                // run ("**Heading**Body"), which renders as one run-on word.
+                // Only insert before a letter/digit/'(' so punctuation that
+                // legitimately follows bold (". , : )") is left alone.
+                html = html.replace(/<\/strong>([A-Za-z0-9(])/g, "</strong> $1");
+                html = html.replace(/([A-Za-z0-9)])<strong>/g, "$1 <strong>");
+
+                // Make [n] markers in the text clickable
+                html = html.replace(/\[(\d+)\]/g, (m0, n) =>
+                    answerSources.some(s => s.n == n)
+                        ? `<a class="cite-link" onclick="event.stopPropagation(); focusSource(${n})">[${n}]</a>` : m0);
+
+                // Any graph id mentioned inline (census records, cases,
+                // dependencies, enabler codes) becomes clickable too
+                html = html.replace(/\b(census_[A-Za-z0-9_-]+|RP\d{1,3}|DEP\d{1,3}|[A-Z]{2}\d{1,2})\b/g,
+                    m => `<a class="cite-link" onclick="event.stopPropagation(); focusRef('${m}')">${m}</a>`);
+
+                // Summary first (the model's opening paragraph), the rest
+                // behind a native <details> accordion; sources stay visible
+                // because provenance is the point.
+                {
+                    const cut = html.indexOf("\n\n");
+                    if (cut > 0) {
+                        const summary = html.slice(0, cut).replace(/^\s*<strong>Summary:?<\/strong>\s*/i, "").replace(/^\s*Summary:\s*/i, "");
+                        const rest = html.slice(cut).replace(/^\n+/, "");
+                        html = `<div class="answer-summary">${summary}</div>` +
+                               `<details class="answer-more"><summary>Read more</summary><div class="answer-rest">${rest}</div></details>`;
+                    }
+                }
+
+                // Bibliography below the text — every entry clickable
+                if (answerSources.length) {
+                    html += `<div class="sources-title">Sources</div>` + answerSources.map(s => {
+                        const label = escapeHtml(s.label || s.id);
+                        const linkable = s.kind === "dependency" || s.kind === "enabler";
+                        const head = linkable
+                            ? `<a class="cite-link" onclick="event.stopPropagation(); focusSource(${s.n})">[${s.n}] ${label}</a>`
+                            : `<a class="cite-link" onclick="event.stopPropagation(); focusRef('${escapeHtml(s.id)}')">[${s.n}] ${label}</a>`;
+                        const cite = s.citation ? `<div class="source-cite">${escapeHtml(s.citation)}${s.evidence ? " — " + escapeHtml(s.evidence) : ""}</div>` : "";
+                        return `<div class="source-item">${head}${cite}</div>`;
+                    }).join("");
+                }
+                content.innerHTML = html;
+            } catch (e) {
+                content.textContent = "Answer unavailable: " + e.message;
+            }
+        }
+
+        function focusSource(n) {
+            const s = answerSources.find(x => x.n == n);
+            if (!s || !cy) return;
+            if (s.kind === "dependency") {
+                const edge = cy.edges().filter(e => e.data("dep_id") === s.id);
+                if (edge.length) {
+                    cy.elements().unselect();
+                    edge.select();
+                    showEdgeDetails(edge[0].data());
+                    focusEles(edge.union(edge.connectedNodes()), 100);
+                    return;
+                }
+                // Edge not in the current view — fall back to its endpoint nodes
+                const nodes = cy.nodes().filter(nd => nd.id() === s.source || nd.id() === s.target);
+                if (nodes.length) {
+                    cy.elements().unselect();
+                    nodes.select();
+                    focusEles(nodes, 120);
+                }
+            } else if (s.kind === "enabler") {
+                selectNode(s.id);
+            } else {
+                focusRef(s.id);
+            }
+        }
+
+        async function focusRef(id) {
+            // Defense in depth: strip chunk-kind prefixes ("case:census_X")
+            id = String(id).split(":").pop();
+            // Graph-first: if the id is a visible node or dependency edge, jump there
+            if (cy) {
+                const node = cy.getElementById(id);
+                if (node && node.length) { selectNode(id); return; }
+                const edge = cy.edges().filter(e => e.data("dep_id") === id);
+                if (edge.length) {
+                    cy.elements().unselect();
+                    edge.select();
+                    showEdgeDetails(edge[0].data());
+                    focusEles(edge.union(edge.connectedNodes()), 100);
+                    return;
+                }
+            }
+            // Otherwise ask the graph what it knows about this id
+            try {
+                const resp = await api(`/node-info/${encodeURIComponent(id)}`);
+                if (!resp.ok) return;
+                showRefDetails(await resp.json());
+            } catch (e) {
+                console.warn("focusRef failed:", e);
+            }
+        }
+
+        function shortVal(v, max = 28) {
+            const s = String(v);
+            // only URLs get shortened: clickable, protocol/www stripped, truncated
+            if (/^https?:\/\//.test(s)) {
+                let disp = s.replace(/^https?:\/\/(www\.)?/, "");
+                if (disp.length > max) disp = disp.slice(0, max - 1) + "…";
+                return `<a class="cite-link" href="${escapeHtml(s)}" target="_blank" rel="noopener" title="${escapeHtml(s)}">${escapeHtml(disp)}</a>`;
+            }
+            return escapeHtml(s);
+        }
+
+        function showRefDetails(info) {
+            const panel = document.getElementById("nodeDetailsPanel");
+            if (!panel) return;
+            let html = `<div class="node-details">
+                <div class="node-details-label">${escapeHtml(info.label || info.id)}</div>
+                <div class="node-details-item">
+                    <div class="node-details-item-label">ID / Type</div>
+                    ${escapeHtml(info.id)}${info.types && info.types.length ? " — " + escapeHtml(info.types.join(", ")) : ""}
+                </div>`;
+            for (const [k, vals] of Object.entries(info.props || {})) {
+                html += `<div class="node-details-item">
+                    <div class="node-details-item-label">${escapeHtml(k)}</div>
+                    ${vals.map(v => shortVal(v)).join(", ")}
+                </div>`;
+            }
+            html += `</div>`;
+            panel.innerHTML = html;
+            panel.style.display = "block";
+            openDetailsColumn();
+        }
+
+        function zoomGraph(factor) {
+            if (!cy) return;
+            // anchor the zoom to the viewport center so the view doesn't drift
+            cy.zoom({
+                level: cy.zoom() * factor,
+                renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 }
+            });
+        }
+
+        function withViewBox(svg) {
+            // cytoscape-svg emits fixed width/height but no viewBox, so CSS
+            // scaling crops instead of scaling. Add a viewBox = full extent.
+            const m = svg.match(/<svg[^>]*\swidth="([\d.]+)"[^>]*\sheight="([\d.]+)"/);
+            if (!m) return svg;
+            return svg.replace(/<svg([^>]*)>/, (all, attrs) =>
+                /viewBox=/.test(attrs) ? all : `<svg${attrs} viewBox="0 0 ${m[1]} ${m[2]}">`);
+        }
+
+        function exportSvg() {
+            // Vector export of the current graph view — for paper figures,
+            // no screenshots needed. full:true renders the whole graph
+            // regardless of pan/zoom; the current styling is preserved.
+            if (!cy || typeof cy.svg !== "function") { alert("SVG export unavailable (plugin not loaded)"); return; }
+            // current viewport, as framed on screen; click fit (⊡) first for the full graph
+            const svg = withViewBox(cy.svg({ full: false, scale: 2, bg: "#ffffff" }));
+            const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "jprx-graph.svg";
+            a.click();
+            URL.revokeObjectURL(a.href);
+        }
+
+        async function exportPdf() {
+            // Server-side PDF: the current view (graph as vector SVG + panels
+            // + answer text, app styling) is rendered to a finished PDF by
+            // headless Chromium on the server and downloaded directly — no
+            // print dialog, identical output in every browser.
+            if (!cy || typeof cy.svg !== "function") { alert("Export unavailable"); return; }
+            // full:false = the current viewport — the graph exactly as framed
+            // in the browser (pan, zoom, centering). Fit first to export all.
+            // PDF only: Chromium's PDF backend explodes each dotted edge into
+            // thousands of dash segments (8k edges -> 90 MB). Solid faint
+            // strokes for co-occurrence edges bring it to <1 MB; dependency
+            // edges stay distinct by colour and arrowhead. The SVG export
+            // keeps the dotted style.
+            const svg = withViewBox(cy.svg({ full: false, scale: 2, bg: "#ffffff" }))
+                .replace(/\sstroke-dasharray="[^"]*"/g, "");
+            const styles = Array.from(document.querySelectorAll("style"))
+                .map(s => s.textContent).join("\n");
+            const clone = document.querySelector(".layout-container").cloneNode(true);
+            clone.querySelector("#graph-container").innerHTML = svg;
+            // a textarea's typed value is form state, not markup — cloneNode drops it
+            const liveQ = document.getElementById("queryInput");
+            const cloneQ = clone.querySelector("#queryInput");
+            if (liveQ && cloneQ) cloneQ.textContent = liveQ.value;
+            // Mirror the Read-more state: open -> full answer, no toggle;
+            // collapsed -> summary only, with an explicit note so the export
+            // can never pass a summary off as the whole answer.
+            clone.querySelectorAll("details.answer-more").forEach(d => {
+                const s = d.querySelector("summary");
+                if (d.hasAttribute("open")) { if (s) s.remove(); return; }
+                const note = document.createElement("div");
+                note.className = "export-note";
+                note.textContent = "Detailed answer collapsed in this export — open “Read more” in the Atlas before exporting for the full text.";
+                d.replaceWith(note);
+            });
+            clone.innerHTML = clone.innerHTML.replace(/Dotted, no arrow/g, "Thin, no arrow");
+            const html =
+                "<!doctype html><html><head><title>Process Atlas export</title>" +
+                "<style>" + styles + "</style>" +
+                "<style>" +
+                "html, body { height: auto !important; overflow: visible !important; background: #f5f7fa !important; }" +
+                "body { padding: 24px !important; }" +
+                ".layout-container, .main-content, .sidebar, .sidebar-content " +
+                "  { height: auto !important; max-height: none !important; overflow: visible !important; }" +
+                "#graph-container { position: static !important; height: auto !important; inset: auto !important; }" +
+                // do not stretch the graph column to the sidebar's height: the graph
+                // card keeps the browser's proportions, the legend strip sits right under it
+                ".graph-row { align-items: flex-start !important; }" +
+                ".header h1 { background: none !important; -webkit-text-fill-color: #00a6d6 !important; color: #00a6d6 !important; }" +
+                // Chromium writes box-shadows into PDFs as transparency groups, which
+                // macOS Preview drops. A hairline border renders identically everywhere.
+                ".header, .details-strip, .graph-canvas-wrap, .sidebar { box-shadow: none !important; border: 1px solid #e3e6ea !important; }" +
+                ".export-note { font-style: italic; color: #666; font-size: 11px; margin-top: 8px; }" +
+                ".header-content { max-width: none !important; }" +
+                ".graph-column > * { flex: none !important; }" +
+                "#graph-container svg { width: 100%; height: auto; display: block; }" +
+                ".control-btn, .sidebar-toggle, #searchBtn, #exampleSelect { display: none !important; }" +
+                "body { margin: 0 !important; }" +
+                "</style></head><body>" + clone.outerHTML + "</body></html>";
+            const btn = event && event.target;
+            if (btn) btn.textContent = "…";
+
+            if (STATIC_MODE) {
+                // No server to render with, so hand the very same document to
+                // the browser's print-to-PDF. The page is sized to the content
+                // measured after layout, as the server does, so the result is
+                // one page rather than a sliced A4 run. The user still gets a
+                // print dialog: choose "Save as PDF".
+                try {
+                    const frame = document.createElement("iframe");
+                    frame.setAttribute("aria-hidden", "true");
+                    // must be laid out at the real page width: a 1px frame
+                    // collapses the grid and the measured page comes out narrow
+                    const pageW = document.documentElement.clientWidth;
+                    frame.style.cssText = "position:fixed;left:-20000px;top:0;border:0;" +
+                                          `width:${pageW}px;height:1200px;`;
+                    document.body.appendChild(frame);
+                    const doc = frame.contentDocument;
+                    doc.open(); doc.write(html); doc.close();
+                    await new Promise(r => setTimeout(r, 400));   // let it lay out
+                    const w = Math.max(pageW, Math.ceil(doc.documentElement.scrollWidth));
+                    const h = Math.ceil(doc.body.scrollHeight) + 40;
+                    const page = doc.createElement("style");
+                    page.textContent = `@page { size: ${w}px ${h}px; margin: 0; }`;
+                    doc.head.appendChild(page);
+                    await new Promise(r => setTimeout(r, 200));
+                    frame.contentWindow.focus();
+                    frame.contentWindow.print();
+                    setTimeout(() => frame.remove(), 60000);      // outlive the dialog
+                } finally {
+                    if (btn) btn.textContent = "PDF";
+                }
+                return;
+            }
+
+            try {
+                const resp = await fetch("/export-pdf", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ html: html, width: document.documentElement.clientWidth }),
+                });
+                if (!resp.ok) {
+                    alert("PDF export failed: " + (await resp.text()).slice(0, 300));
+                    return;
+                }
+                const blob = await resp.blob();
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = "process-atlas.pdf";
+                a.click();
+                URL.revokeObjectURL(a.href);
+            } finally {
+                if (btn) btn.textContent = "PDF";
+            }
+        }
+
+        function fitGraph() {
+            cy.fit(cy.elements(), 30);
+        }
+
+        function resetGraph() {
+            if (cy) {
+                cy.elements().unselect();
+                cy.animate({ fit: { eles: cy.elements(), padding: 30 } }, { duration: 300 });
+            }
+        }
+
+        // Initialize on load
+        window.addEventListener("load", initGraph);
+    </script>
+</body>
+</html>
