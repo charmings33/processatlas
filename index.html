@@ -1906,7 +1906,10 @@
 
                 // Any graph id mentioned inline (census records, cases,
                 // dependencies, enabler codes) becomes clickable too
-                html = html.replace(/\b(census_[A-Za-z0-9_-]+|RP\d{1,3}|DEP\d{1,3}|[A-Z]{2}\d{1,2})\b/g,
+                // Firm_NNN (public build) and Company_X (private) are nodes too:
+                // they carry the cases they are credited on, so a firm named in
+                // an answer should open its record like any other id.
+                html = html.replace(/\b(census_[A-Za-z0-9_-]+|Firm_\d{1,4}|Company_[A-Za-z0-9_]+|RP\d{1,3}|DEP\d{1,3}|[A-Z]{2}\d{1,2})\b/g,
                     m => `<a class="cite-link" onclick="event.stopPropagation(); focusRef('${m}')">${m}</a>`);
 
                 // Summary first (the model's opening paragraph), the rest
