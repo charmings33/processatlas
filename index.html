@@ -2165,6 +2165,13 @@
                 "body { padding: 24px !important; }" +
                 ".layout-container, .main-content, .sidebar, .sidebar-content " +
                 "  { height: auto !important; max-height: none !important; overflow: visible !important; }" +
+                // The legend strip is capped at 210px on screen and each column
+                // scrolls inside it, which is why the edge-type legend ("Dashed
+                // ring ...") was readable on screen and absent from the PDF: a
+                // scroll container prints only what is above its fold. Nothing
+                // scrolls on paper, so let the strip take the height it needs.
+                ".details-strip { max-height: none !important; overflow: visible !important; }" +
+                ".strip-col { max-height: none !important; overflow: visible !important; }" +
                 "#graph-container { position: static !important; height: auto !important; inset: auto !important; }" +
                 // do not stretch the graph column to the sidebar's height: the graph
                 // card keeps the browser's proportions, the legend strip sits right under it

@@ -5,8 +5,10 @@ type: dataset
 authors:
   - family-names: Ng
     given-names: Charmaine Ming Shan
+    orcid: "https://orcid.org/0000-0003-2610-3561"
   - family-names: Dillenburger
     given-names: Benjamin
+    orcid: "https://orcid.org/0000-0002-5153-2985"
   - family-names: Hu
     given-names: Rongbo
 license: CC-BY-4.0

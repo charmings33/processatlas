@@ -4,14 +4,21 @@
  "description": "An explorable, anonymised release of the JPRX knowledge graph of Japanese robotic-construction and digital-fabrication processes: enablers of the Ng et al. (2022) DfDFAB ontology, a census of robotic processes, deep-coded polar cases, literature-cited dependencies between enablers with their evidence grades, and co-occurrence derived from the cases. The archive contains the graph in RDF/Turtle and the Process Atlas, a self-contained web viewer that runs from the archive without a server. Company and robot identities are removed; firms appear as stable pseudonyms so that co-development structure stays analysable. Categorical attributes are released unchanged, so individual well-known processes may remain recognisable.",
  "creators": [
   {
-   "name": "Ng, Charmaine Ming Shan"
+   "name": "Ng, Charmaine Ming Shan",
+   "orcid": "0000-0003-2610-3561"
   },
   {
    "name": "Dillenburger, Benjamin",
-   "affiliation": "ETH Zurich"
+   "affiliation": "ETH Zurich",
+   "orcid": "0000-0002-5153-2985"
   },
   {
    "name": "Hu, Rongbo"
+  }
+ ],
+ "grants": [
+  {
+   "id": "10.13039/501100001711::IZSEZ0_242606"
   }
  ],
  "license": "cc-by-4.0",

@@ -38,11 +38,16 @@ these are bibliographic references, not firm identifications.
 
 ## Answering questions
 
-The Atlas answers the example questions from answers generated once, at build
-time, and stored here with their sources. Generating a new answer needs the
-retrieval index and a language model, which a static page cannot host; to ask
-your own questions, run the instrument from the released code against this
-graph.
+The retrieval and generation pipeline runs against the graph; this page is
+statically hosted, so each example answer is served exactly as the pipeline
+produced it, together with its sources. A hosted interface for free-form
+queries is in preparation. To ask your own questions today, run the instrument
+from the released code against this graph.
+
+## Funding
+
+Supported in part by the Swiss National Science Foundation (SNSF) Scientific
+Exchanges grant IZSEZ0_242606.
 
 ## Reuse
 
