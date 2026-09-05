@@ -2128,6 +2128,12 @@
                     : "<!doctype html><html><head><title>Process Atlas export (identified data, not for distribution)</title>") +
                 "<style>" + styles + "</style>" +
                 "<style>" +
+                // Browsers print with "Background graphics" off by default, which
+                // dropped the grey ground and every card fill, leaving a white
+                // page. print-color-adjust:exact is the standard way to ask for
+                // them anyway, and the server-side path already renders with
+                // backgrounds on, so the two paths now match.
+                "* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }" +
                 "html, body { height: auto !important; overflow: visible !important; background: #f5f7fa !important; }" +
                 "body { padding: 24px !important; }" +
                 ".layout-container, .main-content, .sidebar, .sidebar-content " +
