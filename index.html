@@ -58,7 +58,10 @@
         .public-note strong { color: #4a4f57; }
 
         .about-link {
-            margin-left: 12px;
+            /* top-right of the header, opposite the title: in the running text
+               it separated the usage line from the release note below it */
+            align-self: flex-start;
+            padding-top: 4px;
             color: #00a6d6;
             font-weight: 600;
             cursor: pointer;
@@ -925,7 +928,6 @@
                     <h1>Process Atlas</h1>
                     <p style="font-size: 13px; color: #666; margin-top: 4px;">
                         <strong>Default view:</strong> the full graph — all enablers with all correlations and dependencies. <strong>Search:</strong> shows only the enablers relevant to your query, path highlighted.
-                        <a id="aboutLink" class="about-link" onclick="toggleAbout()">About this project ▸</a>
                     </p>
                     <p id="publicNote" class="public-note" hidden>
                         <strong>Public release.</strong> This is the anonymised graph: company and robot
@@ -937,6 +939,7 @@
                         language model. Details, licence and citation are in the README of the release.
                     </p>
                 </div>
+                <a id="aboutLink" class="about-link" onclick="toggleAbout()">About this project ▸</a>
             </div>
             <div id="aboutPanel" class="about-panel" style="display: none;">
                 <p>
