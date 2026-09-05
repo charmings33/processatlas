@@ -60,6 +60,20 @@
         }
         .public-note strong { color: #4a4f57; }
 
+        /* the identified instance names firms and robots; the anonymised one
+           does not, and on screen they are otherwise identical */
+        .private-badge {
+            font-size: 12px;
+            font-weight: 600;
+            vertical-align: 4px;
+            margin-left: 8px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: #8a1c1c;
+            background: #fdf3f3;
+            border: 1px solid #d8a0a0;
+        }
+
         .about-link {
             /* top-right of the header, opposite the title: in the running text
                it separated the usage line from the release note below it */
@@ -928,7 +942,7 @@
         <div class="header">
             <div class="header-content">
                 <div>
-                    <h1>Process Atlas</h1>
+                    <h1>Process Atlas<span id="privateBadge" class="private-badge" hidden>Private</span></h1>
                     <p style="font-size: 13px; color: #666; margin-top: 4px;">
                         <strong>Default view:</strong> the full graph — all enablers with all correlations and dependencies. <strong>Search:</strong> shows only the enablers relevant to your query, path highlighted.
                     </p>
@@ -1048,6 +1062,7 @@
                             <option value="What becomes possible once a product range is highly standardised?">What becomes possible once a product range is highly standardised?</option>
                             <option value="How can concrete construction become circular?">How can concrete construction become circular?</option>
                             <option value="Which firms have co-developed several robotic construction processes with partners?">Which firms have co-developed several robotic construction processes with partners?</option>
+                            <option value="What is required to deliver a prefabricated timber facade with non-repeating panels within a Minergie envelope?">What is required to deliver a prefabricated timber facade with non-repeating panels within a Minergie envelope?</option>
                         </select>
                         <div class="search-row">
                             <textarea id="queryInput" rows="3" placeholder="Ask the knowledge graph…"
@@ -1237,7 +1252,7 @@
                         const focused = await staticFocus(body && body.query);
                         return focused ? jsonResponse(focused) : fetch(STATIC_BASE + "graph.json");
                     }
-                    return jsonResponse({ detail: "No stored answer for this question. The graph beside it is filtered to the enablers your words match, with their dependencies and strongest co-occurrences, which this page can compute on its own. Writing a grounded answer cannot be done here: it needs the retrieval index and a language model. The Examples menu holds five answered questions, and the released code answers any question against this same graph." }, 501);
+                    return jsonResponse({ detail: "No stored answer for this question. The graph beside it is filtered to the enablers your words match, with their dependencies and strongest co-occurrences, which this page can compute on its own. Writing a grounded answer cannot be done here: it needs the retrieval index and a language model. The Examples menu holds the answered questions, and the released code answers any question against this same graph." }, 501);
                 }
                 const baked = await (await fetch(STATIC_BASE + "queries/" + file)).json();
                 return jsonResponse(path === "/graph" ? baked.graph : baked.answer);
@@ -1256,6 +1271,12 @@
         if (STATIC_MODE) {
             const note = document.getElementById("publicNote");
             if (note) note.hidden = false;
+        } else {
+            // the identified instance says so on screen, not only in the export:
+            // the two are indistinguishable by title, and only one is publishable
+            document.title = "Process Atlas (Private)";
+            const badge = document.getElementById("privateBadge");
+            if (badge) badge.hidden = false;
         }
 
         async function initGraph() {
