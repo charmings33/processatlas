@@ -2150,6 +2150,11 @@
                 ".header, .details-strip, .graph-canvas-wrap, .sidebar { box-shadow: none !important; border: 1px solid #e3e6ea !important; }" +
                 ".export-note { font-style: italic; color: #666; font-size: 11px; margin-top: 8px; }" +
                 ".header-content { max-width: none !important; }" +
+                // the export wraps everything in 24px of body padding, and
+                // .main-content adds 20px of its own, so the content cards sat
+                // 44px in while the header card started at 24px. Keep the
+                // vertical rhythm, drop the horizontal doubling.
+                ".main-content { padding-left: 0 !important; padding-right: 0 !important; }" +
                 ".graph-column > * { flex: none !important; }" +
                 "#graph-container svg { width: 100%; height: auto; display: block; }" +
                 ".control-btn, .sidebar-toggle, #searchBtn, #exampleSelect { display: none !important; }" +
