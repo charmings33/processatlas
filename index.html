@@ -1906,7 +1906,7 @@
 
                 // Any graph id mentioned inline (census records, cases,
                 // dependencies, enabler codes) becomes clickable too
-                // Firm_NNN (public build) and Company_X (private) are nodes too:
+                // Firm_NNN (public build) and Company_<name> (private) are nodes too:
                 // they carry the cases they are credited on, so a firm named in
                 // an answer should open its record like any other id.
                 html = html.replace(/\b(census_[A-Za-z0-9_-]+|Firm_\d{1,4}|Company_[A-Za-z0-9_]+|RP\d{1,3}|DEP\d{1,3}|[A-Z]{2}\d{1,2})\b/g,
@@ -2096,7 +2096,12 @@
             });
             clone.innerHTML = clone.innerHTML.replace(/Dotted, no arrow/g, "Thin, no arrow");
             const html =
-                "<!doctype html><html><head><title>Process Atlas export</title>" +
+                // an export from the private instance carries identified data and
+                // must say so: the two instances are otherwise indistinguishable
+                // on paper, and only one of them is publishable
+                (STATIC_MODE
+                    ? "<!doctype html><html><head><title>Process Atlas export</title>"
+                    : "<!doctype html><html><head><title>Process Atlas export (identified data, not for distribution)</title>") +
                 "<style>" + styles + "</style>" +
                 "<style>" +
                 "html, body { height: auto !important; overflow: visible !important; background: #f5f7fa !important; }" +
@@ -2117,7 +2122,13 @@
                 "#graph-container svg { width: 100%; height: auto; display: block; }" +
                 ".control-btn, .sidebar-toggle, #searchBtn, #exampleSelect { display: none !important; }" +
                 "body { margin: 0 !important; }" +
-                "</style></head><body>" + clone.outerHTML + "</body></html>";
+                "</style></head><body>" +
+                (STATIC_MODE ? "" :
+                 "<div style=\"font: 600 12px/1.4 -apple-system, system-ui, sans-serif; color:#8a1c1c;" +
+                 " border:1px solid #d8a0a0; background:#fdf3f3; padding:8px 12px; margin:0 0 14px;\">" +
+                 "Identified data. This export names firms and robots and is not the anonymised public release." +
+                 "</div>") +
+                clone.outerHTML + "</body></html>";
             const btn = event && event.target;
             if (btn) btn.textContent = "…";
 
