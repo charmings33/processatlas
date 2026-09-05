@@ -545,17 +545,17 @@
         }
 
         .edge-line.dependency {
-            background: #c2691a;
+            background: #000000;
         }
 
         .edge-line.correlation {
             background: repeating-linear-gradient(90deg,
-                #4a5fb0 0 2px, transparent 2px 7px);
+                #000000 0 2px, transparent 2px 7px);
         }
 
         .edge-line.unvalidated {
             background: repeating-linear-gradient(90deg,
-                #4a5fb0 0 9px, transparent 9px 13px);
+                #000000 0 9px, transparent 9px 13px);
         }
 
         .accordion-header {
@@ -1323,7 +1323,7 @@
                     {
                         selector: 'edge[type="coOccursWith"]',
                         style: {
-                            "line-color": "#4a5fb0",
+                            "line-color": "#000000",
                             // DOTS. [1,5] with round caps reads as a bead chain —
                             // categorically different from the long dash used for
                             // unvalidated edges (14:1 stroke-length ratio). The old
@@ -1354,10 +1354,10 @@
                         // co-occurrence is the non-dependency edge
                         selector: 'edge[type != "coOccursWith"]',
                         style: {
-                            // SOLID + arrowhead. Chroma raised from #d4a574, which
-                            // failed the chroma floor (read as gray) and sat at
-                            // 2.17:1 against the surface, below the 3:1 minimum.
-                            "line-color": "#c2691a",
+                            // SOLID + arrowhead, black. The two edge layers are
+                            // now separated by texture and direction alone
+                            // (solid+arrow vs. dotted+no arrow), not by hue.
+                            "line-color": "#000000",
                             // Pinned solid deliberately. The old
                             // `edge[validated = false]` rule sat after this one
                             // and Cytoscape matched it against validated: null
@@ -1370,7 +1370,7 @@
                             "line-dash-pattern": [1, 0],
                             "width": "2.8px",
                             "target-arrow-shape": "triangle",
-                            "target-arrow-color": "#c2691a",
+                            "target-arrow-color": "#000000",
                             // Default arrow-scale is 1, which on a ~2px edge is a
                             // ~7px head -- invisible at full-graph zoom, so the
                             // directionality that distinguishes this layer from
@@ -1387,7 +1387,7 @@
                             "text-rotation": "autorotate",
                             "text-margin-y": -8,
                             "text-background-opacity": 0,
-                            "color": "#8a4a12",
+                            "color": "#1a1a1a",
                             "font-size": "9px",
                             "font-weight": "normal",
                             "z-index": 10
