@@ -1118,21 +1118,19 @@
                     </div>
                     <div class="strip-col" id="detailsColumn">
                         <div class="sidebar-section-title details-header">
-                            <span>Linked Info</span>
+                            <span>Relevant Enablers
+                                <span class="count" id="pathCount">0</span>
+                            </span>
                             <button class="details-close" onclick="closeDetailsColumn()" title="Close">&times;</button>
                         </div>
                         <div id="detailsEmpty" class="details-empty">
                             Click a node for its record, or search to list the enablers
                             relevant to a question.
                         </div>
-                        <div id="nodeDetailsPanel"></div>
                         <div class="sidebar-section" id="pathNodesSection" style="display: none;">
-                            <div class="sidebar-section-title strip-subtitle">
-                                Relevant Enablers
-                                <span class="count" id="pathCount">0</span>
-                            </div>
                             <div id="pathNodesList"></div>
                         </div>
+                        <div id="nodeDetailsPanel"></div>
                     </div>
                 </div>
                 </div>
@@ -2008,10 +2006,23 @@
                 // behind a native <details> accordion; sources stay visible
                 // because provenance is the point.
                 {
-                    const cut = html.indexOf("\n\n");
-                    if (cut > 0) {
-                        const summary = html.slice(0, cut).replace(/^\s*<strong>Summary:?<\/strong>\s*/i, "").replace(/^\s*Summary:\s*/i, "");
-                        const rest = html.slice(cut).replace(/^\n+/, "");
+                    // The model writes the label two ways: inline ("Summary: ...")
+                    // and as a heading on its own line, with the paragraph after
+                    // it. Stripping the label used to leave an EMPTY summary in
+                    // the second case, so the answer panel looked blank and the
+                    // whole answer sat behind "Read more".
+                    const stripLabel = t => t
+                        .replace(/^\s*<strong>\s*Summary:?\s*<\/strong>\s*/i, "")
+                        .replace(/^\s*Summary:\s*/i, "");
+                    const isLabelOnly = t =>
+                        t.replace(/<[^>]*>/g, "").replace(/[:\s]/g, "").toLowerCase() === "summary";
+
+                    const paras = html.split("\n\n");
+                    let i = 0;
+                    while (i < paras.length && (isLabelOnly(paras[i]) || !paras[i].trim())) i++;
+                    if (i < paras.length && paras.length > i + 1) {
+                        const summary = stripLabel(paras[i]);
+                        const rest = paras.slice(i + 1).join("\n\n").replace(/^\n+/, "");
                         html = `<div class="answer-summary">${summary}</div>` +
                                `<details class="answer-more"><summary>Read more</summary><div class="answer-rest">${rest}</div></details>`;
                     }
