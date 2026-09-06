@@ -268,6 +268,12 @@
             grid-template-columns: 1.5fr 1.1fr 1.1fr;
         }
 
+        .details-empty {
+            color: #8a9098;
+            line-height: 1.5;
+            padding: 4px 2px;
+        }
+
         .strip-subtitle {
             margin-top: 8px;
         }
@@ -1067,7 +1073,7 @@
                     </div>
                 </div>
 
-                <div class="details-strip">
+                <div class="details-strip with-details">
                     <div class="strip-col legend-grid">
                             <div class="sidebar-section-title">
                                 Nodes
@@ -1110,10 +1116,14 @@
                         </div>
                         <div id="nodesList"></div>
                     </div>
-                    <div class="strip-col" id="detailsColumn" style="display: none;">
+                    <div class="strip-col" id="detailsColumn">
                         <div class="sidebar-section-title details-header">
                             <span>Linked Info</span>
                             <button class="details-close" onclick="closeDetailsColumn()" title="Close">&times;</button>
+                        </div>
+                        <div id="detailsEmpty" class="details-empty">
+                            Click a node for its record, or search to list the enablers
+                            relevant to a question.
                         </div>
                         <div id="nodeDetailsPanel"></div>
                         <div class="sidebar-section" id="pathNodesSection" style="display: none;">
@@ -1187,12 +1197,12 @@
         }
 
         function openDetailsColumn() {
-            const col = document.getElementById("detailsColumn");
-            if (col) col.style.display = "block";
-            // the strip is a grid, so the third track has to be added and
-            // removed with the column or the other two keep its width
-            const strip = col && col.closest(".details-strip");
-            if (strip) strip.classList.add("with-details");
+            // The column is always in the strip now: hiding it left a visible
+            // hole where a third of the strip should be, and on first load the
+            // page came up as two columns and a gap. Only the empty-state hint
+            // comes and goes.
+            const hint = document.getElementById("detailsEmpty");
+            if (hint) hint.style.display = "none";
         }
 
         function closeDetailsColumn() {
@@ -1203,12 +1213,8 @@
             if (panel) panel.innerHTML = "";
             const pathSection = document.getElementById("pathNodesSection");
             const hasEnablers = pathSection && pathSection.style.display !== "none";
-            const col = document.getElementById("detailsColumn");
-            if (col && !hasEnablers) {
-                col.style.display = "none";
-                const strip = col.closest(".details-strip");
-                if (strip) strip.classList.remove("with-details");
-            }
+            const hint = document.getElementById("detailsEmpty");
+            if (hint && !hasEnablers) hint.style.display = "";
         }
 
         function toggleSidebar() {
