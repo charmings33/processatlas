@@ -760,7 +760,9 @@
             cursor: pointer;
             list-style: none;
             font-weight: 600;
-            color: #1a1a1a;
+            /* the Search button's own blue, so the one control in the answer
+               panel reads as a control rather than as bold body text */
+            color: #00a6d6;
             font-size: 12px;
             padding: 4px 0;
             user-select: none;
@@ -1011,7 +1013,7 @@
                 <div>
                     <h1>Process Atlas<span id="privateBadge" class="private-badge" hidden>Private</span></h1>
                     <p style="font-size: 13px; color: #666; margin-top: 4px;">
-                        <strong>Default view:</strong> the full graph — all enablers with all correlations and dependencies. <strong>Search:</strong> shows only the enablers relevant to your query, path highlighted.
+                        <strong>Default view:</strong> the full graph — all enablers with all correlations and dependencies. <strong>Search:</strong> shows the enablers your query reaches, path highlighted.
                     </p>
                     <p id="publicNote" class="public-note" hidden>
                         <strong>Public release.</strong> This is the anonymised graph: company and robot
@@ -2023,8 +2025,14 @@
                     if (i < paras.length && paras.length > i + 1) {
                         const summary = stripLabel(paras[i]);
                         const rest = paras.slice(i + 1).join("\n\n").replace(/^\n+/, "");
+                        // The label names the action, so it has to flip when the
+                        // section opens: "Read more" on an already-open passage
+                        // tells the reader nothing about what clicking will do.
+                        // Inline handler because this markup is injected with
+                        // innerHTML, which never runs a <script>.
                         html = `<div class="answer-summary">${summary}</div>` +
-                               `<details class="answer-more"><summary>Read more</summary><div class="answer-rest">${rest}</div></details>`;
+                               `<details class="answer-more" ontoggle="this.querySelector('summary').textContent = this.open ? 'Read less' : 'Read more'">` +
+                               `<summary>Read more</summary><div class="answer-rest">${rest}</div></details>`;
                     }
                 }
 
@@ -2215,7 +2223,7 @@
                 if (d.hasAttribute("open")) { if (s) s.remove(); return; }
                 const note = document.createElement("div");
                 note.className = "export-note";
-                note.textContent = "Detailed answer collapsed in this export — open “Read more” in the Atlas before exporting for the full text.";
+                note.textContent = "Detailed answer collapsed in this export. Open “Read more” in the Atlas before exporting for the full text.";
                 d.replaceWith(note);
             });
             clone.innerHTML = clone.innerHTML.replace(/Dotted, no arrow/g, "Thin, no arrow");
