@@ -255,11 +255,12 @@
                mostly empty space the graph could use. */
             grid-template-columns: 1.5fr 1.1fr;
             gap: 20px;
-            /* taller than the old 210px: the category accordion moved in here
-               from a full-height column of its own. 340 fits all eight
-               categories closed, so the common case needs no scrolling; the
-               columns still scroll once a category is expanded. */
-            max-height: 340px;
+            /* Kept short on purpose: every pixel here is a pixel the graph
+               canvas does not get, and the strip was 334px tall against a
+               525px canvas. The height is set by the tallest thing that has
+               to be read at full size, the five relevant enablers in Linked
+               Info; the category list is set smaller to fit the same box. */
+            max-height: 205px;
             font-size: 11px;
         }
 
@@ -268,7 +269,46 @@
         }
 
         .strip-subtitle {
-            margin-top: 10px;
+            margin-top: 8px;
+        }
+
+        /* The category list is a compact index, not prose: eight rows have to
+           sit inside the same box as five Linked Info entries. */
+        /* Scoped through .details-strip because the strip's own accordion
+           rules below match with the same specificity and would otherwise win
+           on source order, which is why the rows stayed 22px. */
+        .details-strip .cat-col .accordion-header {
+            font-size: 9px;
+            padding: 2px 6px;
+            margin-bottom: 1px;
+            gap: 6px;
+        }
+
+        .details-strip .cat-col .accordion-header .count {
+            font-size: 9px;
+        }
+
+        .details-strip .cat-col .accordion-group .legend-color {
+            width: 8px;
+            height: 8px;
+        }
+
+        .details-strip .cat-col .accordion-arrow {
+            font-size: 7px;
+        }
+
+        .details-strip .cat-col .node-item {
+            font-size: 9px;
+            padding: 1px 6px 1px 20px;
+        }
+
+        /* Linked Info stays at reading size, but the rows are tightened so six
+           relevant enablers fit the same box as the eight categories beside
+           them. The alternative was a taller strip, and every pixel here comes
+           off the graph canvas. */
+        .details-strip #detailsColumn .node-item {
+            padding: 3px 8px;
+            margin-bottom: 1px;
         }
 
         #detailsColumn .details-header {
@@ -1048,14 +1088,6 @@
                                 </label>
                             </div>
                             <div class="sidebar-section-title strip-subtitle">
-                                Enablers by category
-                                <span class="count" id="allNodesCount">0</span>
-                            </div>
-                            <div id="nodesList"></div>
-                    </div>
-                    <div class="strip-col">
-                        <div>
-                            <div class="sidebar-section-title">
                                 Edges
                                 <span class="count" id="edgeCount">0</span>
                             </div>
@@ -1070,7 +1102,13 @@
                             <div class="edge-item">
                                 <span><strong>Dashed ring</strong> — enabler activated in none of the 50 cases (no edges)</span>
                             </div>
+                    </div>
+                    <div class="strip-col cat-col">
+                        <div class="sidebar-section-title">
+                            Enablers by category
+                            <span class="count" id="allNodesCount">0</span>
                         </div>
+                        <div id="nodesList"></div>
                     </div>
                     <div class="strip-col" id="detailsColumn" style="display: none;">
                         <div class="sidebar-section-title details-header">
