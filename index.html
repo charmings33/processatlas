@@ -523,7 +523,7 @@
             margin-bottom: 20px;
         }
 
-        /* Relevant Enablers sits in the Linked Info column: breathing room
+        /* The highlighted-enabler list sits in the third strip column: breathing room
            below the header when no node card is shown, and below the card
            when one is. */
         #detailsColumn #pathNodesSection {
@@ -1118,14 +1118,14 @@
                     </div>
                     <div class="strip-col" id="detailsColumn">
                         <div class="sidebar-section-title details-header">
-                            <span>Relevant Enablers
+                            <span>Highlighted in Graph
                                 <span class="count" id="pathCount">0</span>
                             </span>
                             <button class="details-close" onclick="closeDetailsColumn()" title="Close">&times;</button>
                         </div>
                         <div id="detailsEmpty" class="details-empty">
-                            Click a node for its record, or search to list the enablers
-                            relevant to a question.
+                            Click a node for its record, or search to highlight the
+                            enablers a question reaches.
                         </div>
                         <div class="sidebar-section" id="pathNodesSection" style="display: none;">
                             <div id="pathNodesList"></div>
@@ -1204,7 +1204,7 @@
         }
 
         function closeDetailsColumn() {
-            // The third column holds the Relevant Enablers list as well as the
+            // The third column holds the highlighted-enabler list as well as the
             // node card, so "close" clears the card and only hides the column
             // when there are no enablers to show.
             const panel = document.getElementById("nodeDetailsPanel");
@@ -1908,7 +1908,7 @@
                 answerDone = fetchAnswer(query);
 
                 // Mark path edges AFTER graph is rendered. Edge marking needs a
-                // pair, but the Relevant Enablers list below must follow every
+                // pair, but the highlighted-enabler list below must follow every
                 // result, including a single-node one: gating the whole block on
                 // length > 1 left the previous query's enablers on screen.
                 if (data.path && data.path.length > 1 && cy) {
@@ -1939,7 +1939,7 @@
                     }
                     if (pathCount) pathCount.textContent = data.path.length;
                     if (pathSection) pathSection.style.display = "block";
-                    openDetailsColumn();   // Relevant Enablers live in the third column now
+                    openDetailsColumn();   // the highlighted list lives in the third column now
                 }
             } catch (error) {
                 console.error("Search error:", error);
