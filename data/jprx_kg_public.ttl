@@ -4878,7 +4878,7 @@ jprx:cooc_AC10_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC10_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC10 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_AC10_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC10 ;
@@ -5303,7 +5303,7 @@ jprx:cooc_AC11_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC11_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AC11_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
@@ -5498,7 +5498,7 @@ jprx:cooc_AC11_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC11_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_AC11_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
@@ -5533,7 +5533,7 @@ jprx:cooc_AC11_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC11_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 14 .
+    jprx:weight 13 .
 
 jprx:cooc_AC11_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC11 ;
@@ -6093,7 +6093,7 @@ jprx:cooc_AC12_RE15 a jprx:CoOccurrence ;
 jprx:cooc_AC12_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC12 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 4 .
+    jprx:weight 3 .
 
 jprx:cooc_AC12_RE4 a jprx:CoOccurrence ;
     jprx:source jprx:AC12 ;
@@ -6468,7 +6468,7 @@ jprx:cooc_AC13_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC13_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AC13_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
@@ -6663,7 +6663,7 @@ jprx:cooc_AC13_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC13_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_AC13_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
@@ -6698,7 +6698,7 @@ jprx:cooc_AC13_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC13_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 22 .
+    jprx:weight 21 .
 
 jprx:cooc_AC13_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC13 ;
@@ -7083,7 +7083,7 @@ jprx:cooc_AC14_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC14_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AC14_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
@@ -7278,7 +7278,7 @@ jprx:cooc_AC14_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC14_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_AC14_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
@@ -7313,7 +7313,7 @@ jprx:cooc_AC14_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC14_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 18 .
+    jprx:weight 17 .
 
 jprx:cooc_AC14_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC14 ;
@@ -7685,11 +7685,6 @@ jprx:cooc_AC15_AT4 a jprx:CoOccurrence ;
     jprx:target jprx:AT4 ;
     jprx:weight 1 .
 
-jprx:cooc_AC15_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AC15 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
-
 jprx:cooc_AC15_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC15 ;
     jprx:target jprx:AT6 ;
@@ -7878,7 +7873,7 @@ jprx:cooc_AC15_RE13 a jprx:CoOccurrence ;
 jprx:cooc_AC15_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC15 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_AC15_RE4 a jprx:CoOccurrence ;
     jprx:source jprx:AC15 ;
@@ -8248,7 +8243,7 @@ jprx:cooc_AC16_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC16_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AC16_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
@@ -8438,7 +8433,7 @@ jprx:cooc_AC16_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC16_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_AC16_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
@@ -8473,7 +8468,7 @@ jprx:cooc_AC16_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC16_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_AC16_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC16 ;
@@ -9343,7 +9338,7 @@ jprx:cooc_AC1_AT3 a jprx:CoOccurrence ;
 jprx:cooc_AC1_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AC1_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
@@ -9538,7 +9533,7 @@ jprx:cooc_AC1_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC1_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_AC1_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
@@ -9573,7 +9568,7 @@ jprx:cooc_AC1_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC1_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 21 .
+    jprx:weight 20 .
 
 jprx:cooc_AC1_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC1 ;
@@ -10000,11 +9995,6 @@ jprx:cooc_AC2_AT3 a jprx:CoOccurrence ;
     jprx:target jprx:AT3 ;
     jprx:weight 6 .
 
-jprx:cooc_AC2_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AC2 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
-
 jprx:cooc_AC2_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC2 ;
     jprx:target jprx:AT6 ;
@@ -10183,7 +10173,7 @@ jprx:cooc_AC2_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC2_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC2 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_AC2_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:AC2 ;
@@ -10625,11 +10615,6 @@ jprx:cooc_AC3_AT4 a jprx:CoOccurrence ;
     jprx:target jprx:AT4 ;
     jprx:weight 1 .
 
-jprx:cooc_AC3_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AC3 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
-
 jprx:cooc_AC3_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC3 ;
     jprx:target jprx:AT6 ;
@@ -10798,7 +10783,7 @@ jprx:cooc_AC3_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC3_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC3 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_AC3_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:AC3 ;
@@ -11225,11 +11210,6 @@ jprx:cooc_AC4_AT3 a jprx:CoOccurrence ;
     jprx:target jprx:AT3 ;
     jprx:weight 6 .
 
-jprx:cooc_AC4_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AC4 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
-
 jprx:cooc_AC4_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC4 ;
     jprx:target jprx:AT6 ;
@@ -11395,6 +11375,11 @@ jprx:cooc_AC4_RE1 a jprx:CoOccurrence ;
     jprx:target jprx:RE1 ;
     jprx:weight 7 .
 
+jprx:cooc_AC4_RE10 a jprx:CoOccurrence ;
+    jprx:source jprx:AC4 ;
+    jprx:target jprx:RE10 ;
+    jprx:weight 1 .
+
 jprx:cooc_AC4_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:AC4 ;
     jprx:target jprx:RE12 ;
@@ -11408,7 +11393,7 @@ jprx:cooc_AC4_RE13 a jprx:CoOccurrence ;
 jprx:cooc_AC4_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC4 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 4 .
+    jprx:weight 3 .
 
 jprx:cooc_AC4_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC4 ;
@@ -11833,7 +11818,7 @@ jprx:cooc_AC5_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC5_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AC5_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
@@ -12028,7 +12013,7 @@ jprx:cooc_AC5_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC5_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_AC5_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
@@ -12063,7 +12048,7 @@ jprx:cooc_AC5_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC5_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 16 .
+    jprx:weight 15 .
 
 jprx:cooc_AC5_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC5 ;
@@ -12485,11 +12470,6 @@ jprx:cooc_AC6_AT4 a jprx:CoOccurrence ;
     jprx:target jprx:AT4 ;
     jprx:weight 1 .
 
-jprx:cooc_AC6_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AC6 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 2 .
-
 jprx:cooc_AC6_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC6 ;
     jprx:target jprx:AT6 ;
@@ -12683,7 +12663,7 @@ jprx:cooc_AC6_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC6_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC6 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_AC6_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:AC6 ;
@@ -13123,7 +13103,7 @@ jprx:cooc_AC7_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC7_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC7 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AC7_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC7 ;
@@ -13348,7 +13328,7 @@ jprx:cooc_AC7_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC7_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC7 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 18 .
+    jprx:weight 17 .
 
 jprx:cooc_AC7_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC7 ;
@@ -13948,7 +13928,7 @@ jprx:cooc_AC8_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC8_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC8 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_AC8_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC8 ;
@@ -13983,7 +13963,7 @@ jprx:cooc_AC8_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC8_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC8 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 18 .
+    jprx:weight 17 .
 
 jprx:cooc_AC8_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC8 ;
@@ -14393,7 +14373,7 @@ jprx:cooc_AC9_AT4 a jprx:CoOccurrence ;
 jprx:cooc_AC9_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_AC9_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
@@ -14583,7 +14563,7 @@ jprx:cooc_AC9_RE1 a jprx:CoOccurrence ;
 jprx:cooc_AC9_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_AC9_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
@@ -14618,7 +14598,7 @@ jprx:cooc_AC9_RE16 a jprx:CoOccurrence ;
 jprx:cooc_AC9_RE2 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
     jprx:target jprx:RE2 ;
-    jprx:weight 21 .
+    jprx:weight 20 .
 
 jprx:cooc_AC9_RE3 a jprx:CoOccurrence ;
     jprx:source jprx:AC9 ;
@@ -19550,11 +19530,6 @@ jprx:cooc_AT1_AT4 a jprx:CoOccurrence ;
     jprx:target jprx:AT4 ;
     jprx:weight 1 .
 
-jprx:cooc_AT1_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:AT1 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
-
 jprx:cooc_AT1_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AT1 ;
     jprx:target jprx:AT6 ;
@@ -20398,7 +20373,7 @@ jprx:cooc_AT3_AT13 a jprx:CoOccurrence ;
 jprx:cooc_AT3_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:AT3 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT3_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:AT3 ;
@@ -21018,57 +20993,27 @@ jprx:cooc_AT5_AR14 a jprx:CoOccurrence ;
 jprx:cooc_AT5_AR3 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:AR3 ;
-    jprx:weight 3 .
-
-jprx:cooc_AT5_AR4 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AR4 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_AR5 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AR5 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_AR6 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AR6 ;
     jprx:weight 1 .
 
 jprx:cooc_AT5_AR8 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:AR8 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_AR9 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:AR9 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_AT11 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:AT11 ;
-    jprx:weight 3 .
-
-jprx:cooc_AT5_AT12 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AT12 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_AT13 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AT13 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_AT7 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:AT7 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_AT8 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:AT8 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_AT9 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
@@ -21078,37 +21023,32 @@ jprx:cooc_AT5_AT9 a jprx:CoOccurrence ;
 jprx:cooc_AT5_PR1 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR1 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_PR10 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR10 ;
-    jprx:weight 2 .
-
-jprx:cooc_AT5_PR11 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:PR11 ;
     jprx:weight 1 .
 
 jprx:cooc_AT5_PR12 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR12 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_PR13 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR13 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_PR14 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR14 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_PR15 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR15 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_PR16 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
@@ -21118,16 +21058,11 @@ jprx:cooc_AT5_PR16 a jprx:CoOccurrence ;
 jprx:cooc_AT5_PR17 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR17 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_PR18 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:PR18 ;
-    jprx:weight 2 .
-
-jprx:cooc_AT5_PR2 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:PR2 ;
     jprx:weight 1 .
 
 jprx:cooc_AT5_PR4 a jprx:CoOccurrence ;
@@ -21140,60 +21075,45 @@ jprx:cooc_AT5_PR8 a jprx:CoOccurrence ;
     jprx:target jprx:PR8 ;
     jprx:weight 2 .
 
-jprx:cooc_AT5_PR9 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:PR9 ;
-    jprx:weight 1 .
-
 jprx:cooc_AT5_RI1 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI1 ;
-    jprx:weight 3 .
-
-jprx:cooc_AT5_RI10 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:RI10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI11 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI11 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI12 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI12 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI14 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI14 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI15 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI15 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_RI17 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI17 ;
     jprx:weight 1 .
 
-jprx:cooc_AT5_RI18 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:RI18 ;
-    jprx:weight 1 .
-
 jprx:cooc_AT5_RI19 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI19 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI2 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI2 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_RI20 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
@@ -21208,102 +21128,82 @@ jprx:cooc_AT5_RI3 a jprx:CoOccurrence ;
 jprx:cooc_AT5_RI4 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI4 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_RI5 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI6 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI6 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_RI7 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI7 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI8 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI8 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_RI9 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:RI9 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA1 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA1 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA10 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA10 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_VA11 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA11 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_VA12 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA12 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA13 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA13 ;
-    jprx:weight 3 .
-
-jprx:cooc_AT5_VA14 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA14 ;
     jprx:weight 2 .
-
-jprx:cooc_AT5_VA15 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA15 ;
-    jprx:weight 1 .
 
 jprx:cooc_AT5_VA16 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA16 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA19 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA19 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA2 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA2 ;
-    jprx:weight 4 .
-
-jprx:cooc_AT5_VA20 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA20 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_VA21 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA21 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA23 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA23 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA24 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA24 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_AT5_VA25 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
@@ -21313,37 +21213,22 @@ jprx:cooc_AT5_VA25 a jprx:CoOccurrence ;
 jprx:cooc_AT5_VA3 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA3 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_VA4 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA4 ;
-    jprx:weight 2 .
-
-jprx:cooc_AT5_VA5 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA5 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_VA6 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA6 ;
-    jprx:weight 1 .
-
-jprx:cooc_AT5_VA7 a jprx:CoOccurrence ;
-    jprx:source jprx:AT5 ;
-    jprx:target jprx:VA7 ;
     jprx:weight 1 .
 
 jprx:cooc_AT5_VA8 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA8 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT5_VA9 a jprx:CoOccurrence ;
     jprx:source jprx:AT5 ;
     jprx:target jprx:VA9 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_AT6_AR1 a jprx:CoOccurrence ;
     jprx:source jprx:AT6 ;
@@ -23063,7 +22948,7 @@ jprx:cooc_CO10_AT4 a jprx:CoOccurrence ;
 jprx:cooc_CO10_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO10 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_CO10_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO10 ;
@@ -23533,7 +23418,7 @@ jprx:cooc_CO11_AT4 a jprx:CoOccurrence ;
 jprx:cooc_CO11_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO11 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_CO11_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO11 ;
@@ -24203,7 +24088,7 @@ jprx:cooc_CO13_AT4 a jprx:CoOccurrence ;
 jprx:cooc_CO13_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO13 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_CO13_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO13 ;
@@ -24903,7 +24788,7 @@ jprx:cooc_CO16_AT3 a jprx:CoOccurrence ;
 jprx:cooc_CO16_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO16 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_CO16_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO16 ;
@@ -25753,7 +25638,7 @@ jprx:cooc_CO2_AT4 a jprx:CoOccurrence ;
 jprx:cooc_CO2_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO2 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_CO2_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO2 ;
@@ -26928,7 +26813,7 @@ jprx:cooc_CO6_AT3 a jprx:CoOccurrence ;
 jprx:cooc_CO6_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:CO6 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_CO6_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:CO6 ;
@@ -27539,6 +27424,11 @@ jprx:cooc_CO7_PR9 a jprx:CoOccurrence ;
     jprx:source jprx:CO7 ;
     jprx:target jprx:PR9 ;
     jprx:weight 6 .
+
+jprx:cooc_CO7_RE10 a jprx:CoOccurrence ;
+    jprx:source jprx:CO7 ;
+    jprx:target jprx:RE10 ;
+    jprx:weight 1 .
 
 jprx:cooc_CO7_RI1 a jprx:CoOccurrence ;
     jprx:source jprx:CO7 ;
@@ -34683,67 +34573,67 @@ jprx:cooc_PR9_VA9 a jprx:CoOccurrence ;
 jprx:cooc_RE10_AR1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR1 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR10 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR10 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AR11 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR11 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AR14 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR14 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR2 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR2 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR3 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR3 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AR4 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR4 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR5 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR5 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR6 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR6 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AR8 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR8 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_AR9 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AR9 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_AT1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT1 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AT10 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_AT11 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34753,32 +34643,32 @@ jprx:cooc_RE10_AT11 a jprx:CoOccurrence ;
 jprx:cooc_RE10_AT12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT12 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AT2 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT2 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AT3 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT3 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AT7 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT7 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_AT8 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT8 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_AT9 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:AT9 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_CO1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34793,7 +34683,7 @@ jprx:cooc_RE10_CO10 a jprx:CoOccurrence ;
 jprx:cooc_RE10_CO11 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:CO11 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_CO12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34833,12 +34723,12 @@ jprx:cooc_RE10_CO9 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR1 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR10 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR11 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34848,17 +34738,17 @@ jprx:cooc_RE10_PR11 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR12 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR13 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR13 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_PR14 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR14 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR15 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34868,7 +34758,7 @@ jprx:cooc_RE10_PR15 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR16 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR16 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_PR17 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34878,7 +34768,7 @@ jprx:cooc_RE10_PR17 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR18 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR18 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR19 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34888,22 +34778,22 @@ jprx:cooc_RE10_PR19 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR2 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR2 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_PR3 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR3 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_PR5 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR5 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_PR6 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR6 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_PR7 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34918,7 +34808,7 @@ jprx:cooc_RE10_PR8 a jprx:CoOccurrence ;
 jprx:cooc_RE10_PR9 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:PR9 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34933,37 +34823,37 @@ jprx:cooc_RE10_RE15 a jprx:CoOccurrence ;
 jprx:cooc_RE10_RI1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI1 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI10 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_RI11 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI11 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_RI12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI12 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI13 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI13 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI14 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI14 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_RI15 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI15 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_RI16 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34973,22 +34863,22 @@ jprx:cooc_RE10_RI16 a jprx:CoOccurrence ;
 jprx:cooc_RE10_RI17 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI17 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI18 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI18 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_RI19 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI19 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_RI2 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI2 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_RI20 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -34998,52 +34888,57 @@ jprx:cooc_RE10_RI20 a jprx:CoOccurrence ;
 jprx:cooc_RE10_RI3 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI3 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_RI4 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI4 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI5 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI5 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_RI6 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI6 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_RI7 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI7 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_RI8 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI8 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_RI9 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:RI9 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_VA1 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA1 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_VA10 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA10 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
+
+jprx:cooc_RE10_VA11 a jprx:CoOccurrence ;
+    jprx:source jprx:RE10 ;
+    jprx:target jprx:VA11 ;
+    jprx:weight 1 .
 
 jprx:cooc_RE10_VA12 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA12 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_VA13 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -35063,7 +34958,12 @@ jprx:cooc_RE10_VA15 a jprx:CoOccurrence ;
 jprx:cooc_RE10_VA16 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA16 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
+
+jprx:cooc_RE10_VA17 a jprx:CoOccurrence ;
+    jprx:source jprx:RE10 ;
+    jprx:target jprx:VA17 ;
+    jprx:weight 1 .
 
 jprx:cooc_RE10_VA18 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
@@ -35073,62 +34973,72 @@ jprx:cooc_RE10_VA18 a jprx:CoOccurrence ;
 jprx:cooc_RE10_VA19 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA19 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_VA2 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA2 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
+
+jprx:cooc_RE10_VA20 a jprx:CoOccurrence ;
+    jprx:source jprx:RE10 ;
+    jprx:target jprx:VA20 ;
+    jprx:weight 1 .
 
 jprx:cooc_RE10_VA22 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA22 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_VA23 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA23 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE10_VA24 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA24 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
+
+jprx:cooc_RE10_VA25 a jprx:CoOccurrence ;
+    jprx:source jprx:RE10 ;
+    jprx:target jprx:VA25 ;
+    jprx:weight 1 .
 
 jprx:cooc_RE10_VA3 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA3 ;
-    jprx:weight 3 .
+    jprx:weight 4 .
 
 jprx:cooc_RE10_VA4 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA4 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_VA5 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA5 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_VA6 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA6 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_VA7 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA7 ;
-    jprx:weight 2 .
+    jprx:weight 3 .
 
 jprx:cooc_RE10_VA8 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA8 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE10_VA9 a jprx:CoOccurrence ;
     jprx:source jprx:RE10 ;
     jprx:target jprx:VA9 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE11_AR11 a jprx:CoOccurrence ;
     jprx:source jprx:RE11 ;
@@ -35523,7 +35433,7 @@ jprx:cooc_RE12_AT4 a jprx:CoOccurrence ;
 jprx:cooc_RE12_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:RE12 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_RE12_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE12 ;
@@ -37293,7 +37203,7 @@ jprx:cooc_RE1_AT4 a jprx:CoOccurrence ;
 jprx:cooc_RE1_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:RE1 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_RE1_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE1 ;
@@ -37473,7 +37383,7 @@ jprx:cooc_RE1_PR9 a jprx:CoOccurrence ;
 jprx:cooc_RE1_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:RE1 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE1_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:RE1 ;
@@ -37763,12 +37673,12 @@ jprx:cooc_RE2_AR1 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AR10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR10 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_AR11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR11 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_RE2_AR13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37778,7 +37688,7 @@ jprx:cooc_RE2_AR13 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AR14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR14 ;
-    jprx:weight 13 .
+    jprx:weight 12 .
 
 jprx:cooc_RE2_AR2 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37788,7 +37698,7 @@ jprx:cooc_RE2_AR2 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AR3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR3 ;
-    jprx:weight 19 .
+    jprx:weight 18 .
 
 jprx:cooc_RE2_AR4 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37798,7 +37708,7 @@ jprx:cooc_RE2_AR4 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AR5 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR5 ;
-    jprx:weight 4 .
+    jprx:weight 3 .
 
 jprx:cooc_RE2_AR6 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37808,37 +37718,37 @@ jprx:cooc_RE2_AR6 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AR7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR7 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_AR8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR8 ;
-    jprx:weight 20 .
+    jprx:weight 19 .
 
 jprx:cooc_RE2_AR9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AR9 ;
-    jprx:weight 20 .
+    jprx:weight 19 .
 
 jprx:cooc_RE2_AT1 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT1 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_AT10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT10 ;
-    jprx:weight 15 .
+    jprx:weight 14 .
 
 jprx:cooc_RE2_AT11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT11 ;
-    jprx:weight 10 .
+    jprx:weight 9 .
 
 jprx:cooc_RE2_AT12 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT12 ;
-    jprx:weight 12 .
+    jprx:weight 11 .
 
 jprx:cooc_RE2_AT13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37853,17 +37763,12 @@ jprx:cooc_RE2_AT2 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AT3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT3 ;
-    jprx:weight 18 .
-
-jprx:cooc_RE2_AT5 a jprx:CoOccurrence ;
-    jprx:source jprx:RE2 ;
-    jprx:target jprx:AT5 ;
-    jprx:weight 1 .
+    jprx:weight 17 .
 
 jprx:cooc_RE2_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT6 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_AT7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37873,7 +37778,7 @@ jprx:cooc_RE2_AT7 a jprx:CoOccurrence ;
 jprx:cooc_RE2_AT8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:AT8 ;
-    jprx:weight 11 .
+    jprx:weight 10 .
 
 jprx:cooc_RE2_AT9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37888,17 +37793,17 @@ jprx:cooc_RE2_CO1 a jprx:CoOccurrence ;
 jprx:cooc_RE2_CO10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO10 ;
-    jprx:weight 16 .
+    jprx:weight 15 .
 
 jprx:cooc_RE2_CO11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO11 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_CO13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO13 ;
-    jprx:weight 7 .
+    jprx:weight 6 .
 
 jprx:cooc_RE2_CO14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37908,17 +37813,17 @@ jprx:cooc_RE2_CO14 a jprx:CoOccurrence ;
 jprx:cooc_RE2_CO16 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO16 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_CO2 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO2 ;
-    jprx:weight 14 .
+    jprx:weight 13 .
 
 jprx:cooc_RE2_CO3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO3 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_CO4 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37933,7 +37838,7 @@ jprx:cooc_RE2_CO6 a jprx:CoOccurrence ;
 jprx:cooc_RE2_CO7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO7 ;
-    jprx:weight 7 .
+    jprx:weight 6 .
 
 jprx:cooc_RE2_CO8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37943,17 +37848,17 @@ jprx:cooc_RE2_CO8 a jprx:CoOccurrence ;
 jprx:cooc_RE2_CO9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:CO9 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_PR1 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR1 ;
-    jprx:weight 20 .
+    jprx:weight 19 .
 
 jprx:cooc_RE2_PR10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR10 ;
-    jprx:weight 9 .
+    jprx:weight 8 .
 
 jprx:cooc_RE2_PR11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37968,12 +37873,12 @@ jprx:cooc_RE2_PR12 a jprx:CoOccurrence ;
 jprx:cooc_RE2_PR13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR13 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_PR14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR14 ;
-    jprx:weight 14 .
+    jprx:weight 13 .
 
 jprx:cooc_RE2_PR15 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -37983,12 +37888,12 @@ jprx:cooc_RE2_PR15 a jprx:CoOccurrence ;
 jprx:cooc_RE2_PR16 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR16 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_PR17 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR17 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_RE2_PR18 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38003,7 +37908,7 @@ jprx:cooc_RE2_PR19 a jprx:CoOccurrence ;
 jprx:cooc_RE2_PR2 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR2 ;
-    jprx:weight 11 .
+    jprx:weight 10 .
 
 jprx:cooc_RE2_PR3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38028,7 +37933,7 @@ jprx:cooc_RE2_PR6 a jprx:CoOccurrence ;
 jprx:cooc_RE2_PR7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR7 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_RE2_PR8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38038,22 +37943,17 @@ jprx:cooc_RE2_PR8 a jprx:CoOccurrence ;
 jprx:cooc_RE2_PR9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:PR9 ;
-    jprx:weight 7 .
+    jprx:weight 6 .
 
 jprx:cooc_RE2_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE2_RE12 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE12 ;
     jprx:weight 7 .
-
-jprx:cooc_RE2_RE13 a jprx:CoOccurrence ;
-    jprx:source jprx:RE2 ;
-    jprx:target jprx:RE13 ;
-    jprx:weight 1 .
 
 jprx:cooc_RE2_RE14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38073,22 +37973,22 @@ jprx:cooc_RE2_RE3 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RE4 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE4 ;
-    jprx:weight 16 .
+    jprx:weight 15 .
 
 jprx:cooc_RE2_RE5 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE5 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_RE6 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE6 ;
-    jprx:weight 23 .
+    jprx:weight 22 .
 
 jprx:cooc_RE2_RE7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE7 ;
-    jprx:weight 2 .
+    jprx:weight 1 .
 
 jprx:cooc_RE2_RE8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38098,7 +37998,7 @@ jprx:cooc_RE2_RE8 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RE9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RE9 ;
-    jprx:weight 14 .
+    jprx:weight 13 .
 
 jprx:cooc_RE2_RI1 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38113,12 +38013,12 @@ jprx:cooc_RE2_RI10 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RI11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI11 ;
-    jprx:weight 17 .
+    jprx:weight 16 .
 
 jprx:cooc_RE2_RI12 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI12 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_RI13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38128,7 +38028,7 @@ jprx:cooc_RE2_RI13 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RI14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI14 ;
-    jprx:weight 18 .
+    jprx:weight 17 .
 
 jprx:cooc_RE2_RI15 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38143,12 +38043,12 @@ jprx:cooc_RE2_RI17 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RI18 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI18 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_RI19 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI19 ;
-    jprx:weight 13 .
+    jprx:weight 12 .
 
 jprx:cooc_RE2_RI2 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38158,7 +38058,7 @@ jprx:cooc_RE2_RI2 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RI20 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI20 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_RI3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38168,42 +38068,42 @@ jprx:cooc_RE2_RI3 a jprx:CoOccurrence ;
 jprx:cooc_RE2_RI4 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI4 ;
-    jprx:weight 7 .
+    jprx:weight 6 .
 
 jprx:cooc_RE2_RI5 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI5 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_RE2_RI6 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI6 ;
-    jprx:weight 20 .
+    jprx:weight 19 .
 
 jprx:cooc_RE2_RI7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI7 ;
-    jprx:weight 12 .
+    jprx:weight 11 .
 
 jprx:cooc_RE2_RI8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI8 ;
-    jprx:weight 21 .
+    jprx:weight 20 .
 
 jprx:cooc_RE2_RI9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:RI9 ;
-    jprx:weight 13 .
+    jprx:weight 12 .
 
 jprx:cooc_RE2_VA1 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA1 ;
-    jprx:weight 23 .
+    jprx:weight 22 .
 
 jprx:cooc_RE2_VA10 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA10 ;
-    jprx:weight 9 .
+    jprx:weight 8 .
 
 jprx:cooc_RE2_VA11 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38213,17 +38113,17 @@ jprx:cooc_RE2_VA11 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA12 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA12 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_VA13 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA13 ;
-    jprx:weight 21 .
+    jprx:weight 20 .
 
 jprx:cooc_RE2_VA14 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA14 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_VA15 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38233,7 +38133,7 @@ jprx:cooc_RE2_VA15 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA16 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA16 ;
-    jprx:weight 22 .
+    jprx:weight 21 .
 
 jprx:cooc_RE2_VA17 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38248,22 +38148,17 @@ jprx:cooc_RE2_VA18 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA19 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA19 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_VA2 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA2 ;
-    jprx:weight 23 .
+    jprx:weight 22 .
 
 jprx:cooc_RE2_VA20 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA20 ;
-    jprx:weight 4 .
-
-jprx:cooc_RE2_VA21 a jprx:CoOccurrence ;
-    jprx:source jprx:RE2 ;
-    jprx:target jprx:VA21 ;
-    jprx:weight 1 .
+    jprx:weight 3 .
 
 jprx:cooc_RE2_VA22 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38273,7 +38168,7 @@ jprx:cooc_RE2_VA22 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA23 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA23 ;
-    jprx:weight 15 .
+    jprx:weight 14 .
 
 jprx:cooc_RE2_VA24 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38288,12 +38183,12 @@ jprx:cooc_RE2_VA25 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA3 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA3 ;
-    jprx:weight 17 .
+    jprx:weight 16 .
 
 jprx:cooc_RE2_VA4 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA4 ;
-    jprx:weight 5 .
+    jprx:weight 4 .
 
 jprx:cooc_RE2_VA5 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38303,7 +38198,7 @@ jprx:cooc_RE2_VA5 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA6 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA6 ;
-    jprx:weight 14 .
+    jprx:weight 13 .
 
 jprx:cooc_RE2_VA7 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
@@ -38313,12 +38208,12 @@ jprx:cooc_RE2_VA7 a jprx:CoOccurrence ;
 jprx:cooc_RE2_VA8 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA8 ;
-    jprx:weight 6 .
+    jprx:weight 5 .
 
 jprx:cooc_RE2_VA9 a jprx:CoOccurrence ;
     jprx:source jprx:RE2 ;
     jprx:target jprx:VA9 ;
-    jprx:weight 8 .
+    jprx:weight 7 .
 
 jprx:cooc_RE3_AR1 a jprx:CoOccurrence ;
     jprx:source jprx:RE3 ;
@@ -38533,7 +38428,7 @@ jprx:cooc_RE3_PR9 a jprx:CoOccurrence ;
 jprx:cooc_RE3_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:RE3 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 1 .
+    jprx:weight 2 .
 
 jprx:cooc_RE3_RE4 a jprx:CoOccurrence ;
     jprx:source jprx:RE3 ;
@@ -38853,7 +38748,7 @@ jprx:cooc_RE4_AT4 a jprx:CoOccurrence ;
 jprx:cooc_RE4_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:RE4 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 2 .
 
 jprx:cooc_RE4_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE4 ;
@@ -39968,7 +39863,7 @@ jprx:cooc_RE6_AT4 a jprx:CoOccurrence ;
 jprx:cooc_RE6_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:RE6 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 4 .
+    jprx:weight 2 .
 
 jprx:cooc_RE6_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE6 ;
@@ -40158,7 +40053,7 @@ jprx:cooc_RE6_PR9 a jprx:CoOccurrence ;
 jprx:cooc_RE6_RE10 a jprx:CoOccurrence ;
     jprx:source jprx:RE6 ;
     jprx:target jprx:RE10 ;
-    jprx:weight 4 .
+    jprx:weight 5 .
 
 jprx:cooc_RE6_RE11 a jprx:CoOccurrence ;
     jprx:source jprx:RE6 ;
@@ -40998,7 +40893,7 @@ jprx:cooc_RE8_AT3 a jprx:CoOccurrence ;
 jprx:cooc_RE8_AT5 a jprx:CoOccurrence ;
     jprx:source jprx:RE8 ;
     jprx:target jprx:AT5 ;
-    jprx:weight 3 .
+    jprx:weight 1 .
 
 jprx:cooc_RE8_AT6 a jprx:CoOccurrence ;
     jprx:source jprx:RE8 ;
@@ -47519,6 +47414,7 @@ jprx:RP1 a jprx:Process ;
         jprx:PR6,
         jprx:PR9,
         jprx:RE1,
+        jprx:RE10,
         jprx:RE2,
         jprx:RE3,
         jprx:RE6,
@@ -47648,7 +47544,7 @@ jprx:RP1 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:hasActivationTotal 88 ;
+    jprx:hasActivationTotal 89 ;
     jprx:hasAdoptionDriver "Cost",
         "Integration",
         "Labor" ;
@@ -47673,7 +47569,7 @@ jprx:RP1 a jprx:Process ;
     jprx:hasMaterial "Concrete" ;
     jprx:hasProcessId "RP1" ;
     jprx:hasStakeholderTier "trade" ;
-    jprx:hasTRL 9 ;
+    jprx:hasTRL 8 ;
     jprx:hasTask "3dprinting",
         "Concretework" ;
     jprx:hasTransitionEnabler "E2_direct-sale" ;
@@ -47876,8 +47772,7 @@ jprx:RP10 a jprx:Process ;
     jprx:hasSteelworkSubtype "welding" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Assembly",
-        "Steelwork",
-        "sw_welding" ;
+        "Steelwork" ;
     jprx:hasTransitionEnabler "E2_direct-sale",
         "E4_captive-vertical" ;
     jprx:incursRisk jprx:RI10,
@@ -48038,11 +47933,10 @@ jprx:RP11 a jprx:Process ;
     jprx:hasProcessId "RP11" ;
     jprx:hasStakeholderTier "gc" ;
     jprx:hasSteelworkSubtype "rebar" ;
-    jprx:hasTRL 6 ;
+    jprx:hasTRL 7 ;
     jprx:hasTask "Assembly",
         "Concretework",
-        "Steelwork",
-        "sw_rebar" ;
+        "Steelwork" ;
     jprx:hasTransitionEnabler "E5_consortium" ;
     jprx:incursRisk jprx:RI1,
         jprx:RI11,
@@ -48438,8 +48332,7 @@ jprx:RP13 a jprx:Process ;
     jprx:hasMaterial "Universal" ;
     jprx:hasProcessId "RP13" ;
     jprx:hasStakeholderTier "distributor",
-        "robotmanufacturer",
-        "trade" ;
+        "robotmanufacturer" ;
     jprx:hasTRL 8 ;
     jprx:hasTask "SurveyingMapping" ;
     jprx:hasTransitionEnabler "E2_direct-sale" ;
@@ -48456,7 +48349,7 @@ jprx:RP13 a jprx:Process ;
     jprx:isMobileRobot true ;
     jprx:isOffsite false ;
     jprx:isOnsite true ;
-    jprx:isOnsiteOutdoor true ;
+    jprx:isOnsiteIndoor true ;
     jprx:performsProcess jprx:PR12,
         jprx:PR14,
         jprx:PR17,
@@ -48809,8 +48702,8 @@ jprx:RP15 a jprx:Process ;
         jprx:RI9 ;
     jprx:isMobileRobot true ;
     jprx:isOffsite true ;
-    jprx:isOnsite false,
-        true ;
+    jprx:isOnsite true ;
+    jprx:isOnsiteOutdoor true ;
     jprx:performsProcess jprx:PR1,
         jprx:PR10,
         jprx:PR12,
@@ -49014,9 +48907,7 @@ jprx:RP16 a jprx:Process ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Assembly",
         "Concretework",
-        "Steelwork",
-        "cw_precast",
-        "sw_rebar" ;
+        "Steelwork" ;
     jprx:hasTransitionEnabler "E4_captive-vertical" ;
     jprx:incursRisk jprx:RI1,
         jprx:RI11,
@@ -49164,12 +49055,10 @@ jprx:RP17 a jprx:Process ;
         jprx:CO6 ;
     jprx:hasDeployment "onsite",
         "os_outdoor" ;
-    jprx:hasLifecyclePhase "Operation",
-        "Structural Construction" ;
+    jprx:hasLifecyclePhase "Structural Construction" ;
     jprx:hasMaterial "Ceramic" ;
     jprx:hasProcessId "RP17" ;
-    jprx:hasStakeholderTier "housemaker",
-        "robotmanufacturer" ;
+    jprx:hasStakeholderTier "housemaker" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Inspection" ;
     jprx:hasTransitionEnabler "E2_direct-sale" ;
@@ -49177,11 +49066,8 @@ jprx:RP17 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:isOffsite false,
-        true ;
-    jprx:isOnsite false,
-        true ;
-    jprx:isOnsiteOutdoor true ;
+    jprx:isOffsite true ;
+    jprx:isOnsite false ;
     jprx:performsProcess jprx:PR1,
         jprx:PR10,
         jprx:PR17,
@@ -49335,8 +49221,7 @@ jprx:RP18 a jprx:Process ;
     jprx:hasSteelworkSubtype "surface" ;
     jprx:hasTRL 7 ;
     jprx:hasTask "Steelwork",
-        "SurfaceTreatment",
-        "sw_surface" ;
+        "SurfaceTreatment" ;
     jprx:hasTransitionEnabler "E4_captive-vertical" ;
     jprx:incursRisk jprx:RI1,
         jprx:RI11,
@@ -49453,10 +49338,9 @@ jprx:RP19 a jprx:Process ;
     jprx:hasMaterial "Concrete" ;
     jprx:hasProcessId "RP19" ;
     jprx:hasStakeholderTier "gc" ;
-    jprx:hasTRL 8 ;
+    jprx:hasTRL 9 ;
     jprx:hasTask "Concretework",
-        "SurfaceTreatment",
-        "cw_finishing" ;
+        "SurfaceTreatment" ;
     jprx:hasTransitionEnabler "E2_direct-sale" ;
     jprx:incursRisk jprx:RI11,
         jprx:RI14,
@@ -49730,8 +49614,7 @@ jprx:RP2 a jprx:Process ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Assembly",
         "HeavyLift",
-        "Steelwork",
-        "sw_welding" ;
+        "Steelwork" ;
     jprx:hasTransitionEnabler "E4_captive-vertical" ;
     jprx:incursRisk jprx:RI10,
         jprx:RI11,
@@ -50011,7 +49894,7 @@ jprx:RP20 a jprx:Process ;
         jprx:RI8,
         jprx:RI9 ;
     jprx:isMobileRobot true ;
-    jprx:isOffsite true ;
+    jprx:isOffsite false ;
     jprx:isOnsite true ;
     jprx:isOnsiteIndoor true ;
     jprx:isOnsiteOutdoor true ;
@@ -50071,7 +49954,6 @@ jprx:RP21 a jprx:Process ;
         jprx:AR9,
         jprx:AT13,
         jprx:AT3,
-        jprx:AT5,
         jprx:CO13,
         jprx:CO16,
         jprx:CO2,
@@ -50147,7 +50029,7 @@ jprx:RP21 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:hasActivationTotal 44 ;
+    jprx:hasActivationTotal 43 ;
     jprx:hasAdoptionDriver "Digital" ;
     jprx:hasAttribute jprx:AT13,
         jprx:AT3,
@@ -50361,8 +50243,9 @@ jprx:RP22 a jprx:Process ;
         "Structural Construction" ;
     jprx:hasMaterial "Earth" ;
     jprx:hasProcessId "RP22" ;
-    jprx:hasStakeholderTier "trade" ;
-    jprx:hasTRL 8 ;
+    jprx:hasStakeholderTier "robotmanufacturer",
+        "trade" ;
+    jprx:hasTRL 7 ;
     jprx:hasTask "3dprinting",
         "Assembly",
         "Materialhandling" ;
@@ -50378,7 +50261,6 @@ jprx:RP22 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:isMobileRobot true ;
     jprx:isOffsite true ;
     jprx:isOnsite true ;
     jprx:isOnsiteOutdoor true ;
@@ -50814,7 +50696,7 @@ jprx:RP25 a jprx:Process ;
     jprx:hasProcessId "RP25" ;
     jprx:hasStakeholderTier "gc",
         "robotmanufacturer" ;
-    jprx:hasTRL 8 ;
+    jprx:hasTRL 9 ;
     jprx:hasTask "Cleaning",
         "Materialhandling" ;
     jprx:hasTransitionEnabler "E5_consortium" ;
@@ -50823,9 +50705,8 @@ jprx:RP25 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:isOffsite false ;
-    jprx:isOnsite true ;
-    jprx:isOnsiteOutdoor true ;
+    jprx:isOffsite true ;
+    jprx:isOnsite false ;
     jprx:performsProcess jprx:PR1,
         jprx:PR12,
         jprx:PR14,
@@ -50918,13 +50799,12 @@ jprx:RP26 a jprx:Process ;
     jprx:hasMaterial "Interiorboard",
         "Steel" ;
     jprx:hasProcessId "RP26" ;
-    jprx:hasStakeholderTier "distributor",
-        "gc" ;
+    jprx:hasStakeholderTier "gc",
+        "trade" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Materialhandling" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP27 a jprx:Process ;
     jprx:activates jprx:AC1,
@@ -50990,7 +50870,7 @@ jprx:RP27 a jprx:Process ;
     jprx:hasProcessId "RP27" ;
     jprx:hasStakeholderTier "gc",
         "robotmanufacturer" ;
-    jprx:hasTRL 9 ;
+    jprx:hasTRL 7 ;
     jprx:hasTask "Inspection",
         "SurveyingMapping" ;
     jprx:isMobileRobot true ;
@@ -51123,8 +51003,7 @@ jprx:RP29 a jprx:Process ;
     jprx:hasTask "Assembly",
         "Tiling" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP3 a jprx:Process ;
     jprx:achieves jprx:VA10,
@@ -51507,7 +51386,7 @@ jprx:RP31 a jprx:Process ;
     jprx:hasProcessId "RP31" ;
     jprx:hasStakeholderTier "distributor",
         "gc" ;
-    jprx:hasTRL 7 ;
+    jprx:hasTRL 8 ;
     jprx:hasTask "Inspection" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite true ;
@@ -51573,8 +51452,10 @@ jprx:RP32 a jprx:Process ;
     jprx:hasMaterial "Steel" ;
     jprx:hasProcessId "RP32" ;
     jprx:hasStakeholderTier "housemaker" ;
+    jprx:hasSteelworkSubtype "surface" ;
     jprx:hasTRL 9 ;
-    jprx:hasTask "SurfaceTreatment" ;
+    jprx:hasTask "Steelwork",
+        "SurfaceTreatment" ;
     jprx:isOffsite true ;
     jprx:isOnsite false .
 
@@ -51709,7 +51590,7 @@ jprx:RP34 a jprx:Process ;
     jprx:hasMaterial "Universal" ;
     jprx:hasProcessId "RP34" ;
     jprx:hasStakeholderTier "gc" ;
-    jprx:hasTRL 8 ;
+    jprx:hasTRL 9 ;
     jprx:hasTask "Materialhandling" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite false ;
@@ -51759,7 +51640,7 @@ jprx:RP35 a jprx:Process ;
     jprx:hasMaterial "Universal" ;
     jprx:hasProcessId "RP35" ;
     jprx:hasStakeholderTier "robotmanufacturer" ;
-    jprx:hasTRL 8 ;
+    jprx:hasTRL 9 ;
     jprx:hasTask "Inspection" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite false ;
@@ -51809,8 +51690,7 @@ jprx:RP36 a jprx:Process ;
         "Operation" ;
     jprx:hasMaterial "Concrete" ;
     jprx:hasProcessId "RP36" ;
-    jprx:hasStakeholderTier "gc",
-        "robotmanufacturer" ;
+    jprx:hasStakeholderTier "gc" ;
     jprx:hasTRL 7 ;
     jprx:hasTask "Cleaning",
         "Inspection" ;
@@ -51875,7 +51755,7 @@ jprx:RP37 a jprx:Process ;
     jprx:hasProcessId "RP37" ;
     jprx:hasStakeholderTier "gc",
         "robotmanufacturer" ;
-    jprx:hasTRL 7 ;
+    jprx:hasTRL 8 ;
     jprx:hasTask "Inspection" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite false ;
@@ -51933,8 +51813,7 @@ jprx:RP38 a jprx:Process ;
     jprx:hasTask "Materialhandling" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP39 a jprx:Process ;
     jprx:activates jprx:AC1,
@@ -51993,8 +51872,7 @@ jprx:RP39 a jprx:Process ;
         "SitePreparation" ;
     jprx:hasMaterial "Universal" ;
     jprx:hasProcessId "RP39" ;
-    jprx:hasStakeholderTier "gc",
-        "robotmanufacturer" ;
+    jprx:hasStakeholderTier "robotmanufacturer" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "SurveyingMapping" ;
     jprx:isMobileRobot true ;
@@ -52064,7 +51942,6 @@ jprx:RP4 a jprx:Process ;
         jprx:PR7,
         jprx:PR9,
         jprx:RE13,
-        jprx:RE2,
         jprx:RE4,
         jprx:RE5,
         jprx:RE6,
@@ -52177,7 +52054,7 @@ jprx:RP4 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:hasActivationTotal 79 ;
+    jprx:hasActivationTotal 78 ;
     jprx:hasAdoptionDriver "Digital",
         "Labor" ;
     jprx:hasAttribute jprx:AT1,
@@ -52203,11 +52080,7 @@ jprx:RP4 a jprx:Process ;
     jprx:hasMaterial "Steel" ;
     jprx:hasProcessId "RP4" ;
     jprx:hasStakeholderTier "gc" ;
-    jprx:hasSteelworkSubtype "welding" ;
     jprx:hasTRL 9 ;
-    jprx:hasTask "Assembly",
-        "Steelwork",
-        "sw_welding" ;
     jprx:hasTransitionEnabler "E1_client-pull",
         "E2_direct-sale" ;
     jprx:incursRisk jprx:RI11,
@@ -52312,8 +52185,8 @@ jprx:RP40 a jprx:Process ;
     jprx:hasMaterial "Concrete",
         "Steel" ;
     jprx:hasProcessId "RP40" ;
-    jprx:hasStakeholderTier "gc",
-        "robotmanufacturer" ;
+    jprx:hasStakeholderTier "robotmanufacturer" ;
+    jprx:hasSteelworkSubtype "rebar" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Assembly",
         "Steelwork" ;
@@ -52613,8 +52486,7 @@ jprx:RP45 a jprx:Process ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Materialhandling" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP46 a jprx:Process ;
     jprx:activates jprx:AC13,
@@ -52669,8 +52541,7 @@ jprx:RP46 a jprx:Process ;
         "Planning" ;
     jprx:hasMaterial "Concrete" ;
     jprx:hasProcessId "RP46" ;
-    jprx:hasStakeholderTier "gc",
-        "robotmanufacturer" ;
+    jprx:hasStakeholderTier "gc" ;
     jprx:hasTRL 9 ;
     jprx:isOffsite true ;
     jprx:isOnsite false .
@@ -52733,6 +52604,7 @@ jprx:RP47 a jprx:Process ;
         "Quality" ;
     jprx:hasBuildingSystem "Structural core" ;
     jprx:hasCensusRecord jprx:census_RXM11-5 ;
+    jprx:hasConcreteworkSubtype "shotcrete" ;
     jprx:hasLifecyclePhase "Design",
         "Structural Construction" ;
     jprx:hasMaterial "Concrete",
@@ -52741,7 +52613,8 @@ jprx:RP47 a jprx:Process ;
     jprx:hasStakeholderTier "gc" ;
     jprx:hasTRL 7 ;
     jprx:hasTask "3dprinting",
-        "Concretework" ;
+        "Concretework",
+        "SurfaceTreatment" ;
     jprx:isMobileRobot true ;
     jprx:isOffsite false ;
     jprx:isOnsite true ;
@@ -52790,11 +52663,11 @@ jprx:RP48 a jprx:Process ;
     jprx:hasProcessId "RP48" ;
     jprx:hasStakeholderTier "robotmanufacturer",
         "trade" ;
+    jprx:hasSteelworkSubtype "welding" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Steelwork" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP49 a jprx:Process ;
     jprx:activates jprx:AC1,
@@ -52865,10 +52738,10 @@ jprx:RP49 a jprx:Process ;
     jprx:hasProcessId "RP49" ;
     jprx:hasStakeholderTier "housemaker" ;
     jprx:hasTRL 9 ;
-    jprx:hasTask "Materialhandling" ;
+    jprx:hasTask "Materialhandling",
+        "TimberJoineryCutting" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP5 a jprx:Process ;
     jprx:achieves jprx:VA1,
@@ -52910,7 +52783,6 @@ jprx:RP5 a jprx:Process ;
         jprx:AT11,
         jprx:AT12,
         jprx:AT3,
-        jprx:AT5,
         jprx:AT7,
         jprx:AT8,
         jprx:CO10,
@@ -53024,7 +52896,7 @@ jprx:RP5 a jprx:Process ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9 ;
-    jprx:hasActivationTotal 67 ;
+    jprx:hasActivationTotal 66 ;
     jprx:hasAdoptionDriver "Cost",
         "Integration",
         "Regulation" ;
@@ -53156,8 +53028,7 @@ jprx:RP50 a jprx:Process ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Steelwork" ;
     jprx:isOffsite true ;
-    jprx:isOnsite false ;
-    jprx:isOnsiteIndoor true .
+    jprx:isOnsite false .
 
 jprx:RP6 a jprx:Process ;
     jprx:achieves jprx:VA1,
@@ -53993,8 +53864,7 @@ jprx:RP9 a jprx:Process ;
     jprx:hasStakeholderTier "housemaker" ;
     jprx:hasTRL 9 ;
     jprx:hasTask "Assembly",
-        "Concretework",
-        "cw_precast" ;
+        "Concretework" ;
     jprx:hasTransitionEnabler "E4_captive-vertical" ;
     jprx:incursRisk jprx:RI10,
         jprx:RI12,
@@ -54041,15 +53911,14 @@ jprx:census_RX13 a jprx:CensusProcess ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
     jprx:constructionTask "Assembly",
-        "Concrete work",
-        "Material Handling",
         "SW_rebar",
         "Steelwork" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_072 ;
-    jprx:hasAdoptionDriver "Labor" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Safety" ;
     jprx:hasCensusId "RX13" ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "C" ;
@@ -54094,12 +53963,16 @@ jprx:census_RX2 a jprx:CensusProcess ;
     jprx:buildingSystem "Cross-system/Not-specific",
         "Sitework" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Surveying & Mapping" ;
+    jprx:constructionTask "Inspection",
+        "Surveying & Mapping" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_005 ;
-    jprx:hasAdoptionDriver "Quality" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RX2" ;
     jprx:hasTRL "TRL7" ;
     jprx:icStatus "C" ;
@@ -54119,10 +53992,10 @@ jprx:census_RX20 a jprx:CensusProcess ;
     jprx:censusTRL 8 ;
     jprx:constructionTask "Material Handling" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_159 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Digital" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor" ;
     jprx:hasCensusId "RX20" ;
     jprx:hasTRL "TRL8" ;
     jprx:icStatus "C" ;
@@ -54144,7 +54017,9 @@ jprx:census_RX21 a jprx:CensusProcess ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_161 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Labor" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Safety" ;
     jprx:hasCensusId "RX21" ;
     jprx:hasTRL "TRL8" ;
     jprx:icStatus "C" ;
@@ -54160,14 +54035,14 @@ jprx:census_RX21 a jprx:CensusProcess ;
 jprx:census_RX22 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RX22" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
-    jprx:censusTRL 8 ;
+    jprx:censusTRL 9 ;
     jprx:constructionTask "Inspection" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_147 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Digital",
+    jprx:hasAdoptionDriver "Labor",
         "Safety" ;
     jprx:hasCensusId "RX22" ;
     jprx:hasTRL "TRL8" ;
@@ -54187,10 +54062,9 @@ jprx:census_RX30 a jprx:CensusProcess ;
     jprx:constructionTask "SW_welding",
         "Steelwork" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_113 ;
-    jprx:hasAdoptionDriver "Cost",
-        "Labor" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Quality" ;
     jprx:hasCensusId "RX30" ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "C" ;
@@ -54210,7 +54084,9 @@ jprx:census_RX32 a jprx:CensusProcess ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_048 ;
-    jprx:hasAdoptionDriver "Quality" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RX32" ;
     jprx:hasTRL "TRL8" ;
     jprx:icStatus "C" ;
@@ -54228,7 +54104,7 @@ jprx:census_RX47 a jprx:CensusProcess ;
     jprx:censusTRL 8 ;
     jprx:constructionTask "Surveying & Mapping" ;
     jprx:deployOnsite true ;
-    jprx:deployOnsiteOutdoor true ;
+    jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_132 ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP13/RX47)" ;
@@ -54249,19 +54125,21 @@ jprx:census_RX5 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RX5" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Surveying & Mapping" ;
+    jprx:constructionTask "Inspection",
+        "Surveying & Mapping" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_107 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Safety" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Safety" ;
     jprx:hasCensusId "RX5" ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP42 ;
     jprx:lifecyclePhase "Maintenance",
-        "Operation",
-        "Site Preparation" ;
+        "Operation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
     jprx:stakeholderDistributor 1 ;
@@ -54274,6 +54152,7 @@ jprx:census_RXH15-1 a jprx:CensusProcess ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
     jprx:constructionTask "Assembly",
+        "CW_precast",
         "Concrete work" ;
     jprx:deployOffsite true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP9/RXH15-1)" ;
@@ -54296,6 +54175,7 @@ jprx:census_RXH2-1 a jprx:CensusProcess ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
     jprx:constructionTask "Assembly",
+        "Heavy Lift",
         "SW_welding",
         "Steelwork" ;
     jprx:deployOffsite true ;
@@ -54324,21 +54204,19 @@ jprx:census_RXH3-3 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXH3-3" ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Assembly",
-        "SW_welding",
-        "Steelwork" ;
+    jprx:constructionTask "Steelwork" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_145 ;
     jprx:digitalRobot true ;
     jprx:hasAdoptionDriver "Cost",
-        "Digital" ;
+        "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXH3-3" ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP50 ;
-    jprx:lifecyclePhase "Design",
-        "Structural Construction" ;
+    jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderHouseMaker 1 ;
     jprx:usesMaterial "Steel" ;
@@ -54374,7 +54252,6 @@ jprx:census_RXH3-5 a jprx:CensusProcess ;
     jprx:censusTRL 9 ;
     jprx:constructionTask "Inspection" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
     jprx:enrResearchStatus "DONE (deep pass)" ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP17/RXH3-5)" ;
@@ -54386,11 +54263,9 @@ jprx:census_RXH3-5 a jprx:CensusProcess ;
         jprx:Firm_144 ;
     jprx:hasTRL "TRL9" ;
     jprx:isCensusRecordOf jprx:RP17 ;
-    jprx:lifecyclePhase "Operation",
-        "Structural Construction" ;
+    jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderHouseMaker 1 ;
-    jprx:stakeholderRobotManufacturer 1 ;
     jprx:usesMaterial "Ceramic" ;
     jprx:usesMaterialNode jprx:Material_Ceramic .
 
@@ -54404,14 +54279,15 @@ jprx:census_RXH5-2 a jprx:CensusProcess ;
     jprx:deployOffsite true ;
     jprx:digitalRobot true ;
     jprx:hasAdoptionDriver "Cost",
-        "Labor" ;
+        "Labor",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RXH5-2" ;
     jprx:hasManufacturer jprx:Firm_027 ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP32 ;
-    jprx:lifecyclePhase "Design",
-        "Finishing Fitout" ;
+    jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
     jprx:stakeholderHouseMaker 1 ;
     jprx:usesMaterial "Steel" ;
@@ -54424,17 +54300,17 @@ jprx:census_RXH7-2 a jprx:CensusProcess ;
     jprx:constructionTask "Assembly",
         "Tiling" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Integration",
-        "Labor" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Market",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RXH7-2" ;
     jprx:hasManufacturer jprx:Firm_125 ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP29 ;
-    jprx:lifecyclePhase "Design",
-        "Finishing Fitout" ;
+    jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
     jprx:stakeholderHouseMaker 1 ;
     jprx:usesMaterial "Ceramic",
@@ -54446,11 +54322,12 @@ jprx:census_RXH8-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXH8-1" ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Assembly",
+    jprx:constructionTask "Material Handling",
         "Timber Joinery Cutting" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
-    jprx:hasAdoptionDriver "Market" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXH8-1" ;
     jprx:hasManufacturer jprx:Firm_097 ;
     jprx:hasTRL "TRL9" ;
@@ -54509,10 +54386,11 @@ jprx:census_RXH9-3 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXH9-3" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
     jprx:censusTRL 9 ;
+    jprx:constructionTask "Material Handling" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Cost",
+    jprx:hasAdoptionDriver "Labor",
+        "Market",
         "Quality" ;
     jprx:hasCensusId "RXH9-3" ;
     jprx:hasManufacturer jprx:Firm_160 ;
@@ -54528,12 +54406,15 @@ jprx:census_RXH9-3 a jprx:CensusProcess ;
 jprx:census_RXM11-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM11-1" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
-    jprx:censusTRL 8 ;
+    jprx:censusTRL 9 ;
     jprx:constructionTask "Material Handling" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:deployOnsiteOutdoor true ;
-    jprx:hasAdoptionDriver "Digital" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Integration",
+        "Labor",
+        "Safety" ;
     jprx:hasCensusId "RXM11-1" ;
     jprx:hasManufacturer jprx:Firm_151 ;
     jprx:hasTRL "TRL8" ;
@@ -54553,13 +54434,13 @@ jprx:census_RXM11-3 a jprx:CensusProcess ;
     jprx:censusTRL 8 ;
     jprx:constructionTask "Assembly",
         "Surface Treatment" ;
-    jprx:deployOffsite true ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP20/RXM11-3)" ;
-    jprx:hasAdoptionDriver "Digital" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor" ;
     jprx:hasCensusId "RXM11-3" ;
     jprx:hasManufacturer jprx:Firm_151 ;
     jprx:hasTRL "TRL8" ;
@@ -54577,7 +54458,6 @@ jprx:census_RXM11-5 a jprx:CensusProcess ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 7 ;
     jprx:constructionTask "3D Printing",
-        "Assembly",
         "CW_shotcrete",
         "Concrete work",
         "Surface Treatment" ;
@@ -54585,7 +54465,10 @@ jprx:census_RXM11-5 a jprx:CensusProcess ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_110 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Labor" ;
+    jprx:hasAdoptionDriver "Cost",
+        "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXM11-5" ;
     jprx:hasManufacturer jprx:Firm_151 ;
     jprx:hasTRL "TRL8" ;
@@ -54602,10 +54485,9 @@ jprx:census_RXM11-5 a jprx:CensusProcess ;
 jprx:census_RXM13-2 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM13-2" ;
     jprx:buildingSystem "Structural core" ;
-    jprx:censusTRL 6 ;
+    jprx:censusTRL 7 ;
     jprx:constructionTask "Assembly",
         "Concrete work",
-        "Heavy Lift",
         "SW_rebar",
         "Steelwork" ;
     jprx:deployOnsite true ;
@@ -54634,13 +54516,15 @@ jprx:census_RXM13-2 a jprx:CensusProcess ;
 jprx:census_RXM15-2 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM15-2" ;
     jprx:buildingSystem "Envelope/Facade" ;
-    jprx:censusTRL 7 ;
+    jprx:censusTRL 8 ;
     jprx:constructionTask "Inspection" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
     jprx:hasAdoptionDriver "Digital",
-        "Quality" ;
+        "Labor",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RXM15-2" ;
     jprx:hasManufacturer jprx:Firm_010,
         jprx:Firm_045,
@@ -54662,12 +54546,16 @@ jprx:census_RXM15-2 a jprx:CensusProcess ;
 jprx:census_RXM16-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM16-1" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
-    jprx:censusTRL 9 ;
-    jprx:constructionTask "Surveying & Mapping" ;
+    jprx:censusTRL 7 ;
+    jprx:constructionTask "Inspection",
+        "Surveying & Mapping" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:deployOnsiteOutdoor true ;
-    jprx:hasAdoptionDriver "Integration" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RXM16-1" ;
     jprx:hasDistributor jprx:Firm_168 ;
     jprx:hasManufacturer jprx:Firm_016 ;
@@ -54693,7 +54581,9 @@ jprx:census_RXM16-3 a jprx:CensusProcess ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:deployOnsiteOutdoor true ;
-    jprx:hasAdoptionDriver "Digital" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Safety" ;
     jprx:hasCensusId "RXM16-3" ;
     jprx:hasManufacturer jprx:Firm_147,
         jprx:Firm_168 ;
@@ -54714,7 +54604,7 @@ jprx:census_RXM16-7 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM16-7" ;
     jprx:buildingSystem "Envelope/Facade",
         "Interior fitout" ;
-    jprx:censusTRL 7 ;
+    jprx:censusTRL 8 ;
     jprx:constructionTask "Inspection" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
@@ -54723,9 +54613,10 @@ jprx:census_RXM16-7 a jprx:CensusProcess ;
     jprx:developedBy jprx:Firm_037,
         jprx:Firm_058 ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Cost",
-        "Integration",
-        "Quality" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality",
+        "Safety" ;
     jprx:hasCensusId "RXM16-7" ;
     jprx:hasManufacturer jprx:Firm_168 ;
     jprx:hasTRL "TRL6" ;
@@ -54768,11 +54659,10 @@ jprx:census_RXM21-3 a jprx:CensusProcess ;
 jprx:census_RXM26-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM26-1" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
-    jprx:censusTRL 8 ;
+    jprx:censusTRL 9 ;
     jprx:constructionTask "Cleaning",
         "Material Handling" ;
-    jprx:deployOnsite true ;
-    jprx:deployOnsiteOutdoor true ;
+    jprx:deployOffsite true ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP25/RXM26-1)" ;
     jprx:hasAdoptionDriver "Labor" ;
@@ -54789,17 +54679,18 @@ jprx:census_RXM26-1 a jprx:CensusProcess ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
     jprx:stakeholderOthers 1 ;
-    jprx:stakeholderRobotManufacturer 2 ;
+    jprx:stakeholderRobotManufacturer 1 ;
     jprx:usesMaterial "Universal" .
 
 jprx:census_RXM28-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM28-1" ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Surveying & Mapping" ;
     jprx:deployOffsite true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Cost" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXM28-1" ;
     jprx:hasManufacturer jprx:Firm_057,
         jprx:Firm_122 ;
@@ -54808,9 +54699,7 @@ jprx:census_RXM28-1 a jprx:CensusProcess ;
     jprx:isCensusRecordOf jprx:RP46 ;
     jprx:lifecyclePhase "Design",
         "Planning" ;
-    jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
-    jprx:stakeholderRobotManufacturer 1 ;
     jprx:usesMaterial "Concrete" ;
     jprx:usesMaterialNode jprx:Material_Concrete .
 
@@ -54818,12 +54707,13 @@ jprx:census_RXM29-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM29-1" ;
     jprx:buildingSystem "Interior fitout" ;
     jprx:censusTRL 7 ;
-    jprx:constructionTask "Assembly" ;
+    jprx:constructionTask "Assembly",
+        "Material Handling" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Cost",
-        "Labor" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Safety" ;
     jprx:hasCensusId "RXM29-1" ;
     jprx:hasManufacturer jprx:Firm_033 ;
     jprx:hasTRL "TRL7" ;
@@ -54841,8 +54731,8 @@ jprx:census_RXM31-1 a jprx:CensusProcess ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
     jprx:constructionTask "Assembly",
+        "CW_precast",
         "Concrete work",
-        "Heavy Lift",
         "SW_rebar",
         "Steelwork" ;
     jprx:deployOffsite true ;
@@ -54890,15 +54780,16 @@ jprx:census_RXM34-2 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM34-2" ;
     jprx:buildingSystem "Interior fitout" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Assembly",
-        "Timber Joinery Cutting" ;
+    jprx:constructionTask "Material Handling" ;
     jprx:deployOffsite true ;
-    jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_114,
         jprx:Firm_182 ;
     jprx:digitalRobot true ;
     jprx:hasAdoptionDriver "Cost",
-        "Digital" ;
+        "Digital",
+        "Integration",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXM34-2" ;
     jprx:hasTRL "TRL9" ;
     jprx:icStatus "C" ;
@@ -54906,8 +54797,8 @@ jprx:census_RXM34-2 a jprx:CensusProcess ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout" ;
     jprx:physicalRobot true ;
-    jprx:stakeholderDistributor 1 ;
-    jprx:stakeholderGC 2 ;
+    jprx:stakeholderGC 1 ;
+    jprx:stakeholderTrade 1 ;
     jprx:usesMaterial "Interior board" ;
     jprx:usesMaterialNode jprx:Material_Interior_board .
 
@@ -54915,9 +54806,6 @@ jprx:census_RXM35-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM35-1" ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 9 ;
-    jprx:constructionTask "Assembly",
-        "SW_welding",
-        "Steelwork" ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_136 ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP4/RXM35-1)" ;
@@ -54965,10 +54853,10 @@ jprx:census_RXM4-3 a jprx:CensusProcess ;
     jprx:censusTRL 7 ;
     jprx:constructionTask "3D Printing",
         "Assembly",
-        "CW_shotcrete",
         "Concrete work" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
+    jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
     jprx:enrResearchStatus "DONE (deep pass)" ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP15/RXM4-3)" ;
@@ -54989,9 +54877,8 @@ jprx:census_RXM4-3 a jprx:CensusProcess ;
 jprx:census_RXM50 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM50" ;
     jprx:buildingSystem "Structural core" ;
-    jprx:censusTRL 9 ;
+    jprx:censusTRL 8 ;
     jprx:constructionTask "3D Printing",
-        "CW_shotcrete",
         "Concrete work" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
@@ -55041,8 +54928,9 @@ jprx:census_RXM6-1 a jprx:CensusProcess ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteIndoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Cost",
-        "Labor" ;
+    jprx:hasAdoptionDriver "Digital",
+        "Labor",
+        "Quality" ;
     jprx:hasCensusId "RXM6-1" ;
     jprx:hasManufacturer jprx:Firm_060 ;
     jprx:hasTRL "TRL8" ;
@@ -55059,8 +54947,8 @@ jprx:census_RXM6-1 a jprx:CensusProcess ;
 jprx:census_RXM6-2 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM6-2" ;
     jprx:buildingSystem "Structural core" ;
-    jprx:censusTRL 8 ;
-    jprx:constructionTask "CW_precast",
+    jprx:censusTRL 9 ;
+    jprx:constructionTask "CW_finishing",
         "Concrete work",
         "Surface Treatment" ;
     jprx:deployOnsite true ;
@@ -55109,6 +54997,8 @@ jprx:census_RXM6-4 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM6-4" ;
     jprx:buildingSystem "Sitework" ;
     jprx:censusTRL 9 ;
+    jprx:constructionTask "Heavy Lift",
+        "Material Handling" ;
     jprx:deployOffsite true ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
@@ -55138,11 +55028,12 @@ jprx:census_RXM8-6 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM8-6" ;
     jprx:buildingSystem "Structural core" ;
     jprx:censusTRL 7 ;
-    jprx:constructionTask "Cleaning" ;
+    jprx:constructionTask "Surface Treatment" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Safety" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Safety" ;
     jprx:hasCensusId "RXM8-6" ;
     jprx:hasManufacturer jprx:Firm_082,
         jprx:Firm_195 ;
@@ -55150,7 +55041,7 @@ jprx:census_RXM8-6 a jprx:CensusProcess ;
     jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP43 ;
     jprx:lifecyclePhase "Maintenance",
-        "Operation" ;
+        "Site Preparation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -55162,11 +55053,13 @@ jprx:census_RXM9-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXM9-1" ;
     jprx:buildingSystem "Cross-system/Not-specific" ;
     jprx:censusTRL 7 ;
-    jprx:constructionTask "Cleaning" ;
+    jprx:constructionTask "Cleaning",
+        "Inspection" ;
     jprx:deployOnsite true ;
     jprx:deployOnsiteOutdoor true ;
     jprx:digitalRobot true ;
-    jprx:hasAdoptionDriver "Safety" ;
+    jprx:hasAdoptionDriver "Labor",
+        "Safety" ;
     jprx:hasCensusId "RXM9-1" ;
     jprx:hasManufacturer jprx:Firm_126 ;
     jprx:hasTRL "TRL8" ;
@@ -55231,7 +55124,7 @@ jprx:census_RXT49-1 a jprx:CensusProcess ;
     rdfs:label "Robotic process census_RXT49-1" ;
     jprx:buildingSystem "Envelope/Facade",
         "Sitework" ;
-    jprx:censusTRL 8 ;
+    jprx:censusTRL 7 ;
     jprx:constructionTask "3D Printing",
         "Assembly",
         "Material Handling" ;
@@ -55248,8 +55141,8 @@ jprx:census_RXT49-1 a jprx:CensusProcess ;
     jprx:isCensusRecordOf jprx:RP22 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
-    jprx:mobileRobot true ;
     jprx:physicalRobot true ;
+    jprx:stakeholderRobotManufacturer 1 ;
     jprx:stakeholderTrade 1 .
 
 jprx:exposesTo a owl:ObjectProperty ;
@@ -56156,6 +56049,86 @@ jprx:RE3 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction" .
 
+jprx:AT5 a jprx:Enabler ;
+    rdfs:label "Human independent"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR11,
+        jprx:AR14,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT13,
+        jprx:AT7,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR2,
+        jprx:PR4,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:dependsOn jprx:CO16 ;
+    jprx:enablesCapability jprx:VA1 ;
+    jprx:hasActivationFrequency 2 ;
+    jprx:hasCategory "Attribute" ;
+    jprx:hasCategoryColour "#eee450" ;
+    jprx:hasEnablerId "AT5" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction" .
+
 jprx:Enabler a owl:Class .
 
 jprx:CO1 a jprx:Enabler ;
@@ -56252,106 +56225,6 @@ jprx:CO1 a jprx:Enabler ;
     jprx:hasEnablerId "CO1" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
-
-jprx:RE10 a jprx:Enabler ;
-    rdfs:label "Gantry-type robotic system"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT1,
-        jprx:AT10,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT2,
-        jprx:AT3,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:CO1,
-        jprx:CO10,
-        jprx:CO11,
-        jprx:CO12,
-        jprx:CO13,
-        jprx:CO16,
-        jprx:CO2,
-        jprx:CO6,
-        jprx:CO8,
-        jprx:CO9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR2,
-        jprx:PR3,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RE12,
-        jprx:RE15,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 4 ;
-    jprx:hasCategory "Resource" ;
-    jprx:hasCategoryColour "#5eb5e5" ;
-    jprx:hasEnablerId "RE10" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Structural Construction" .
 
 jprx:AC12 a jprx:Enabler ;
     rdfs:label "DFAB BIM coordinator"@en ;
@@ -56737,6 +56610,106 @@ jprx:AC2 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
 
+jprx:RE10 a jprx:Enabler ;
+    rdfs:label "Gantry-type robotic system"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT1,
+        jprx:AT10,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT2,
+        jprx:AT3,
+        jprx:AT7,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:CO1,
+        jprx:CO10,
+        jprx:CO11,
+        jprx:CO12,
+        jprx:CO13,
+        jprx:CO16,
+        jprx:CO2,
+        jprx:CO6,
+        jprx:CO8,
+        jprx:CO9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR2,
+        jprx:PR3,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RE12,
+        jprx:RE15,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 5 ;
+    jprx:hasCategory "Resource" ;
+    jprx:hasCategoryColour "#5eb5e5" ;
+    jprx:hasEnablerId "RE10" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Structural Construction" .
+
 jprx:AC3 a jprx:Enabler ;
     rdfs:label "Design engineer"@en ;
     jprx:bookingPhase "Design" ;
@@ -56975,86 +56948,6 @@ jprx:RE7 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction" .
 
-jprx:AT5 a jprx:Enabler ;
-    rdfs:label "Human independent"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR11,
-        jprx:AR14,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT13,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR2,
-        jprx:PR4,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:dependsOn jprx:CO16 ;
-    jprx:enablesCapability jprx:VA1 ;
-    jprx:hasActivationFrequency 4 ;
-    jprx:hasCategory "Attribute" ;
-    jprx:hasCategoryColour "#eee450" ;
-    jprx:hasEnablerId "AT5" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Structural Construction" .
-
 jprx:RE8 a jprx:Enabler ;
     rdfs:label "Machine Learning/AI"@en ;
     jprx:bookingPhase "Design" ;
@@ -57252,80 +57145,6 @@ jprx:CO8 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction;Operation;Maintenance" .
 
-jprx:PR6 a jprx:Enabler ;
-    rdfs:label "Post-rationalisation"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 3 ;
-    jprx:hasCategory "Process" ;
-    jprx:hasCategoryColour "#0e74b1" ;
-    jprx:hasEnablerId "PR6" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Design" .
-
 jprx:AC15 a jprx:Enabler ;
     rdfs:label "Factory commissioner"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -57447,6 +57266,80 @@ jprx:AC15 a jprx:Enabler ;
     jprx:hasEnablerId "AC15" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction" .
+
+jprx:PR6 a jprx:Enabler ;
+    rdfs:label "Post-rationalisation"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 3 ;
+    jprx:hasCategory "Process" ;
+    jprx:hasCategoryColour "#0e74b1" ;
+    jprx:hasEnablerId "PR6" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Design" .
 
 jprx:PR3 a jprx:Enabler ;
     rdfs:label "Additive manufacturing"@en ;
@@ -58925,6 +58818,228 @@ jprx:AR13 a jprx:Enabler ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Operation;Maintenance" .
 
+jprx:AT1 a jprx:Enabler ;
+    rdfs:label "Bespoke/customised design"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT10,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT2,
+        jprx:AT3,
+        jprx:AT4,
+        jprx:AT5,
+        jprx:AT6,
+        jprx:AT7,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR2,
+        jprx:PR3,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:constrains jprx:AT2 ;
+    jprx:hasActivationFrequency 10 ;
+    jprx:hasCategory "Attribute" ;
+    jprx:hasCategoryColour "#eee450" ;
+    jprx:hasEnablerId "AT1" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Design" .
+
+jprx:RE2 a jprx:Enabler ;
+    rdfs:label "Robot arm"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT1,
+        jprx:AT10,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT13,
+        jprx:AT2,
+        jprx:AT3,
+        jprx:AT5,
+        jprx:AT6,
+        jprx:AT7,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:CO1,
+        jprx:CO10,
+        jprx:CO11,
+        jprx:CO13,
+        jprx:CO14,
+        jprx:CO16,
+        jprx:CO2,
+        jprx:CO3,
+        jprx:CO4,
+        jprx:CO6,
+        jprx:CO7,
+        jprx:CO8,
+        jprx:CO9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR2,
+        jprx:PR3,
+        jprx:PR4,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RE10,
+        jprx:RE12,
+        jprx:RE13,
+        jprx:RE14,
+        jprx:RE15,
+        jprx:RE3,
+        jprx:RE4,
+        jprx:RE5,
+        jprx:RE6,
+        jprx:RE7,
+        jprx:RE8,
+        jprx:RE9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:enablesCapability jprx:PR4 ;
+    jprx:hasActivationFrequency 22 ;
+    jprx:hasCategory "Resource" ;
+    jprx:hasCategoryColour "#5eb5e5" ;
+    jprx:hasEnablerId "RE2" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Structural Construction" .
+
 jprx:AC8 a jprx:Enabler ;
     rdfs:label "DFAB contractor"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -59061,104 +59176,6 @@ jprx:AC8 a jprx:Enabler ;
     jprx:hasEnablerId "AC8" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction" .
-
-jprx:AT1 a jprx:Enabler ;
-    rdfs:label "Bespoke/customised design"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT10,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT2,
-        jprx:AT3,
-        jprx:AT4,
-        jprx:AT5,
-        jprx:AT6,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR2,
-        jprx:PR3,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:constrains jprx:AT2 ;
-    jprx:hasActivationFrequency 10 ;
-    jprx:hasCategory "Attribute" ;
-    jprx:hasCategoryColour "#eee450" ;
-    jprx:hasEnablerId "AT1" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Design" .
 
 jprx:AT2 a jprx:Enabler ;
     rdfs:label "Modular"@en ;
@@ -59348,234 +59365,6 @@ jprx:AT6 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:CO7 a jprx:Enabler ;
-    rdfs:label "CVE/integrated platform"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT1,
-        jprx:AT10,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT2,
-        jprx:AT3,
-        jprx:AT5,
-        jprx:AT6,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:CO10,
-        jprx:CO11,
-        jprx:CO13,
-        jprx:CO14,
-        jprx:CO16,
-        jprx:CO8,
-        jprx:CO9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR2,
-        jprx:PR3,
-        jprx:PR4,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 20 ;
-    jprx:hasCategory "Condition" ;
-    jprx:hasCategoryColour "#049d74" ;
-    jprx:hasEnablerId "CO7" ;
-    jprx:phaseRole "neutral" ;
-    jprx:phaseSpan "All" .
-
-jprx:RE2 a jprx:Enabler ;
-    rdfs:label "Robot arm"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT1,
-        jprx:AT10,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT13,
-        jprx:AT2,
-        jprx:AT3,
-        jprx:AT5,
-        jprx:AT6,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:CO1,
-        jprx:CO10,
-        jprx:CO11,
-        jprx:CO13,
-        jprx:CO14,
-        jprx:CO16,
-        jprx:CO2,
-        jprx:CO3,
-        jprx:CO4,
-        jprx:CO6,
-        jprx:CO7,
-        jprx:CO8,
-        jprx:CO9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR2,
-        jprx:PR3,
-        jprx:PR4,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RE10,
-        jprx:RE12,
-        jprx:RE13,
-        jprx:RE14,
-        jprx:RE15,
-        jprx:RE3,
-        jprx:RE4,
-        jprx:RE5,
-        jprx:RE6,
-        jprx:RE7,
-        jprx:RE8,
-        jprx:RE9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:enablesCapability jprx:PR4 ;
-    jprx:hasActivationFrequency 23 ;
-    jprx:hasCategory "Resource" ;
-    jprx:hasCategoryColour "#5eb5e5" ;
-    jprx:hasEnablerId "RE2" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Structural Construction" .
-
 jprx:AC6 a jprx:Enabler ;
     rdfs:label "Material specialist"@en ;
     jprx:bookingPhase "Design" ;
@@ -59713,6 +59502,110 @@ jprx:AC6 a jprx:Enabler ;
     jprx:hasEnablerId "AC6" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
+
+jprx:CO7 a jprx:Enabler ;
+    rdfs:label "CVE/integrated platform"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT1,
+        jprx:AT10,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT2,
+        jprx:AT3,
+        jprx:AT5,
+        jprx:AT6,
+        jprx:AT7,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:CO10,
+        jprx:CO11,
+        jprx:CO13,
+        jprx:CO14,
+        jprx:CO16,
+        jprx:CO8,
+        jprx:CO9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR2,
+        jprx:PR3,
+        jprx:PR4,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 20 ;
+    jprx:hasCategory "Condition" ;
+    jprx:hasCategoryColour "#049d74" ;
+    jprx:hasEnablerId "CO7" ;
+    jprx:phaseRole "neutral" ;
+    jprx:phaseSpan "All" .
 
 jprx:PR19 a jprx:Enabler ;
     rdfs:label "Robotic driling"@en ;
@@ -60214,9 +60107,6 @@ jprx:VA17 a jprx:Enabler ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:Company a owl:Class ;
-    rdfs:label "Company / organisation"@en .
-
 jprx:AR4 a jprx:Enabler ;
     rdfs:label "Performance-based design"@en ;
     jprx:bookingPhase "Design" ;
@@ -60279,6 +60169,9 @@ jprx:AR4 a jprx:Enabler ;
     jprx:hasEnablerId "AR4" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
+
+jprx:Company a owl:Class ;
+    rdfs:label "Company / organisation"@en .
 
 jprx:CO6 a jprx:Enabler ;
     rdfs:label "Human-robot interaction"@en ;
@@ -60803,6 +60696,55 @@ jprx:PR15 a jprx:Enabler ;
 jprx:CensusProcess a owl:Class ;
     rdfs:comment "Full JPR census process (225). Distinct from the 25 polar Process cases." .
 
+jprx:VA5 a jprx:Enabler ;
+    rdfs:label "Architectural complexity"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 6 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA5" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Design" .
+
 jprx:AC7 a jprx:Enabler ;
     rdfs:label "DFAB Manager"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -60941,55 +60883,6 @@ jprx:AC7 a jprx:Enabler ;
     jprx:hasEnablerId "AC7" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
-
-jprx:VA5 a jprx:Enabler ;
-    rdfs:label "Architectural complexity"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 6 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA5" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Design" .
 
 jprx:AC11 a jprx:Enabler ;
     rdfs:label "DFAB programmer"@en ;
@@ -62006,64 +61899,6 @@ jprx:AT9 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "Structural Construction;Operation" .
 
-jprx:AR10 a jprx:Enabler ;
-    rdfs:label "2D shop drawings for production"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 10 ;
-    jprx:hasCategory "Artefact" ;
-    jprx:hasCategoryColour "#d36027" ;
-    jprx:hasEnablerId "AR10" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Design;Structural Construction" .
-
 jprx:PR11 a jprx:Enabler ;
     rdfs:label "Mass customisation"@en ;
     jprx:bookingPhase "Design" ;
@@ -62220,6 +62055,64 @@ jprx:PR9 a jprx:Enabler ;
     jprx:hasCategoryColour "#0e74b1" ;
     jprx:hasEnablerId "PR9" ;
     jprx:phaseRole "designForX" ;
+    jprx:phaseSpan "Design;Structural Construction" .
+
+jprx:AR10 a jprx:Enabler ;
+    rdfs:label "2D shop drawings for production"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 10 ;
+    jprx:hasCategory "Artefact" ;
+    jprx:hasCategoryColour "#d36027" ;
+    jprx:hasEnablerId "AR10" ;
+    jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:RE4 a jprx:Enabler ;
@@ -62821,6 +62714,97 @@ jprx:PR13 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
+jprx:PR2 a jprx:Enabler ;
+    rdfs:label "Prefabrication/off-site"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR3,
+        jprx:PR4,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR7,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:dependsOn jprx:RI14,
+        jprx:RI18 ;
+    jprx:enablesCapability jprx:VA10,
+        jprx:VA13,
+        jprx:VA2,
+        jprx:VA3 ;
+    jprx:hasActivationFrequency 20 ;
+    jprx:hasCategory "Process" ;
+    jprx:hasCategoryColour "#0e74b1" ;
+    jprx:hasEnablerId "PR2" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Design;Structural Construction" .
+
 jprx:AT10 a jprx:Enabler ;
     rdfs:label "Human assistance"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -62913,40 +62897,10 @@ jprx:AT10 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "Structural Construction" .
 
-jprx:PR2 a jprx:Enabler ;
-    rdfs:label "Prefabrication/off-site"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR3,
-        jprx:PR4,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR7,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
+jprx:VA15 a jprx:Enabler ;
+    rdfs:label "Circular construction / DfDisAssembly"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI1,
         jprx:RI10,
         jprx:RI11,
         jprx:RI12,
@@ -62966,43 +62920,56 @@ jprx:PR2 a jprx:Enabler ;
         jprx:RI7,
         jprx:RI8,
         jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
         jprx:VA16,
         jprx:VA17,
         jprx:VA18,
         jprx:VA19,
-        jprx:VA2,
         jprx:VA20,
         jprx:VA21,
         jprx:VA22,
         jprx:VA23,
         jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:dependsOn jprx:RI14,
-        jprx:RI18 ;
-    jprx:enablesCapability jprx:VA10,
-        jprx:VA13,
-        jprx:VA2,
-        jprx:VA3 ;
-    jprx:hasActivationFrequency 20 ;
-    jprx:hasCategory "Process" ;
-    jprx:hasCategoryColour "#0e74b1" ;
-    jprx:hasEnablerId "PR2" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Design;Structural Construction" .
+        jprx:VA25 ;
+    jprx:enablesCapability jprx:VA4 ;
+    jprx:hasActivationFrequency 8 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA15" ;
+    jprx:phaseRole "designForX" ;
+    jprx:phaseSpan "Design;Demolition" .
+
+jprx:VA22 a jprx:Enabler ;
+    rdfs:label "Easy to maintain"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25 ;
+    jprx:hasActivationFrequency 9 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA22" ;
+    jprx:phaseRole "designForX" ;
+    jprx:phaseSpan "Operation;Maintenance" .
 
 jprx:VA11 a jprx:Enabler ;
     rdfs:label "Systemic design solutions"@en ;
@@ -63047,80 +63014,6 @@ jprx:VA11 a jprx:Enabler ;
     jprx:hasEnablerId "VA11" ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Design" .
-
-jprx:VA22 a jprx:Enabler ;
-    rdfs:label "Easy to maintain"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:hasActivationFrequency 9 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA22" ;
-    jprx:phaseRole "designForX" ;
-    jprx:phaseSpan "Operation;Maintenance" .
-
-jprx:VA15 a jprx:Enabler ;
-    rdfs:label "Circular construction / DfDisAssembly"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:enablesCapability jprx:VA4 ;
-    jprx:hasActivationFrequency 8 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA15" ;
-    jprx:phaseRole "designForX" ;
-    jprx:phaseSpan "Design;Demolition" .
 
 jprx:AT8 a jprx:Enabler ;
     rdfs:label "Industrialised construction scale"@en ;
@@ -63293,6 +63186,48 @@ jprx:PR10 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
+jprx:VA14 a jprx:Enabler ;
+    rdfs:label "Integrated supply-chain"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25 ;
+    jprx:enablesCapability jprx:PR2 ;
+    jprx:hasActivationFrequency 14 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA14" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "All" .
+
 jprx:AT3 a jprx:Enabler ;
     rdfs:label "Bespoke DFAB technology"@en ;
     jprx:amplifies jprx:VA2 ;
@@ -63391,48 +63326,6 @@ jprx:AT3 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:VA14 a jprx:Enabler ;
-    rdfs:label "Integrated supply-chain"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:enablesCapability jprx:PR2 ;
-    jprx:hasActivationFrequency 14 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA14" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "All" .
-
 jprx:VA20 a jprx:Enabler ;
     rdfs:label "Location independent"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -63464,6 +63357,54 @@ jprx:VA20 a jprx:Enabler ;
     jprx:hasCategory "Value" ;
     jprx:hasCategoryColour "#cb79a7" ;
     jprx:hasEnablerId "VA20" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction" .
+
+jprx:VA7 a jprx:Enabler ;
+    rdfs:label "Reduce construction complexity"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 16 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA7" ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Structural Construction" .
 
@@ -63662,56 +63603,8 @@ jprx:RE6 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
-jprx:VA7 a jprx:Enabler ;
-    rdfs:label "Reduce construction complexity"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 16 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA7" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Structural Construction" .
-
 jprx:AR3 a jprx:Enabler ;
-    rdfs:label "Bespoke DFAB tool"@en ;
+    rdfs:label "Bespoke DFAB tools"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -63818,6 +63711,26 @@ jprx:RI2 a jprx:Enabler ;
     jprx:hasEnablerId "RI2" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction;Operation" .
+
+jprx:RI10 a jprx:Enabler ;
+    rdfs:label "Stakeholder sceptical attitude"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI20 ;
+    jprx:hasActivationFrequency 9 ;
+    jprx:hasCategory "Risk" ;
+    jprx:hasCategoryColour "#787878" ;
+    jprx:hasEnablerId "RI10" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "All" .
 
 jprx:VA4 a jprx:Enabler ;
     rdfs:label "Material/energy saving"@en ;
@@ -63940,26 +63853,6 @@ jprx:PR17 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Structural Construction;Operation" .
 
-jprx:RI10 a jprx:Enabler ;
-    rdfs:label "Stakeholder sceptical attitude"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI20 ;
-    jprx:hasActivationFrequency 9 ;
-    jprx:hasCategory "Risk" ;
-    jprx:hasCategoryColour "#787878" ;
-    jprx:hasEnablerId "RI10" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "All" .
-
 jprx:PR12 a jprx:Enabler ;
     rdfs:label "Path planning"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -64035,36 +63928,6 @@ jprx:PR12 a jprx:Enabler ;
     jprx:hasEnablerId "PR12" ;
     jprx:hasPrecondition jprx:RE4 ;
     jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Structural Construction" .
-
-jprx:VA25 a jprx:Enabler ;
-    rdfs:label "Reduce disruption due to hazards"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9 ;
-    jprx:hasActivationFrequency 13 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA25" ;
-    jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:PR1 a jprx:Enabler ;
@@ -64152,6 +64015,36 @@ jprx:PR1 a jprx:Enabler ;
     jprx:hasEnablerId "PR1" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
+
+jprx:VA25 a jprx:Enabler ;
+    rdfs:label "Reduce disruption due to hazards"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9 ;
+    jprx:hasActivationFrequency 13 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA25" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction" .
 
 jprx:RI1 a jprx:Enabler ;
     rdfs:label "Increase production uncertainty"@en ;
@@ -64241,6 +64134,55 @@ jprx:AR8 a jprx:Enabler ;
     jprx:hasEnablerId "AR8" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
+
+jprx:VA6 a jprx:Enabler ;
+    rdfs:label "Reduce cost"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 22 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA6" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:VA8 a jprx:Enabler ;
     rdfs:label "Knowledge transfer"@en ;
@@ -64343,55 +64285,6 @@ jprx:AR14 a jprx:Enabler ;
     jprx:hasEnablerId "AR14" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
-
-jprx:VA6 a jprx:Enabler ;
-    rdfs:label "Reduce cost"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 22 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA6" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:RI17 a jprx:Enabler ;
     rdfs:label "Market access complexity/ uncertainty"@en ;

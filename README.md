@@ -3,7 +3,7 @@
 An explorable, anonymised release of the JPRX knowledge graph: 140
 digital-fabrication enablers, 217 Japanese robotic-construction
 processes, 50 deep-coded polar cases, 100 literature-cited
-dependencies between enablers and 8447 co-occurrence pairs derived
+dependencies between enablers and 8426 co-occurrence pairs derived
 from the cases.
 
 Open `index.html` through a web server (`python -m http.server -d . 8080`, then
