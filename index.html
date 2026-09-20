@@ -329,9 +329,16 @@
         }
 
         .details-strip .legend-item,
-        .details-strip .edge-item,
         .details-strip .node-item {
             font-size: 11px;
+        }
+
+        /* the edge legend sits beside the Enablers-by-category list and reads as
+           one key with it, so it takes that list's 9px rather than the 11px the
+           node rows use. Split out of the rule it shared with .node-item, which
+           also styles the Linked Info rows and should stay at reading size. */
+        .details-strip .edge-item {
+            font-size: 9px;
         }
 
         .details-strip .node-item,
@@ -631,8 +638,9 @@
         }
 
         .edge-line.correlation {
-            background: repeating-linear-gradient(90deg,
-                #000000 0 2px, transparent 2px 7px);
+            /* solid grey, no arrowhead: it is the one symmetric, statistical
+               layer, so it should not look like the asserted directional ones */
+            background: #9aa0a6;
         }
 
         .edge-line.unvalidated {
@@ -1122,6 +1130,10 @@
                                 <span class="count" id="edgeCount">0</span>
                             </div>
                             <div class="edge-item">
+                                <div class="edge-line correlation"></div>
+                                <span>X and Y <strong>co-occur</strong>, statistical and symmetric, not asserted</span>
+                            </div>
+                            <div class="edge-item">
                                 <div class="edge-line rel-enables"></div>
                                 <span>X <strong>enables</strong> Y</span>
                             </div>
@@ -1144,10 +1156,6 @@
                             <div class="edge-item">
                                 <div class="edge-line rel-constrains"></div>
                                 <span>X <strong>constrains</strong> Y</span>
-                            </div>
-                            <div class="edge-item">
-                                <div class="edge-line correlation"></div>
-                                <span>X and Y <strong>co-occur</strong>, statistical and symmetric, not asserted</span>
                             </div>
                             <div class="edge-item">
                                 <span><strong>Dashed ring</strong> — enabler activated in none of the 50 cases (no edges)</span>
@@ -1536,15 +1544,16 @@
                     {
                         selector: 'edge[type="coOccursWith"]',
                         style: {
-                            "line-color": "#000000",
-                            // DOTS. [1,5] with round caps reads as a bead chain —
-                            // categorically different from the long dash used for
-                            // unvalidated edges (14:1 stroke-length ratio). The old
-                            // [4,2] vs [6,3] were the same texture at two scales,
-                            // which is why they were indistinguishable.
-                            "line-style": "dashed",
-                            "line-dash-pattern": [1, 5],
-                            "line-cap": "round",
+                            // Solid grey, no arrowhead. Once the six dependency
+                            // relations each took their own dash pattern, a dotted
+                            // black co-occurrence read as a seventh relation. It is
+                            // not one: it is symmetric and statistical, so it gets
+                            // the one style none of them use, and grey keeps it
+                            // behind the asserted layer it must never be read as.
+                            "line-color": "#9aa0a6",
+                            "line-style": "solid",
+                            "line-dash-pattern": [1, 0],
+                            "line-cap": "butt",
                             "target-arrow-shape": "none",
                             "curve-style": "bezier",
                             // strong correlations stand out, weak ones fade back —
