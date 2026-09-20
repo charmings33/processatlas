@@ -640,6 +640,28 @@
                 #000000 0 9px, transparent 9px 13px);
         }
 
+        /* the six dependency relations, matching the paper's figure. The swatch
+           pattern mirrors the Cytoscape line-dash-pattern for the same type, so
+           the key and the canvas cannot drift apart. */
+        .edge-line.rel-enables { background: #000; }
+        .edge-line.rel-requires {
+            background: repeating-linear-gradient(90deg, #000 0 7px, transparent 7px 11px);
+        }
+        .edge-line.rel-presupposes {
+            background: repeating-linear-gradient(90deg,
+                #000 0 8px, transparent 8px 11px, #000 11px 13px, transparent 13px 16px);
+        }
+        .edge-line.rel-amplifies {
+            background: repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 5px);
+        }
+        .edge-line.rel-mitigates {
+            background: repeating-linear-gradient(90deg,
+                #000 0 7px, transparent 7px 9px, #000 9px 11px, transparent 11px 13px);
+        }
+        .edge-line.rel-constrains {
+            background: repeating-linear-gradient(90deg, #000 0 3px, transparent 3px 6px);
+        }
+
         .accordion-header {
             display: flex;
             align-items: center;
@@ -1100,12 +1122,32 @@
                                 <span class="count" id="edgeCount">0</span>
                             </div>
                             <div class="edge-item">
-                                <div class="edge-line dependency"></div>
-                                <span><strong>Solid, arrow</strong> — dependency: asserted, literature-cited, directional</span>
+                                <div class="edge-line rel-enables"></div>
+                                <span>X <strong>enables</strong> Y</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line rel-requires"></div>
+                                <span>X <strong>requires</strong> Y</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line rel-presupposes"></div>
+                                <span>X <strong>presupposes</strong> Y</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line rel-amplifies"></div>
+                                <span>X <strong>amplifies</strong> value Y</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line rel-mitigates"></div>
+                                <span>X <strong>mitigates</strong> risk Y</span>
+                            </div>
+                            <div class="edge-item">
+                                <div class="edge-line rel-constrains"></div>
+                                <span>X <strong>constrains</strong> Y</span>
                             </div>
                             <div class="edge-item">
                                 <div class="edge-line correlation"></div>
-                                <span><strong>Dotted, no arrow</strong> — co-occurrence: statistical, symmetric</span>
+                                <span>X and Y <strong>co-occur</strong>, statistical and symmetric, not asserted</span>
                             </div>
                             <div class="edge-item">
                                 <span><strong>Dashed ring</strong> — enabler activated in none of the 50 cases (no edges)</span>
@@ -1564,6 +1606,37 @@
                             "font-weight": "normal",
                             "z-index": 10
                         }
+                    },
+                    // The six dependency relations, drawn as the paper's figure
+                    // draws them. Until now all six collapsed into one solid
+                    // arrow, so the Atlas showed that an edge was asserted but
+                    // not what it asserted, while the figure beside it in the
+                    // paper distinguished them. Cytoscape has no crossbar, so
+                    // "constrains" takes the densest pattern rather than the
+                    // figure's barred line; every other style matches.
+                    {
+                        selector: 'edge[type="enablesCapability"]',
+                        style: { "line-style": "solid", "line-dash-pattern": [1, 0] }
+                    },
+                    {
+                        selector: 'edge[type="dependsOn"]',
+                        style: { "line-style": "dashed", "line-dash-pattern": [10, 5], "line-cap": "butt" }
+                    },
+                    {
+                        selector: 'edge[type="hasPrecondition"]',
+                        style: { "line-style": "dashed", "line-dash-pattern": [12, 4, 2, 4], "line-cap": "butt" }
+                    },
+                    {
+                        selector: 'edge[type="amplifies"]',
+                        style: { "line-style": "dashed", "line-dash-pattern": [2, 4], "line-cap": "butt" }
+                    },
+                    {
+                        selector: 'edge[type="mitigates"]',
+                        style: { "line-style": "dashed", "line-dash-pattern": [10, 3, 2, 3, 2, 3], "line-cap": "butt" }
+                    },
+                    {
+                        selector: 'edge[type="constrains"]',
+                        style: { "line-style": "dashed", "line-dash-pattern": [3, 3], "line-cap": "butt" }
                     },
                     {
                         selector: "edge[path_edge]",

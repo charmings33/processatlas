@@ -55603,8 +55603,6 @@ jprx:RE16 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
-jprx:Dependency a owl:Class .
-
 jprx:RE13 a jprx:Enabler ;
     rdfs:label "IFC"@en ;
     jprx:bookingPhase "Design" ;
@@ -55676,6 +55674,8 @@ jprx:RE13 a jprx:Enabler ;
     jprx:hasEnablerId "RE13" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
+
+jprx:Dependency a owl:Class .
 
 jprx:CO4 a jprx:Enabler ;
     rdfs:label "DFAB digital twin"@en ;
@@ -55856,6 +55856,68 @@ jprx:CO14 a jprx:Enabler ;
     jprx:hasEnablerId "CO14" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
+
+jprx:AT5 a jprx:Enabler ;
+    rdfs:label "Human independent"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR11,
+        jprx:AR14,
+        jprx:AR3,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT11,
+        jprx:AT8,
+        jprx:AT9,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR4,
+        jprx:PR8,
+        jprx:RI1,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA16,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:dependsOn jprx:CO16 ;
+    jprx:enablesCapability jprx:VA1 ;
+    jprx:hasActivationFrequency 2 ;
+    jprx:hasCategory "Attribute" ;
+    jprx:hasCategoryColour "#eee450" ;
+    jprx:hasEnablerId "AT5" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction" .
 
 jprx:AC17 a jprx:Enabler ;
     rdfs:label "Surveyor"@en ;
@@ -56047,86 +56109,6 @@ jprx:RE3 a jprx:Enabler ;
     jprx:hasCategoryColour "#5eb5e5" ;
     jprx:hasEnablerId "RE3" ;
     jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Structural Construction" .
-
-jprx:AT5 a jprx:Enabler ;
-    rdfs:label "Human independent"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR11,
-        jprx:AR14,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT13,
-        jprx:AT7,
-        jprx:AT8,
-        jprx:AT9,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR2,
-        jprx:PR4,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:dependsOn jprx:CO16 ;
-    jprx:enablesCapability jprx:VA1 ;
-    jprx:hasActivationFrequency 2 ;
-    jprx:hasCategory "Attribute" ;
-    jprx:hasCategoryColour "#eee450" ;
-    jprx:hasEnablerId "AT5" ;
-    jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:Enabler a owl:Class .
@@ -56379,7 +56361,6 @@ jprx:AC4 a jprx:Enabler ;
         jprx:AT12,
         jprx:AT2,
         jprx:AT3,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -56413,6 +56394,7 @@ jprx:AC4 a jprx:Enabler ;
         jprx:PR8,
         jprx:PR9,
         jprx:RE1,
+        jprx:RE10,
         jprx:RE12,
         jprx:RE13,
         jprx:RE2,
@@ -56511,7 +56493,6 @@ jprx:AC2 a jprx:Enabler ;
         jprx:AT12,
         jprx:AT2,
         jprx:AT3,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -56685,17 +56666,21 @@ jprx:RE10 a jprx:Enabler ;
         jprx:RI9,
         jprx:VA1,
         jprx:VA10,
+        jprx:VA11,
         jprx:VA12,
         jprx:VA13,
         jprx:VA14,
         jprx:VA15,
         jprx:VA16,
+        jprx:VA17,
         jprx:VA18,
         jprx:VA19,
         jprx:VA2,
+        jprx:VA20,
         jprx:VA22,
         jprx:VA23,
         jprx:VA24,
+        jprx:VA25,
         jprx:VA3,
         jprx:VA4,
         jprx:VA5,
@@ -56746,7 +56731,6 @@ jprx:AC3 a jprx:Enabler ;
         jprx:AT2,
         jprx:AT3,
         jprx:AT4,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -57170,7 +57154,6 @@ jprx:AC15 a jprx:Enabler ;
         jprx:AT2,
         jprx:AT3,
         jprx:AT4,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -58840,7 +58823,6 @@ jprx:AT1 a jprx:Enabler ;
         jprx:AT2,
         jprx:AT3,
         jprx:AT4,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -58939,7 +58921,6 @@ jprx:RE2 a jprx:Enabler ;
         jprx:AT13,
         jprx:AT2,
         jprx:AT3,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -58978,7 +58959,6 @@ jprx:RE2 a jprx:Enabler ;
         jprx:PR9,
         jprx:RE10,
         jprx:RE12,
-        jprx:RE13,
         jprx:RE14,
         jprx:RE15,
         jprx:RE3,
@@ -59020,7 +59000,6 @@ jprx:RE2 a jprx:Enabler ;
         jprx:VA19,
         jprx:VA2,
         jprx:VA20,
-        jprx:VA21,
         jprx:VA22,
         jprx:VA23,
         jprx:VA24,
@@ -59400,7 +59379,6 @@ jprx:AC6 a jprx:Enabler ;
         jprx:AT2,
         jprx:AT3,
         jprx:AT4,
-        jprx:AT5,
         jprx:AT6,
         jprx:AT7,
         jprx:AT8,
@@ -59556,6 +59534,7 @@ jprx:CO7 a jprx:Enabler ;
         jprx:PR7,
         jprx:PR8,
         jprx:PR9,
+        jprx:RE10,
         jprx:RI1,
         jprx:RI10,
         jprx:RI11,
@@ -60070,43 +60049,6 @@ jprx:AC1 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:VA17 a jprx:Enabler ;
-    rdfs:label "Reduce transportation complexity"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:hasActivationFrequency 4 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA17" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Design;Structural Construction" .
-
 jprx:AR4 a jprx:Enabler ;
     rdfs:label "Performance-based design"@en ;
     jprx:bookingPhase "Design" ;
@@ -60169,6 +60111,43 @@ jprx:AR4 a jprx:Enabler ;
     jprx:hasEnablerId "AR4" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
+
+jprx:VA17 a jprx:Enabler ;
+    rdfs:label "Reduce transportation complexity"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25 ;
+    jprx:hasActivationFrequency 4 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA17" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:Company a owl:Class ;
     rdfs:label "Company / organisation"@en .
@@ -61020,6 +60999,69 @@ jprx:AC11 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
+jprx:AR6 a jprx:Enabler ;
+    rdfs:label "Configurators/kit-of-parts"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:enablesCapability jprx:PR11 ;
+    jprx:hasActivationFrequency 12 ;
+    jprx:hasCategory "Artefact" ;
+    jprx:hasCategoryColour "#d36027" ;
+    jprx:hasEnablerId "AR6" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Design" .
+
 jprx:AR7 a jprx:Enabler ;
     rdfs:label "High LOD BIM for DFAB"@en ;
     jprx:bookingPhase "Design" ;
@@ -61082,13 +61124,14 @@ jprx:AR7 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:AR6 a jprx:Enabler ;
-    rdfs:label "Configurators/kit-of-parts"@en ;
+jprx:AR5 a jprx:Enabler ;
+    rdfs:label "DFAB virtual mockup"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
         jprx:AR13,
         jprx:AR14,
+        jprx:AR6,
         jprx:AR7,
         jprx:AR8,
         jprx:AR9,
@@ -61099,7 +61142,6 @@ jprx:AR6 a jprx:Enabler ;
         jprx:RI13,
         jprx:RI14,
         jprx:RI15,
-        jprx:RI16,
         jprx:RI17,
         jprx:RI18,
         jprx:RI19,
@@ -61137,11 +61179,10 @@ jprx:AR6 a jprx:Enabler ;
         jprx:VA7,
         jprx:VA8,
         jprx:VA9 ;
-    jprx:enablesCapability jprx:PR11 ;
-    jprx:hasActivationFrequency 12 ;
+    jprx:hasActivationFrequency 8 ;
     jprx:hasCategory "Artefact" ;
     jprx:hasCategoryColour "#d36027" ;
-    jprx:hasEnablerId "AR6" ;
+    jprx:hasEnablerId "AR5" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
 
@@ -61394,68 +61435,6 @@ jprx:AC9 a jprx:Enabler ;
     jprx:hasEnablerId "AC9" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
-
-jprx:AR5 a jprx:Enabler ;
-    rdfs:label "DFAB virtual mockup"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 8 ;
-    jprx:hasCategory "Artefact" ;
-    jprx:hasCategoryColour "#d36027" ;
-    jprx:hasEnablerId "AR5" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Design" .
 
 jprx:VA18 a jprx:Enabler ;
     rdfs:label "Enable life cycle assessment"@en ;
@@ -61810,95 +61789,6 @@ jprx:AT7 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
-jprx:AT9 a jprx:Enabler ;
-    rdfs:label "Mobile"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:AT10,
-        jprx:AT11,
-        jprx:AT12,
-        jprx:AT13,
-        jprx:PR1,
-        jprx:PR10,
-        jprx:PR11,
-        jprx:PR12,
-        jprx:PR13,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:PR2,
-        jprx:PR3,
-        jprx:PR4,
-        jprx:PR5,
-        jprx:PR6,
-        jprx:PR8,
-        jprx:PR9,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:enablesCapability jprx:PR8 ;
-    jprx:hasActivationFrequency 28 ;
-    jprx:hasCategory "Attribute" ;
-    jprx:hasCategoryColour "#eee450" ;
-    jprx:hasEnablerId "AT9" ;
-    jprx:phaseRole "neutral" ;
-    jprx:phaseSpan "Structural Construction;Operation" .
-
 jprx:PR11 a jprx:Enabler ;
     rdfs:label "Mass-customisation"@en ;
     jprx:bookingPhase "Design" ;
@@ -62056,6 +61946,95 @@ jprx:PR9 a jprx:Enabler ;
     jprx:hasEnablerId "PR9" ;
     jprx:phaseRole "designForX" ;
     jprx:phaseSpan "Design;Structural Construction" .
+
+jprx:AT9 a jprx:Enabler ;
+    rdfs:label "Mobile"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:AT10,
+        jprx:AT11,
+        jprx:AT12,
+        jprx:AT13,
+        jprx:PR1,
+        jprx:PR10,
+        jprx:PR11,
+        jprx:PR12,
+        jprx:PR13,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:PR2,
+        jprx:PR3,
+        jprx:PR4,
+        jprx:PR5,
+        jprx:PR6,
+        jprx:PR8,
+        jprx:PR9,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:enablesCapability jprx:PR8 ;
+    jprx:hasActivationFrequency 28 ;
+    jprx:hasCategory "Attribute" ;
+    jprx:hasCategoryColour "#eee450" ;
+    jprx:hasEnablerId "AT9" ;
+    jprx:phaseRole "neutral" ;
+    jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:AR10 a jprx:Enabler ;
     rdfs:label "2D drawings for production"@en ;
@@ -62640,80 +62619,6 @@ jprx:PR16 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "SitePreparation;Structural Construction" .
 
-jprx:PR13 a jprx:Enabler ;
-    rdfs:label "Platform development"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:AR1,
-        jprx:AR10,
-        jprx:AR11,
-        jprx:AR13,
-        jprx:AR14,
-        jprx:AR2,
-        jprx:AR3,
-        jprx:AR4,
-        jprx:AR5,
-        jprx:AR6,
-        jprx:AR7,
-        jprx:AR8,
-        jprx:AR9,
-        jprx:PR14,
-        jprx:PR15,
-        jprx:PR16,
-        jprx:PR17,
-        jprx:PR18,
-        jprx:PR19,
-        jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA1,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA2,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA3,
-        jprx:VA4,
-        jprx:VA5,
-        jprx:VA6,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 22 ;
-    jprx:hasCategory "Process" ;
-    jprx:hasCategoryColour "#0e74b1" ;
-    jprx:hasEnablerId "PR13" ;
-    jprx:phaseRole "neutral" ;
-    jprx:phaseSpan "All" .
-
 jprx:PR2 a jprx:Enabler ;
     rdfs:label "Prefabrication/off-site"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -62804,6 +62709,80 @@ jprx:PR2 a jprx:Enabler ;
     jprx:hasEnablerId "PR2" ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Design;Structural Construction" .
+
+jprx:PR13 a jprx:Enabler ;
+    rdfs:label "Platform development"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:AR1,
+        jprx:AR10,
+        jprx:AR11,
+        jprx:AR13,
+        jprx:AR14,
+        jprx:AR2,
+        jprx:AR3,
+        jprx:AR4,
+        jprx:AR5,
+        jprx:AR6,
+        jprx:AR7,
+        jprx:AR8,
+        jprx:AR9,
+        jprx:PR14,
+        jprx:PR15,
+        jprx:PR16,
+        jprx:PR17,
+        jprx:PR18,
+        jprx:PR19,
+        jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA1,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA2,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA3,
+        jprx:VA4,
+        jprx:VA5,
+        jprx:VA6,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 22 ;
+    jprx:hasCategory "Process" ;
+    jprx:hasCategoryColour "#0e74b1" ;
+    jprx:hasEnablerId "PR13" ;
+    jprx:phaseRole "neutral" ;
+    jprx:phaseSpan "All" .
 
 jprx:AT10 a jprx:Enabler ;
     rdfs:label "Human assistance"@en ;
@@ -63109,6 +63088,48 @@ jprx:AT8 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
+jprx:VA14 a jprx:Enabler ;
+    rdfs:label "Integrate supply chain"@en ;
+    jprx:bookingPhase "Design" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25 ;
+    jprx:enablesCapability jprx:PR2 ;
+    jprx:hasActivationFrequency 14 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA14" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "All" .
+
 jprx:PR10 a jprx:Enabler ;
     rdfs:label "Material testing"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -63185,48 +63206,6 @@ jprx:PR10 a jprx:Enabler ;
     jprx:hasEnablerId "PR10" ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design;Structural Construction" .
-
-jprx:VA14 a jprx:Enabler ;
-    rdfs:label "Integrate supply chain"@en ;
-    jprx:bookingPhase "Design" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:enablesCapability jprx:PR2 ;
-    jprx:hasActivationFrequency 14 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA14" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "All" .
 
 jprx:AT3 a jprx:Enabler ;
     rdfs:label "Bespoke DFAB technology"@en ;
@@ -63326,40 +63305,6 @@ jprx:AT3 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "Design;Structural Construction" .
 
-jprx:VA20 a jprx:Enabler ;
-    rdfs:label "Location independent"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25 ;
-    jprx:hasActivationFrequency 17 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA20" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Structural Construction" .
-
 jprx:VA7 a jprx:Enabler ;
     rdfs:label "Reduce construction complexity"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -63405,6 +63350,40 @@ jprx:VA7 a jprx:Enabler ;
     jprx:hasCategory "Value" ;
     jprx:hasCategoryColour "#cb79a7" ;
     jprx:hasEnablerId "VA7" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction" .
+
+jprx:VA20 a jprx:Enabler ;
+    rdfs:label "Location independent"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25 ;
+    jprx:hasActivationFrequency 17 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA20" ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Structural Construction" .
 
@@ -64016,6 +63995,35 @@ jprx:PR1 a jprx:Enabler ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
 
+jprx:RI1 a jprx:Enabler ;
+    rdfs:label "Increase uncertainty in production"@en ;
+    jprx:bookingPhase "Structural Construction" ;
+    jprx:coOccursWith jprx:RI10,
+        jprx:RI11,
+        jprx:RI12,
+        jprx:RI13,
+        jprx:RI14,
+        jprx:RI15,
+        jprx:RI16,
+        jprx:RI17,
+        jprx:RI18,
+        jprx:RI19,
+        jprx:RI2,
+        jprx:RI20,
+        jprx:RI3,
+        jprx:RI4,
+        jprx:RI5,
+        jprx:RI6,
+        jprx:RI7,
+        jprx:RI8,
+        jprx:RI9 ;
+    jprx:hasActivationFrequency 14 ;
+    jprx:hasCategory "Risk" ;
+    jprx:hasCategoryColour "#787878" ;
+    jprx:hasEnablerId "RI1" ;
+    jprx:phaseRole "incurs" ;
+    jprx:phaseSpan "Structural Construction" .
+
 jprx:VA25 a jprx:Enabler ;
     rdfs:label "Reduce disruption due to hazards"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -64046,10 +64054,11 @@ jprx:VA25 a jprx:Enabler ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Structural Construction" .
 
-jprx:RI1 a jprx:Enabler ;
-    rdfs:label "Increase uncertainty in production"@en ;
+jprx:VA6 a jprx:Enabler ;
+    rdfs:label "Reduce cost"@en ;
     jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI10,
+    jprx:coOccursWith jprx:RI1,
+        jprx:RI10,
         jprx:RI11,
         jprx:RI12,
         jprx:RI13,
@@ -64067,13 +64076,32 @@ jprx:RI1 a jprx:Enabler ;
         jprx:RI6,
         jprx:RI7,
         jprx:RI8,
-        jprx:RI9 ;
-    jprx:hasActivationFrequency 14 ;
-    jprx:hasCategory "Risk" ;
-    jprx:hasCategoryColour "#787878" ;
-    jprx:hasEnablerId "RI1" ;
-    jprx:phaseRole "incurs" ;
-    jprx:phaseSpan "Structural Construction" .
+        jprx:RI9,
+        jprx:VA10,
+        jprx:VA11,
+        jprx:VA12,
+        jprx:VA13,
+        jprx:VA14,
+        jprx:VA15,
+        jprx:VA16,
+        jprx:VA17,
+        jprx:VA18,
+        jprx:VA19,
+        jprx:VA20,
+        jprx:VA21,
+        jprx:VA22,
+        jprx:VA23,
+        jprx:VA24,
+        jprx:VA25,
+        jprx:VA7,
+        jprx:VA8,
+        jprx:VA9 ;
+    jprx:hasActivationFrequency 22 ;
+    jprx:hasCategory "Value" ;
+    jprx:hasCategoryColour "#cb79a7" ;
+    jprx:hasEnablerId "VA6" ;
+    jprx:phaseRole "realizes" ;
+    jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:AR8 a jprx:Enabler ;
     rdfs:label "Bespoke DFAB platform"@en ;
@@ -64134,55 +64162,6 @@ jprx:AR8 a jprx:Enabler ;
     jprx:hasEnablerId "AR8" ;
     jprx:phaseRole "neutral" ;
     jprx:phaseSpan "All" .
-
-jprx:VA6 a jprx:Enabler ;
-    rdfs:label "Reduce cost"@en ;
-    jprx:bookingPhase "Structural Construction" ;
-    jprx:coOccursWith jprx:RI1,
-        jprx:RI10,
-        jprx:RI11,
-        jprx:RI12,
-        jprx:RI13,
-        jprx:RI14,
-        jprx:RI15,
-        jprx:RI16,
-        jprx:RI17,
-        jprx:RI18,
-        jprx:RI19,
-        jprx:RI2,
-        jprx:RI20,
-        jprx:RI3,
-        jprx:RI4,
-        jprx:RI5,
-        jprx:RI6,
-        jprx:RI7,
-        jprx:RI8,
-        jprx:RI9,
-        jprx:VA10,
-        jprx:VA11,
-        jprx:VA12,
-        jprx:VA13,
-        jprx:VA14,
-        jprx:VA15,
-        jprx:VA16,
-        jprx:VA17,
-        jprx:VA18,
-        jprx:VA19,
-        jprx:VA20,
-        jprx:VA21,
-        jprx:VA22,
-        jprx:VA23,
-        jprx:VA24,
-        jprx:VA25,
-        jprx:VA7,
-        jprx:VA8,
-        jprx:VA9 ;
-    jprx:hasActivationFrequency 22 ;
-    jprx:hasCategory "Value" ;
-    jprx:hasCategoryColour "#cb79a7" ;
-    jprx:hasEnablerId "VA6" ;
-    jprx:phaseRole "realizes" ;
-    jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:VA8 a jprx:Enabler ;
     rdfs:label "Knowledge transfer"@en ;
