@@ -1652,15 +1652,6 @@
                         }
                     },
                     {
-                        selector: "node.isolated",
-                        style: {
-                            "border-width": 3,
-                            "border-style": "dashed",
-                            "border-color": "#8a8a8a",
-                            "background-opacity": 0.55
-                        }
-                    },
-                    {
                         selector: "edge:selected",
                         style: {
                             "opacity": 1,
@@ -1701,8 +1692,14 @@
                         if (isolated.length && connected.length) {
                             const bb = connected.boundingBox();
                             isolated.forEach((n, i) => {
+                                // Parked below the cluster, and that is the whole
+                                // cue now. The dashed ring that used to mark them
+                                // was 1.8px of grey on an 18px node at the 0.62
+                                // zoom the full graph renders at, so it was not
+                                // perceptible and its legend row described
+                                // something no reader could see (author decision,
+                                // 2026-09-21). Separation carries the meaning.
                                 n.position({ x: bb.x1 + 60 + i * 150, y: bb.y2 + 110 });
-                                n.addClass("isolated");
                             });
                         }
                         cy.fit(cy.elements(), 40);
