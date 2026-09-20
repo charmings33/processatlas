@@ -55152,7 +55152,7 @@ jprx:hasCensusRecord a owl:ObjectProperty ;
     rdfs:comment "Polar Process -> its JPR census record" .
 
 jprx:CO5 a jprx:Enabler ;
-    rdfs:label "Ambient Intelligence"@en ;
+    rdfs:label "Ambient intelligence"@en ;
     jprx:bookingPhase "Operation" ;
     jprx:hasActivationFrequency 0 ;
     jprx:hasCategory "Condition" ;
@@ -55361,7 +55361,7 @@ jprx:CO12 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:AT13 a jprx:Enabler ;
-    rdfs:label "Risk sharing/ Agile contracting"@en ;
+    rdfs:label "Risk-sharing/agile contracting"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR3,
         jprx:AR8,
@@ -55734,7 +55734,7 @@ jprx:CO4 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:AT4 a jprx:Enabler ;
-    rdfs:label "Generative design"@en ;
+    rdfs:label "Automated design optimisation/generative design"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -55798,7 +55798,7 @@ jprx:AT4 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:CO14 a jprx:Enabler ;
-    rdfs:label "Immersive XR Environment"@en ;
+    rdfs:label "Immersive XR environment"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR11,
         jprx:AR13,
@@ -56132,7 +56132,7 @@ jprx:AT5 a jprx:Enabler ;
 jprx:Enabler a owl:Class .
 
 jprx:CO1 a jprx:Enabler ;
-    rdfs:label "Visual programming"@en ;
+    rdfs:label "Visual-programming"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -56346,7 +56346,7 @@ jprx:AC12 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:AC4 a jprx:Enabler ;
-    rdfs:label "DFAB Design coordinator"@en ;
+    rdfs:label "DFAB design coordinator"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AC10,
         jprx:AC11,
@@ -56476,7 +56476,7 @@ jprx:AC4 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:AC2 a jprx:Enabler ;
-    rdfs:label "Architectural Designer"@en ;
+    rdfs:label "Architectural designer"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AC10,
         jprx:AC11,
@@ -56843,7 +56843,7 @@ jprx:AC3 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:RE7 a jprx:Enabler ;
-    rdfs:label "CNC Machine"@en ;
+    rdfs:label "CNC machines"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -56949,7 +56949,7 @@ jprx:RE7 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RE8 a jprx:Enabler ;
-    rdfs:label "Machine Learning/AI"@en ;
+    rdfs:label "Machine Learning/AI algorithm"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -57060,7 +57060,7 @@ jprx:RE8 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:CO8 a jprx:Enabler ;
-    rdfs:label "Remote control"@en ;
+    rdfs:label "Remote-control"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -57268,7 +57268,7 @@ jprx:AC15 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:PR6 a jprx:Enabler ;
-    rdfs:label "Post-rationalisation"@en ;
+    rdfs:label "Post-rationalisation/design optimisation"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -58235,7 +58235,7 @@ jprx:CO9 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:RE1 a jprx:Enabler ;
-    rdfs:label "Parametric/Computational Algorithm"@en ;
+    rdfs:label "Parametric/computational/data-driven algorithm/machine code"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -58425,7 +58425,7 @@ jprx:AR1 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:RI16 a jprx:Enabler ;
-    rdfs:label "Increase material usage"@en ;
+    rdfs:label "Increase material usage/waste"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI17,
         jprx:RI18,
@@ -58771,7 +58771,7 @@ jprx:AC16 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:AR13 a jprx:Enabler ;
-    rdfs:label "Digital twin FM"@en ;
+    rdfs:label "Digital twin for FM"@en ;
     jprx:bookingPhase "Operation" ;
     jprx:coOccursWith jprx:AR14,
         jprx:RI10,
@@ -58917,7 +58917,7 @@ jprx:AT1 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:RE2 a jprx:Enabler ;
-    rdfs:label "Robot arm"@en ;
+    rdfs:label "Robotic arm"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -59274,7 +59274,7 @@ jprx:AT2 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:AT6 a jprx:Enabler ;
-    rdfs:label "High LOD BIM"@en ;
+    rdfs:label "High LOD BIM/model data"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -59608,7 +59608,7 @@ jprx:CO7 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:PR19 a jprx:Enabler ;
-    rdfs:label "Robotic driling"@en ;
+    rdfs:label "Robotic drilling"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -60385,7 +60385,7 @@ jprx:CO11 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:AC5 a jprx:Enabler ;
-    rdfs:label "GC/trade contractor"@en ;
+    rdfs:label "GC/Trade contractor"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AC10,
         jprx:AC11,
@@ -60627,7 +60627,7 @@ jprx:CO13 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction;Operation;Maintenance" .
 
 jprx:PR15 a jprx:Enabler ;
-    rdfs:label "Robotic pickup/ selection"@en ;
+    rdfs:label "Robotic pickup/selection"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -60697,7 +60697,7 @@ jprx:CensusProcess a owl:Class ;
     rdfs:comment "Full JPR census process (225). Distinct from the 25 polar Process cases." .
 
 jprx:VA5 a jprx:Enabler ;
-    rdfs:label "Architectural complexity"@en ;
+    rdfs:label "Increase arch complexity/design customisation/creativity"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -60746,7 +60746,7 @@ jprx:VA5 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:AC7 a jprx:Enabler ;
-    rdfs:label "DFAB Manager"@en ;
+    rdfs:label "DFAB manager"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AC10,
         jprx:AC11,
@@ -61083,7 +61083,7 @@ jprx:AR7 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:AR6 a jprx:Enabler ;
-    rdfs:label "Configurator/kit-of-parts"@en ;
+    rdfs:label "Configurators/kit-of-parts"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR10,
         jprx:AR11,
@@ -61458,7 +61458,7 @@ jprx:AR5 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:VA18 a jprx:Enabler ;
-    rdfs:label "Enable life-cycle assessment"@en ;
+    rdfs:label "Enable life cycle assessment"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -61494,7 +61494,7 @@ jprx:VA18 a jprx:Enabler ;
     jprx:phaseSpan "Design;Operation" .
 
 jprx:AC14 a jprx:Enabler ;
-    rdfs:label "End-users"@en ;
+    rdfs:label "End-user"@en ;
     jprx:bookingPhase "Operation" ;
     jprx:coOccursWith jprx:AC15,
         jprx:AC16,
@@ -61627,7 +61627,7 @@ jprx:AC14 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:AT11 a jprx:Enabler ;
-    rdfs:label "Sequential design-DFAB processes"@en ;
+    rdfs:label "Sequential design-DFAB process"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -61900,7 +61900,7 @@ jprx:AT9 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:PR11 a jprx:Enabler ;
-    rdfs:label "Mass customisation"@en ;
+    rdfs:label "Mass-customisation"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -62058,7 +62058,7 @@ jprx:PR9 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:AR10 a jprx:Enabler ;
-    rdfs:label "2D shop drawings for production"@en ;
+    rdfs:label "2D drawings for production"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR11,
         jprx:AR13,
@@ -62116,7 +62116,7 @@ jprx:AR10 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:RE4 a jprx:Enabler ;
-    rdfs:label "3D Sensor/Camera/ICT"@en ;
+    rdfs:label "3D scanner/sensor/camera/ICT"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -62570,7 +62570,7 @@ jprx:AC13 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:PR16 a jprx:Enabler ;
-    rdfs:label "Excavation/ transportation"@en ;
+    rdfs:label "Excavation/transportation"@en ;
     jprx:bookingPhase "SitePreparation" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -62898,7 +62898,7 @@ jprx:AT10 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:VA15 a jprx:Enabler ;
-    rdfs:label "Circular construction / DfDisAssembly"@en ;
+    rdfs:label "Circular construction/DfDisAssembly"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -63016,7 +63016,7 @@ jprx:VA11 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:AT8 a jprx:Enabler ;
-    rdfs:label "Industrialised construction scale"@en ;
+    rdfs:label "Industrialised"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -63187,7 +63187,7 @@ jprx:PR10 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:VA14 a jprx:Enabler ;
-    rdfs:label "Integrated supply-chain"@en ;
+    rdfs:label "Integrate supply chain"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -63686,7 +63686,7 @@ jprx:RI13 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI2 a jprx:Enabler ;
-    rdfs:label "Performance compromise"@en ;
+    rdfs:label "Performance compromise/uncertainty"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
@@ -63713,7 +63713,7 @@ jprx:RI2 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:RI10 a jprx:Enabler ;
-    rdfs:label "Stakeholder sceptical attitude"@en ;
+    rdfs:label "Stakeholders sceptical attitude"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI11,
         jprx:RI12,
@@ -63733,7 +63733,7 @@ jprx:RI10 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:VA4 a jprx:Enabler ;
-    rdfs:label "Material/energy saving"@en ;
+    rdfs:label "Material/energy saving/reduce CO2/waste"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -63784,7 +63784,7 @@ jprx:VA4 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:PR17 a jprx:Enabler ;
-    rdfs:label "Data mapping/ augmentation"@en ;
+    rdfs:label "Data mapping/augmentation"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -63854,7 +63854,7 @@ jprx:PR17 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction;Operation" .
 
 jprx:PR12 a jprx:Enabler ;
-    rdfs:label "Path planning"@en ;
+    rdfs:label "Path-planning"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -64047,7 +64047,7 @@ jprx:VA25 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI1 a jprx:Enabler ;
-    rdfs:label "Increase production uncertainty"@en ;
+    rdfs:label "Increase uncertainty in production"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
@@ -64287,7 +64287,7 @@ jprx:AR14 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:RI17 a jprx:Enabler ;
-    rdfs:label "Market access complexity/ uncertainty"@en ;
+    rdfs:label "Market access complexity/uncertainty"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI18,
         jprx:RI19,
@@ -64300,7 +64300,7 @@ jprx:RI17 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:AR11 a jprx:Enabler ;
-    rdfs:label "Human-readable performance report"@en ;
+    rdfs:label "Human-readable perform. report"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:AR13,
         jprx:AR14,
@@ -64357,7 +64357,7 @@ jprx:AR11 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:PR14 a jprx:Enabler ;
-    rdfs:label "Providing services/ operational"@en ;
+    rdfs:label "Providing services/operations"@en ;
     jprx:bookingPhase "Operation" ;
     jprx:coOccursWith jprx:AR1,
         jprx:AR10,
@@ -64473,7 +64473,7 @@ jprx:VA12 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:VA24 a jprx:Enabler ;
-    rdfs:label "Environment adaptive"@en ;
+    rdfs:label "Environmental adaptive"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -64504,7 +64504,7 @@ jprx:VA24 a jprx:Enabler ;
     jprx:phaseSpan "Operation;Maintenance" .
 
 jprx:VA9 a jprx:Enabler ;
-    rdfs:label "Allow traceable data"@en ;
+    rdfs:label "Allow traceable/linked data"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -64552,7 +64552,7 @@ jprx:VA9 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:RI15 a jprx:Enabler ;
-    rdfs:label "Design compromise/ over standardised"@en ;
+    rdfs:label "Design compromise/over standardised"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI16,
         jprx:RI17,
@@ -64567,7 +64567,7 @@ jprx:RI15 a jprx:Enabler ;
     jprx:phaseSpan "Design" .
 
 jprx:RI3 a jprx:Enabler ;
-    rdfs:label "Cost/investment uncertainty"@en ;
+    rdfs:label "Increase cost/investment uncertainty"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
@@ -64594,7 +64594,7 @@ jprx:RI3 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:VA10 a jprx:Enabler ;
-    rdfs:label "Reduce errors"@en ;
+    rdfs:label "Reduce errors/constraints"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -64639,7 +64639,7 @@ jprx:VA10 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI4 a jprx:Enabler ;
-    rdfs:label "Increase in interface/ management complexity"@en ;
+    rdfs:label "Increase management complexity"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
@@ -64665,7 +64665,7 @@ jprx:RI4 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:VA19 a jprx:Enabler ;
-    rdfs:label "Increase profit/ ROI"@en ;
+    rdfs:label "Increase profit/ROI"@en ;
     jprx:bookingPhase "Operation" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -64711,7 +64711,7 @@ jprx:RI20 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI18 a jprx:Enabler ;
-    rdfs:label "Regulatory/ legal concern"@en ;
+    rdfs:label "Regulatory/legal concern"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI19,
         jprx:RI20 ;
@@ -64723,7 +64723,7 @@ jprx:RI18 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:VA3 a jprx:Enabler ;
-    rdfs:label "Improve quality"@en ;
+    rdfs:label "Improve quality/performance"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -64775,7 +64775,7 @@ jprx:VA3 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI12 a jprx:Enabler ;
-    rdfs:label "Delivery/ business model/ work culture"@en ;
+    rdfs:label "Delivery/business model/work culture"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI13,
         jprx:RI14,
@@ -64834,7 +64834,7 @@ jprx:VA13 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI5 a jprx:Enabler ;
-    rdfs:label "Location-dependent/ site constraints"@en ;
+    rdfs:label "Location dependent/site constraint"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
@@ -65068,7 +65068,7 @@ jprx:VA23 a jprx:Enabler ;
     jprx:phaseSpan "All" .
 
 jprx:RI19 a jprx:Enabler ;
-    rdfs:label "Production/ assembly restriction"@en ;
+    rdfs:label "Production/assembly restriction"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI20 ;
     jprx:hasActivationFrequency 25 ;
@@ -65079,7 +65079,7 @@ jprx:RI19 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:VA2 a jprx:Enabler ;
-    rdfs:label "Reduce time/efficiency"@en ;
+    rdfs:label "Reduce time/improve productivity/efficiency"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI1,
         jprx:RI10,
@@ -65148,7 +65148,7 @@ jprx:RI14 a jprx:Enabler ;
     jprx:phaseSpan "Design;Structural Construction" .
 
 jprx:RI11 a jprx:Enabler ;
-    rdfs:label "Machinery erros/ immature technology"@en ;
+    rdfs:label "Machine error/immature technology"@en ;
     jprx:bookingPhase "Structural Construction" ;
     jprx:coOccursWith jprx:RI12,
         jprx:RI13,
@@ -65167,7 +65167,7 @@ jprx:RI11 a jprx:Enabler ;
     jprx:phaseSpan "Structural Construction" .
 
 jprx:RI6 a jprx:Enabler ;
-    rdfs:label "Workforce training"@en ;
+    rdfs:label "Require workforce training"@en ;
     jprx:bookingPhase "Design" ;
     jprx:coOccursWith jprx:RI10,
         jprx:RI11,
