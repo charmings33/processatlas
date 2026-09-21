@@ -3060,7 +3060,7 @@ jprx:census_RXM6-11 a jprx:CensusProcess ;
     jprx:hasCensusId "RXM6-11" ;
     jprx:hasDistributor jprx:Firm_008 ;
     jprx:hasManufacturer jprx:Firm_060,
-        jprx:Firm_073 ;
+        jprx:Firm_072 ;
     jprx:hasTRL "TRL9" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -47007,9 +47007,6 @@ jprx:Firm_070 a jprx:Company ;
 jprx:Firm_071 a jprx:Company ;
     rdfs:label "Firm_071" .
 
-jprx:Firm_073 a jprx:Company ;
-    rdfs:label "Firm_073" .
-
 jprx:Firm_074 a jprx:Company ;
     rdfs:label "Firm_074" .
 
@@ -55188,9 +55185,6 @@ jprx:Firm_064 a jprx:Company ;
 jprx:Firm_066 a jprx:Company ;
     rdfs:label "Firm_066" .
 
-jprx:Firm_072 a jprx:Company ;
-    rdfs:label "Firm_072" .
-
 jprx:Firm_081 a jprx:Company ;
     rdfs:label "Firm_081" .
 
@@ -55229,6 +55223,9 @@ jprx:Firm_204 a jprx:Company ;
 
 jprx:developedBy a owl:ObjectProperty ;
     rdfs:label "developed by (case->company)"@en .
+
+jprx:Firm_072 a jprx:Company ;
+    rdfs:label "Firm_072" .
 
 jprx:Firm_117 a jprx:Company ;
     rdfs:label "Firm_117" .
@@ -60112,6 +60109,9 @@ jprx:AR4 a jprx:Enabler ;
     jprx:phaseRole "incurs" ;
     jprx:phaseSpan "Design" .
 
+jprx:Company a owl:Class ;
+    rdfs:label "Company / organisation"@en .
+
 jprx:VA17 a jprx:Enabler ;
     rdfs:label "Reduce transportation complexity"@en ;
     jprx:bookingPhase "Structural Construction" ;
@@ -60148,9 +60148,6 @@ jprx:VA17 a jprx:Enabler ;
     jprx:hasEnablerId "VA17" ;
     jprx:phaseRole "realizes" ;
     jprx:phaseSpan "Design;Structural Construction" .
-
-jprx:Company a owl:Class ;
-    rdfs:label "Company / organisation"@en .
 
 jprx:CO6 a jprx:Enabler ;
     rdfs:label "Human-robot interaction"@en ;
