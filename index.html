@@ -1199,6 +1199,7 @@
                             <option value="What regulatory or legal problems do robotic construction processes run into?">What regulatory or legal problems do robotic construction processes run into?</option>
                             <option value="What has to change in a project's delivery to adopt a robotic process?">What has to change in a project's delivery to adopt a robotic process?</option>
                             <option value="What makes it possible for a robot to build?">What makes it possible for a robot to build?</option>
+                            <option value="How do Japanese housemakers build prefabricated houses that are both high quality and economical?">How do Japanese housemakers build prefabricated houses that are both high quality and economical?</option>
                         </select>
                         <div class="search-row">
                             <textarea id="queryInput" rows="3" placeholder="Ask the knowledge graph…"
@@ -1940,14 +1941,88 @@
         // answer is still generating and repeat clicks pile up requests.
         let searchInFlight = false;
 
-        function setSearchBusy(busy) {
+        function setSearchBusy(busy, label) {
             searchInFlight = busy;
             const btn = document.getElementById("searchBtn");
             if (!btn) return;
             btn.disabled = busy;
-            btn.textContent = busy ? "Searching…" : "Search";
+            btn.textContent = busy ? (label || "Searching…") : "Search";
             btn.style.cursor = busy ? "progress" : "";
             btn.style.opacity = busy ? "0.6" : "";
+        }
+
+        // The two phases cost very different amounts of time: the graph comes
+        // back in about a second, the answer takes a minute or more because the
+        // model is writing several thousand cited tokens. Holding the button at
+        // "Searching..." for all of it reads as a hang, when the graph on screen
+        // is already finished and usable.
+        function setAnswerPhase() {
+            setSearchBusy(true, "Writing answer\u2026");
+        }
+
+        // Mark path edges AFTER the graph is rendered. Edge marking needs a
+        // pair, but the highlighted-enabler list must follow every result,
+        // including a single-node one: gating the whole block on length > 1
+        // left the previous query's enablers on screen.
+        function applyPathEdges(path) {
+            if (!path || path.length < 2 || !cy) return;
+            for (let i = 0; i < path.length - 1; i++) {
+                const edges = cy.edges().stdFilter(e =>
+                    (e.source().id() === path[i] && e.target().id() === path[i+1]) ||
+                    (e.source().id() === path[i+1] && e.target().id() === path[i])
+                );
+                edges.forEach(e => e.data("path_edge", true));
+            }
+        }
+
+        // The HIGHLIGHTED IN GRAPH list. Painted once from the /graph result,
+        // which is retrieval order, and repainted from the answer's own order
+        // as soon as the answer lands — see applyAnswerHighlight.
+        function renderHighlightPanel(data) {
+            if (!data || !data.path || !data.path.length || !cy) return;
+            const pathSection = document.getElementById("pathNodesSection");
+            const pathList = document.getElementById("pathNodesList");
+            const pathCount = document.getElementById("pathCount");
+            if (pathList) {
+                pathList.innerHTML = data.path
+                    .map(id => {
+                        const node = (data.nodes || []).find(n => n.data.id === id);
+                        const label = node ? node.data.label : id;
+                        return `<div class="node-item" onclick="selectNode('${id}')" onmouseenter="hoverNode('${id}', true)" onmouseleave="hoverNode('${id}', false)"><span class="nid">${id}</span>${label}</div>`;
+                    })
+                    .join("");
+            }
+            if (pathCount) pathCount.textContent = data.path.length;
+            if (pathSection) pathSection.style.display = "block";
+            openDetailsColumn();   // the highlighted list lives in the third column now
+        }
+
+        // Repaint graph and panel from the enablers the ANSWER names.
+        //
+        // The panel used to show whatever retrieval ranked highest, which is a
+        // different question from what the answer went on to reason about: on
+        // "what makes it possible for a robot to build" the summary named RE2,
+        // RE4, AT7, PR2, RI6, RE9 and the panel offered CO3, PR3, PR12, PR4,
+        // AT3, VA2. Two of six agreed. The caption says HIGHLIGHTED IN GRAPH,
+        // so the set has to be the one the prose is about, in the order the
+        // prose introduces it, and however many that is — no fixed five or six.
+        async function applyAnswerHighlight(query, highlight) {
+            if (!highlight || !highlight.length) return;
+            const current = (currentGraphData && currentGraphData.path) || [];
+            if (current.join(",") === highlight.join(",")) return;   // already agrees
+            try {
+                const resp = await api("/graph", { query, path: highlight });
+                if (!resp.ok) return;
+                const data = await resp.json();
+                if (!data || !data.nodes || !data.edges) return;
+                currentGraphData = data;
+                renderGraph(data);
+                updateStats(data);
+                applyPathEdges(data.path);
+                renderHighlightPanel(data);
+            } catch (e) {
+                console.error("highlight repaint failed:", e);   // keep the answer
+            }
         }
 
         async function searchQuery() {
@@ -1986,41 +2061,10 @@
                 // Not awaited here (the graph should paint immediately), but
                 // the promise is kept so the button stays locked until it ends.
                 answerDone = fetchAnswer(query);
+                setAnswerPhase();   // graph is painted; the rest is generation
 
-                // Mark path edges AFTER graph is rendered. Edge marking needs a
-                // pair, but the highlighted-enabler list below must follow every
-                // result, including a single-node one: gating the whole block on
-                // length > 1 left the previous query's enablers on screen.
-                if (data.path && data.path.length > 1 && cy) {
-                    for (let i = 0; i < data.path.length - 1; i++) {
-                        const edges = cy.edges().stdFilter(e =>
-                            (e.source().id() === data.path[i] && e.target().id() === data.path[i+1]) ||
-                            (e.source().id() === data.path[i+1] && e.target().id() === data.path[i])
-                        );
-                        edges.forEach(e => e.data("path_edge", true));
-                    }
-
-                }
-
-                if (data.path && data.path.length && cy) {
-                    // Show path in sidebar
-                    const pathSection = document.getElementById("pathNodesSection");
-                    const pathList = document.getElementById("pathNodesList");
-                    const pathCount = document.getElementById("pathCount");
-
-                    if (pathList) {
-                        pathList.innerHTML = data.path
-                            .map(id => {
-                                const node = data.nodes.find(n => n.data.id === id);
-                                const label = node ? node.data.label : id;
-                                return `<div class="node-item" onclick="selectNode('${id}')" onmouseenter="hoverNode('${id}', true)" onmouseleave="hoverNode('${id}', false)"><span class="nid">${id}</span>${label}</div>`;
-                            })
-                            .join("");
-                    }
-                    if (pathCount) pathCount.textContent = data.path.length;
-                    if (pathSection) pathSection.style.display = "block";
-                    openDetailsColumn();   // the highlighted list lives in the third column now
-                }
+                applyPathEdges(data.path);
+                renderHighlightPanel(data);
             } catch (error) {
                 console.error("Search error:", error);
                 alert("Error searching: " + error.message);
@@ -2045,7 +2089,7 @@
             const content = document.getElementById("answerContent");
             if (!section || !content) return;
             section.style.display = "block";
-            content.textContent = "Generating grounded answer…";
+            content.textContent = "Generating grounded answer\u2026 this usually takes 30 to 90 seconds; the graph beside it is already complete.";
             try {
                 const resp = await api("/graph-answer", { query });
                 if (!resp.ok) {
@@ -2127,6 +2171,9 @@
                     }).join("");
                 }
                 content.innerHTML = html;
+
+                // The answer is on screen; now make the graph agree with it.
+                await applyAnswerHighlight(query, data.highlight);
             } catch (e) {
                 content.textContent = "Answer unavailable: " + e.message;
             }
