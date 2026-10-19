@@ -922,6 +922,23 @@
         }
 
         @media (max-width: 1024px) {
+            /* Stacked panels are taller than a phone screen: let the page
+               scroll instead of clipping at 100vh, and give the graph a real
+               height, since flex: 1 alone collapses it to nothing here */
+            body {
+                overflow: auto;
+            }
+
+            .layout-container {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .graph-canvas-wrap {
+                flex: none;
+                height: 65vh;
+            }
+
             .graph-row {
                 flex-direction: column;
             }
