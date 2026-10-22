@@ -19,6 +19,12 @@ its data with `fetch`, which browsers block on `file://`.
 | `data/graph.json` | the graph as the viewer consumes it |
 | `data/node-info.json` | per-node record behind the Linked Info panel |
 | `data/queries/` | the example questions with their answers and sources |
+| `ontology/jprx_ontology.ttl` | the ontology (classes, properties, SKOS vocabularies), current version |
+| `ontology/jprx_kg_public.ttl` | the anonymised graph, current version |
+| `ontology/<version>/` | frozen copies of both, per release (2.0.0 onwards) |
+| `CHANGELOG.md` | what changed between releases |
+
+The namespace is `https://w3id.org/jprx/ontology#`.
 
 ## Anonymisation, and its limits
 

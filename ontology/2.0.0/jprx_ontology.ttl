@@ -1,0 +1,740 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix jprx: <https://w3id.org/jprx/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/jprx/ontology> a owl:Ontology ;
+    dcterms:creator "Benjamin Dillenburger",
+        "Ming Shan Ng",
+        "Rongbo Hu",
+        "Ryusuke Kojio",
+        "Thomas Bock" ;
+    dcterms:modified "2026-10-22"^^xsd:date ;
+    dcterms:title "JPRX robotic construction enabler ontology and knowledge graph"@en ;
+    rdfs:comment "Re-engineering of the DfDFAB 140-enabler framework (Ng et al. 2022) into OWL/RDF, instantiated with 50 polar cases and 217 census records of robotic construction in Japan."@en ;
+    owl:versionIRI <https://w3id.org/jprx/ontology/2.0.0> ;
+    owl:versionInfo "2.0.0" .
+
+jprx:EG_PeerReviewed a skos:Concept ;
+    skos:definition "The dependency is stated in a peer-reviewed publication."@en ;
+    skos:inScheme jprx:EvidenceGradeScheme ;
+    skos:prefLabel "peer-reviewed"@en ;
+    skos:topConceptOf jprx:EvidenceGradeScheme .
+
+jprx:EG_Standard a skos:Concept ;
+    skos:definition "The dependency is stated in an ISO standard or an ICC-ES evaluation report or acceptance criteria."@en ;
+    skos:inScheme jprx:EvidenceGradeScheme ;
+    skos:prefLabel "standard"@en ;
+    skos:topConceptOf jprx:EvidenceGradeScheme .
+
+jprx:RT_amplifies a skos:Concept ;
+    skos:broader jprx:RT_Modulation ;
+    skos:definition "The source enabler increases the target value."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "amplifies"@en ;
+    jprx:hasDirectProperty jprx:amplifies .
+
+jprx:RT_constrains a skos:Concept ;
+    skos:broader jprx:RT_Modulation ;
+    skos:definition "The source enabler narrows what the target enabler can do without ruling it out."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "constrains"@en ;
+    jprx:hasDirectProperty jprx:constrains .
+
+jprx:RT_enables a skos:Concept ;
+    skos:broader jprx:RT_Enablement ;
+    skos:definition "The source enabler supports or makes possible the target enabler."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "enables"@en ;
+    jprx:hasDirectProperty jprx:enables .
+
+jprx:RT_mitigates a skos:Concept ;
+    skos:broader jprx:RT_Modulation ;
+    skos:definition "The source enabler reduces the target risk."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "mitigates"@en ;
+    jprx:hasDirectProperty jprx:mitigates .
+
+jprx:RT_presupposes a skos:Concept ;
+    skos:broader jprx:RT_Enablement ;
+    skos:definition "The target enabler must already be in place before the source enabler can be used (a precondition)."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "presupposes"@en ;
+    jprx:hasDirectProperty jprx:presupposes .
+
+jprx:RT_requires a skos:Concept ;
+    skos:broader jprx:RT_Enablement ;
+    skos:definition "The source enabler needs the target enabler in order to operate."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "requires"@en ;
+    jprx:hasDirectProperty jprx:requires .
+
+jprx:achieves a owl:ObjectProperty ;
+    rdfs:label "achieves"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Value ;
+    rdfs:subPropertyOf jprx:activates ;
+    skos:definition "Case draws on a Value enabler: an outcome it is coded as achieving."@en .
+
+jprx:adoptionDriver a owl:DatatypeProperty ;
+    rdfs:label "adoption driver"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A adoption driver coded for the census record."@en .
+
+jprx:buildingSystem a owl:DatatypeProperty ;
+    rdfs:label "building system"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A building system coded for the census record."@en .
+
+jprx:censusTRL a owl:DatatypeProperty ;
+    rdfs:label "census TRL"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Technology readiness level coded for the census record."@en .
+
+jprx:censusTRLText a owl:DatatypeProperty ;
+    rdfs:label "census TRL (text)"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Technology readiness level as first coded for the census record (e.g. 'TRL8'); predates censusTRL and disagrees with it on 21 records."@en .
+
+jprx:coEnablerA a owl:ObjectProperty ;
+    rdfs:label "co-enabler A"@en ;
+    rdfs:domain jprx:CoOccurrence ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "First enabler of a co-occurrence pair."@en .
+
+jprx:coEnablerB a owl:ObjectProperty ;
+    rdfs:label "co-enabler B"@en ;
+    rdfs:domain jprx:CoOccurrence ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "Second enabler of a co-occurrence pair."@en .
+
+jprx:coOccurrenceCount a owl:DatatypeProperty ;
+    rdfs:label "co-occurrence count"@en ;
+    rdfs:domain jprx:CoOccurrence ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of polar cases that activate both enablers of the pair."@en .
+
+jprx:coOccursWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "co-occurs with"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "The two enablers are drawn on together by at least one case; the direct form of a CoOccurrence node."@en .
+
+jprx:companyAlias a owl:DatatypeProperty ;
+    rdfs:label "firm alias"@en ;
+    rdfs:domain jprx:Firm ;
+    rdfs:range xsd:string ;
+    skos:definition "Other name under which the firm appears in the sources."@en .
+
+jprx:companyLabel a owl:DatatypeProperty ;
+    rdfs:label "firm label"@en ;
+    rdfs:domain jprx:Firm ;
+    rdfs:range xsd:string ;
+    skos:definition "Short name of the firm."@en .
+
+jprx:companyNameEN a owl:DatatypeProperty ;
+    rdfs:label "Company Name(s) EN (with M/D suffix)"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Company Name(s) EN (with M/D suffix)'."@en .
+
+jprx:companyNameJP a owl:DatatypeProperty ;
+    rdfs:label "Company Name JP"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Company Name JP'."@en .
+
+jprx:constructionTask a owl:DatatypeProperty ;
+    rdfs:label "construction task"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A construction task coded for the census record."@en .
+
+jprx:dependencyNote a owl:DatatypeProperty ;
+    rdfs:label "dependency note"@en ;
+    rdfs:domain jprx:Dependency ;
+    rdfs:range xsd:string ;
+    skos:definition "Short statement of what the source asserts for this dependency."@en .
+
+jprx:dependencySource a owl:ObjectProperty ;
+    rdfs:label "dependency source"@en ;
+    rdfs:domain jprx:Dependency ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "The enabler a dependency starts from."@en .
+
+jprx:dependencyTarget a owl:ObjectProperty ;
+    rdfs:label "dependency target"@en ;
+    rdfs:domain jprx:Dependency ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "The enabler a dependency points to."@en .
+
+jprx:deployOffsite a owl:DatatypeProperty ;
+    rdfs:label "offsite"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Offsite'."@en .
+
+jprx:deployOnsite a owl:DatatypeProperty ;
+    rdfs:label "onsite"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Onsite'."@en .
+
+jprx:deployOnsiteIndoor a owl:DatatypeProperty ;
+    rdfs:label "onsite indoor"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Onsite Indoor'."@en .
+
+jprx:deployOnsiteOutdoor a owl:DatatypeProperty ;
+    rdfs:label "onsite outdoor"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Onsite Outdoor'."@en .
+
+jprx:digitalRobot a owl:DatatypeProperty ;
+    rdfs:label "digital robot"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Digital Robot'."@en .
+
+jprx:enrCorrection a owl:DatatypeProperty ;
+    rdfs:label "enr_correction"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Source-validation field 'enr_correction' from the deep verification pass."@en .
+
+jprx:enrReadiness a owl:DatatypeProperty ;
+    rdfs:label "enr_readiness"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Source-validation field 'enr_readiness' from the deep verification pass."@en .
+
+jprx:enrResearchStatus a owl:DatatypeProperty ;
+    rdfs:label "enr_research_status"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Source-validation field 'enr_research_status' from the deep verification pass."@en .
+
+jprx:enrSelectedReconciled a owl:DatatypeProperty ;
+    rdfs:label "enr_selected_reconciled"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Source-validation field 'enr_selected_reconciled' from the deep verification pass."@en .
+
+jprx:enrValidationTier a owl:DatatypeProperty ;
+    rdfs:label "enr_validation_tier"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Source-validation field 'enr_validation_tier' from the deep verification pass."@en .
+
+jprx:exposesTo a owl:ObjectProperty ;
+    rdfs:label "exposes to"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Risk ;
+    rdfs:subPropertyOf jprx:activates ;
+    skos:definition "Case draws on a Risk enabler: a risk it is coded as carrying."@en .
+
+jprx:hasActivationFrequency a owl:DatatypeProperty ;
+    rdfs:label "activation frequency"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of polar cases that activate the enabler."@en .
+
+jprx:hasActivationTotal a owl:DatatypeProperty ;
+    rdfs:label "activation total"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of enablers the robotic process activates."@en .
+
+jprx:hasAdoptionDriver a owl:DatatypeProperty ;
+    rdfs:label "adoption driver"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A driver for adopting the robotic process."@en .
+
+jprx:hasAttribute a owl:ObjectProperty ;
+    rdfs:label "has attribute"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Attribute ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on an Attribute enabler."@en .
+
+jprx:hasBookingPhase a owl:DatatypeProperty ;
+    rdfs:label "booking phase"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range xsd:string ;
+    skos:definition "The lifecycle phase in which the enabler is booked."@en .
+
+jprx:hasBuildingSystem a owl:DatatypeProperty ;
+    rdfs:label "building system"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A building system the robotic process works on."@en .
+
+jprx:hasCensusId a owl:DatatypeProperty ;
+    rdfs:label "census id"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Identifier of the census record (sheet JPR)."@en .
+
+jprx:hasCensusRecord a owl:ObjectProperty ;
+    rdfs:label "has census record"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:CensusRecord ;
+    owl:inverseOf jprx:isCensusRecordOf ;
+    skos:definition "Links a polar case to its census record."@en .
+
+jprx:hasConcreteworkSubtype a owl:DatatypeProperty ;
+    rdfs:label "concretework subtype"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "Refines the Concretework task; not a standalone task."@en .
+
+jprx:hasCondition a owl:ObjectProperty ;
+    rdfs:label "has condition"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Condition ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on a Condition enabler."@en .
+
+jprx:hasDeployment a owl:DatatypeProperty ;
+    rdfs:label "deployment"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "Deployment setting coded for the case: offsite, onsite, mobilerobot, os_indoor, os_outdoor."@en .
+
+jprx:hasDirectProperty a owl:AnnotationProperty ;
+    rdfs:label "has direct property"@en ;
+    skos:definition "Links a relation-type concept to the object property used for the direct enabler-to-enabler edge."@en .
+
+jprx:hasDistributor a owl:ObjectProperty ;
+    rdfs:label "has distributor"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    rdfs:subPropertyOf jprx:developedBy ;
+    skos:definition "Firm that distributes or rents out the robot in the census record."@en .
+
+jprx:hasEnablerId a owl:DatatypeProperty ;
+    rdfs:label "enabler ID"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range xsd:string ;
+    skos:definition "The enabler code in the 140-enabler ontology, e.g. RE2."@en .
+
+jprx:hasEvidenceGrade a owl:ObjectProperty ;
+    rdfs:label "has evidence grade"@en ;
+    rdfs:domain jprx:Dependency ;
+    rdfs:range skos:Concept ;
+    skos:definition "The evidence grade of a dependency, from the evidence-grade scheme."@en .
+
+jprx:hasLifecyclePhase a owl:DatatypeProperty ;
+    rdfs:label "lifecycle phase"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A lifecycle phase in which the robotic process is deployed."@en .
+
+jprx:hasManufacturer a owl:ObjectProperty ;
+    rdfs:label "has manufacturer"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    rdfs:subPropertyOf jprx:developedBy ;
+    skos:definition "Firm that manufactures the robot in the census record."@en .
+
+jprx:hasMaterial a owl:DatatypeProperty ;
+    rdfs:label "material"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A material the robotic process works with."@en .
+
+jprx:hasPhaseRole a owl:DatatypeProperty ;
+    rdfs:label "phase role"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range xsd:string ;
+    skos:definition "How the enabler acts in its phase (e.g. realizes, incurs)."@en .
+
+jprx:hasPhaseSpan a owl:DatatypeProperty ;
+    rdfs:label "phase span"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range xsd:string ;
+    skos:definition "A lifecycle phase across which the enabler acts."@en .
+
+jprx:hasProcessId a owl:DatatypeProperty ;
+    rdfs:label "process ID"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "The polar-case code, e.g. RP12."@en .
+
+jprx:hasRelationType a owl:ObjectProperty ;
+    rdfs:label "has relation type"@en ;
+    rdfs:domain jprx:Dependency ;
+    rdfs:range skos:Concept ;
+    skos:definition "The relation type of a dependency, from the relation-type scheme."@en .
+
+jprx:hasStakeholderTier a owl:DatatypeProperty ;
+    rdfs:label "stakeholder tier"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A stakeholder tier that deploys or develops the process."@en .
+
+jprx:hasSteelworkSubtype a owl:DatatypeProperty ;
+    rdfs:label "steelwork subtype"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "Refines the Steelwork task; not a standalone task."@en .
+
+jprx:hasTRL a owl:DatatypeProperty ;
+    rdfs:label "technology readiness level"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:integer ;
+    skos:definition "Technology readiness level of the robotic process (5 to 9)."@en .
+
+jprx:hasTask a owl:DatatypeProperty ;
+    rdfs:label "task"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "A construction task the robotic process performs."@en .
+
+jprx:hasTransitionEnabler a owl:DatatypeProperty ;
+    rdfs:label "transition enabler"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:string ;
+    skos:definition "Transition route coded for the case (E1 to E6)."@en .
+
+jprx:hasWebsite a owl:DatatypeProperty ;
+    rdfs:label "Website(s)"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Website(s)'."@en .
+
+jprx:icStatus a owl:DatatypeProperty ;
+    rdfs:label "IC?"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'IC?'."@en .
+
+jprx:isMobileRobot a owl:DatatypeProperty ;
+    rdfs:label "is mobile robot"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:boolean ;
+    skos:definition "The process uses a mobile robot."@en .
+
+jprx:isOffsite a owl:DatatypeProperty ;
+    rdfs:label "is offsite"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:boolean ;
+    skos:definition "The process is deployed offsite."@en .
+
+jprx:isOnsite a owl:DatatypeProperty ;
+    rdfs:label "is onsite"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:boolean ;
+    skos:definition "The process is deployed onsite."@en .
+
+jprx:isOnsiteIndoor a owl:DatatypeProperty ;
+    rdfs:label "is onsite indoor"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:boolean ;
+    skos:definition "The process is deployed onsite indoors."@en .
+
+jprx:isOnsiteOutdoor a owl:DatatypeProperty ;
+    rdfs:label "is onsite outdoor"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range xsd:boolean ;
+    skos:definition "The process is deployed onsite outdoors."@en .
+
+jprx:lifecyclePhase a owl:DatatypeProperty ;
+    rdfs:label "lifecycle phase"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A lifecycle phase coded for the census record."@en .
+
+jprx:mobileRobot a owl:DatatypeProperty ;
+    rdfs:label "mobile robot"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Mobile Robot'."@en .
+
+jprx:performsProcess a owl:ObjectProperty ;
+    rdfs:label "performs process"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Process ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on a Process enabler."@en .
+
+jprx:physicalRobot a owl:DatatypeProperty ;
+    rdfs:label "physical robot"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:boolean ;
+    skos:definition "True where the census record is coded 'Physical Robot'."@en .
+
+jprx:producesArtefact a owl:ObjectProperty ;
+    rdfs:label "produces artefact"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Artefact ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on an Artefact enabler."@en .
+
+jprx:requiresActor a owl:ObjectProperty ;
+    rdfs:label "requires actor"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Actor ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on an Actor enabler."@en .
+
+jprx:robotDescriptionEN a owl:DatatypeProperty ;
+    rdfs:label "Robot Description EN"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Robot Description EN'."@en .
+
+jprx:robotDescriptionJP a owl:DatatypeProperty ;
+    rdfs:label "Robot Description JP"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Robot Description JP'."@en .
+
+jprx:robotNameEN a owl:DatatypeProperty ;
+    rdfs:label "Robot Name EN"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Robot Name EN'."@en .
+
+jprx:robotNameJP a owl:DatatypeProperty ;
+    rdfs:label "Robot Name"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Robot Name'."@en .
+
+jprx:robotWebsite a owl:DatatypeProperty ;
+    rdfs:label "Robot Website"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "Census column 'Robot Website'."@en .
+
+jprx:stakeholderDistributor a owl:DatatypeProperty ;
+    rdfs:label "Distributor count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'Distributor' stakeholders in the census record."@en .
+
+jprx:stakeholderGC a owl:DatatypeProperty ;
+    rdfs:label "GC count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'GC' stakeholders in the census record."@en .
+
+jprx:stakeholderHouseMaker a owl:DatatypeProperty ;
+    rdfs:label "House Maker count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'House Maker' stakeholders in the census record."@en .
+
+jprx:stakeholderOthers a owl:DatatypeProperty ;
+    rdfs:label "Others count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'Others' stakeholders in the census record."@en .
+
+jprx:stakeholderRobotManufacturer a owl:DatatypeProperty ;
+    rdfs:label "Robot Manufacturer count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'Robot Manufacturer' stakeholders in the census record."@en .
+
+jprx:stakeholderTrade a owl:DatatypeProperty ;
+    rdfs:label "Trade count"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:integer ;
+    skos:definition "Number of 'Trade' stakeholders in the census record."@en .
+
+jprx:usesMaterial a owl:DatatypeProperty ;
+    rdfs:label "material"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A material coded for the census record."@en .
+
+jprx:usesMaterialNode a owl:ObjectProperty ;
+    rdfs:label "uses material"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Material ;
+    skos:definition "Material the robot in the census record works with."@en .
+
+jprx:usesResource a owl:ObjectProperty ;
+    rdfs:label "uses resource"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Resource ;
+    rdfs:subPropertyOf jprx:usesEnabler ;
+    skos:definition "Case draws on a Resource enabler."@en .
+
+jprx:Material a owl:Class ;
+    rdfs:label "Material"@en ;
+    skos:definition "Material a census robot works with."@en .
+
+jprx:Source a owl:Class ;
+    rdfs:label "source"@en ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "A publication, standard or evaluation report from which a dependency is derived."@en .
+
+jprx:amplifies a owl:ObjectProperty ;
+    rdfs:label "amplifies"@en ;
+    rdfs:range jprx:Value ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The source enabler increases the target value."@en .
+
+jprx:constrains a owl:ObjectProperty ;
+    rdfs:label "constrains"@en ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The source enabler narrows what the target enabler can do without ruling it out."@en .
+
+jprx:enables a owl:ObjectProperty ;
+    rdfs:label "enables"@en ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The source enabler supports or makes possible the target enabler."@en .
+
+jprx:isCensusRecordOf a owl:ObjectProperty ;
+    rdfs:label "is census record of"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:RoboticProcess ;
+    skos:definition "Links a census record to the polar case drawn from it."@en .
+
+jprx:mitigates a owl:ObjectProperty ;
+    rdfs:label "mitigates"@en ;
+    rdfs:range jprx:Risk ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The source enabler reduces the target risk."@en .
+
+jprx:presupposes a owl:ObjectProperty ;
+    rdfs:label "presupposes"@en ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The target enabler must already be in place before the source enabler can be used (a precondition)."@en .
+
+jprx:requires a owl:ObjectProperty ;
+    rdfs:label "requires"@en ;
+    rdfs:subPropertyOf jprx:dependsOnEnabler ;
+    skos:definition "The source enabler needs the target enabler in order to operate."@en .
+
+jprx:Actor a owl:Class ;
+    rdfs:label "actor"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a role or profession, held by a person, group or organisation, taking part in the robotic process (named after roles or professions, as in Ng et al. 2022)."@en .
+
+jprx:Artefact a owl:Class ;
+    rdfs:label "artefact"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a product, model, document, tool or platform made or used in the process."@en .
+
+jprx:Attribute a owl:Class ;
+    rdfs:label "attribute"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a characteristic of the design, product, technology, process or contract."@en .
+
+jprx:Condition a owl:Class ;
+    rdfs:label "condition"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a technical or organisational setting in which the process operates: data, digital environment, sensing or control mode, or project arrangement."@en .
+
+jprx:Process a owl:Class ;
+    rdfs:label "process"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is an activity or method carried out as part of the robotic process."@en .
+
+jprx:Resource a owl:Class ;
+    rdfs:label "resource"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a means the process draws on: equipment, software, algorithm, data standard, platform or human labour."@en .
+
+jprx:developedBy a owl:ObjectProperty ;
+    rdfs:label "developed by"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    skos:definition "Firm credited with developing the robotic process in the census record."@en .
+
+jprx:RT_Enablement a skos:Concept ;
+    skos:definition "A relation by which one enabler enables, requires or presupposes another."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "enablement"@en ;
+    skos:topConceptOf jprx:RelationTypeScheme .
+
+jprx:RT_Modulation a skos:Concept ;
+    skos:definition "A relation by which one enabler amplifies a value, mitigates a risk or constrains another enabler."@en ;
+    skos:inScheme jprx:RelationTypeScheme ;
+    skos:prefLabel "modulation"@en ;
+    skos:topConceptOf jprx:RelationTypeScheme .
+
+jprx:Risk a owl:Class ;
+    rdfs:label "risk"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is a barrier, uncertainty or negative consequence of adopting the process."@en .
+
+jprx:Value a owl:Class ;
+    rdfs:label "value"@en ;
+    rdfs:subClassOf jprx:Enabler ;
+    skos:definition "An enabler that is an outcome or benefit the process is meant to achieve and that can be stated as a target."@en .
+
+jprx:activates a owl:ObjectProperty ;
+    rdfs:label "activates"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "The robotic process draws on the enabler, as coded in the case."@en .
+
+jprx:CoOccurrence a owl:Class ;
+    rdfs:label "co-occurrence"@en ;
+    skos:definition "An undirected pair of enablers with the number of polar cases that activate both."@en .
+
+jprx:EvidenceGradeScheme a skos:ConceptScheme ;
+    rdfs:label "evidence grades"@en ;
+    skos:definition "Grades for the source type of a dependency."@en .
+
+jprx:Firm a owl:Class ;
+    rdfs:label "Firm"@en ;
+    skos:definition "Organisation that develops, manufactures or distributes a robot in the census. Identified in the private graph; pseudonymised (Firm_NNN) in the public one."@en .
+
+jprx:Dependency a owl:Class ;
+    rdfs:label "dependency"@en ;
+    rdfs:subClassOf prov:Entity ;
+    skos:definition "A directed, cited relation between two enablers, reified so that it can carry a relation type, an evidence grade, a note and its source."@en .
+
+jprx:dependsOnEnabler a owl:ObjectProperty ;
+    rdfs:label "dependency relation"@en ;
+    rdfs:domain jprx:Enabler ;
+    rdfs:range jprx:Enabler ;
+    skos:definition "Super-property of the six direct relations between enablers."@en .
+
+jprx:usesEnabler a owl:ObjectProperty ;
+    rdfs:label "uses enabler"@en ;
+    rdfs:domain jprx:RoboticProcess ;
+    rdfs:range jprx:Enabler ;
+    rdfs:subPropertyOf jprx:activates ;
+    skos:definition "Case draws on an enabler that is neither a value nor a risk; the union of the six typed links below."@en .
+
+jprx:RelationTypeScheme a skos:ConceptScheme ;
+    rdfs:label "relation types"@en ;
+    skos:definition "The six dependency relation types in two groups."@en .
+
+jprx:Enabler a owl:Class ;
+    rdfs:label "enabler"@en ;
+    skos:definition "A way or medium with the capability to provide human or non-human competence to achieve a purpose (Ng et al. 2022). One of 140 coded enablers."@en .
+
+jprx:RoboticProcess a owl:Class ;
+    rdfs:label "robotic process"@en ;
+    skos:definition "A robotic construction process deployed in practice and coded against the 140 enablers (one of the 50 polar cases)."@en .
+
+jprx:CensusRecord a owl:Class ;
+    rdfs:label "census record"@en ;
+    skos:definition "One of the 217 documented robotic construction deployments in Japan, with company, robot and deployment data."@en .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( jprx:Actor jprx:Resource jprx:Condition jprx:Attribute jprx:Process jprx:Artefact jprx:Value jprx:Risk ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( jprx:Enabler jprx:RoboticProcess jprx:CensusRecord jprx:Dependency jprx:CoOccurrence jprx:Source ) .
+
