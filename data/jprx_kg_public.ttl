@@ -855,7 +855,7 @@ jprx:adoptionDriver a owl:DatatypeProperty ;
     rdfs:label "adoption driver"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range xsd:string ;
-    skos:definition "A adoption driver coded for the census record."@en .
+    skos:definition "An adoption driver coded for the census record."@en .
 
 jprx:buildingSystem a owl:DatatypeProperty ;
     rdfs:label "building system"@en ;
@@ -887,7 +887,6 @@ jprx:census_RX1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_004 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX1" ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Operation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -907,7 +906,6 @@ jprx:census_RX10 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_074 ;
     jprx:hasCensusId "RX10" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Operation",
         "Site Preparation" ;
@@ -930,7 +928,6 @@ jprx:census_RX11 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_084 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX11" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation" ;
     jprx:mobileRobot true ;
@@ -950,7 +947,6 @@ jprx:census_RX12 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_059 ;
     jprx:hasCensusId "RX12" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:mobileRobot true ;
@@ -970,7 +966,6 @@ jprx:census_RX14 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_018 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX14" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -989,7 +984,6 @@ jprx:census_RX17 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_163 ;
     jprx:hasCensusId "RX17" ;
-    jprx:icStatus "C" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1006,7 +1000,6 @@ jprx:census_RX18 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_154 ;
     jprx:hasCensusId "RX18" ;
-    jprx:icStatus "C" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
     jprx:usesMaterial "Universal" .
@@ -1023,7 +1016,6 @@ jprx:census_RX23 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_157 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX23" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -1043,7 +1035,6 @@ jprx:census_RX24 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_156 ;
     jprx:hasCensusId "RX24" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -1064,7 +1055,6 @@ jprx:census_RX25 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_164 ;
     jprx:hasCensusId "RX25" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -1085,7 +1075,6 @@ jprx:census_RX26 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_170 ;
     jprx:hasCensusId "RX26" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -1105,7 +1094,6 @@ jprx:census_RX27 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_024 ;
     jprx:hasCensusId "RX27" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderDistributor 1 ;
@@ -1123,7 +1111,6 @@ jprx:census_RX29 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_031 ;
     jprx:hasCensusId "RX29" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:mobileRobot true ;
@@ -1142,7 +1129,6 @@ jprx:census_RX3 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_038 ;
     jprx:hasCensusId "RX3" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Operation",
         "Site Preparation",
@@ -1166,7 +1152,6 @@ jprx:census_RX37 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_090 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX37" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1186,7 +1171,6 @@ jprx:census_RX4 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_196 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX4" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Operation",
         "Site Preparation",
@@ -1208,7 +1192,6 @@ jprx:census_RX41 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_106 ;
     jprx:hasCensusId "RX41" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1229,7 +1212,6 @@ jprx:census_RX43 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_203 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX43" ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1251,7 +1233,6 @@ jprx:census_RX44 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_207 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX44" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1268,7 +1249,6 @@ jprx:census_RX48 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_133 ;
     jprx:hasCensusId "RX48" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:mobileRobot true ;
@@ -1291,7 +1271,6 @@ jprx:census_RX50 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX50" ;
     jprx:hasManufacturer jprx:Firm_210 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Maintenance" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1310,7 +1289,6 @@ jprx:census_RX6 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_014 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX6" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation" ;
     jprx:mobileRobot true ;
@@ -1332,7 +1310,6 @@ jprx:census_RX9 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_064 ;
     jprx:hasCensusId "RX9" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1353,7 +1330,6 @@ jprx:census_RXH1-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:hasCensusId "RXH1-1" ;
     jprx:hasManufacturer jprx:Firm_013 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1377,7 +1353,6 @@ jprx:census_RXH10-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH10-1" ;
     jprx:hasManufacturer jprx:Firm_101 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1400,7 +1375,6 @@ jprx:census_RXH10-2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_102 ;
     jprx:hasCensusId "RXH10-2" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1421,7 +1395,6 @@ jprx:census_RXH12-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:hasCensusId "RXH12-1" ;
     jprx:hasManufacturer jprx:Firm_198 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1443,7 +1416,6 @@ jprx:census_RXH13-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH13-1" ;
     jprx:hasManufacturer jprx:Firm_148 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1465,7 +1437,6 @@ jprx:census_RXH3-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXH3-1" ;
     jprx:hasManufacturer jprx:Firm_142 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1491,7 +1462,6 @@ jprx:census_RXH3-2 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_143 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH3-2" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -1516,7 +1486,6 @@ jprx:census_RXH4-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH4-1" ;
     jprx:hasManufacturer jprx:Firm_166 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1538,7 +1507,6 @@ jprx:census_RXH5-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH5-1" ;
     jprx:hasManufacturer jprx:Firm_027 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1560,7 +1528,6 @@ jprx:census_RXH5-3 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH5-3" ;
     jprx:hasManufacturer jprx:Firm_027 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1584,7 +1551,6 @@ jprx:census_RXH5-4 a jprx:CensusRecord ;
         jprx:Firm_033 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH5-4" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -1607,7 +1573,6 @@ jprx:census_RXH6-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH6-1" ;
     jprx:hasManufacturer jprx:Firm_185 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1632,7 +1597,6 @@ jprx:census_RXH7-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXH7-1" ;
     jprx:hasManufacturer jprx:Firm_125,
         jprx:Firm_204 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1655,7 +1619,6 @@ jprx:census_RXH8-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXH8-2" ;
     jprx:hasManufacturer jprx:Firm_097,
         jprx:Firm_098 ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -1677,7 +1640,6 @@ jprx:census_RXH9-2 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_083 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH9-2" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1700,7 +1662,6 @@ jprx:census_RXI1-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_070 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI1-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -1721,7 +1682,6 @@ jprx:census_RXI10-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_100 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI10-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1739,7 +1699,6 @@ jprx:census_RXI11-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_140 ;
     jprx:hasCensusId "RXI11-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1757,7 +1716,6 @@ jprx:census_RXI12-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_029 ;
     jprx:hasCensusId "RXI12-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1775,7 +1733,6 @@ jprx:census_RXI13-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_200 ;
     jprx:hasCensusId "RXI13-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1793,7 +1750,6 @@ jprx:census_RXI14-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_150 ;
     jprx:hasCensusId "RXI14-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1810,7 +1766,6 @@ jprx:census_RXI15-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_067 ;
     jprx:hasCensusId "RXI15-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1827,7 +1782,6 @@ jprx:census_RXI16-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_118 ;
     jprx:hasCensusId "RXI16-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1846,7 +1800,6 @@ jprx:census_RXI17-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_047 ;
     jprx:hasCensusId "RXI17-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1867,7 +1820,6 @@ jprx:census_RXI2-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_204 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI2-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1889,7 +1841,6 @@ jprx:census_RXI3-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_078 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI3-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1912,7 +1863,6 @@ jprx:census_RXI4-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_025 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI4-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -1938,7 +1888,6 @@ jprx:census_RXI5-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_081 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI5-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -1957,7 +1906,6 @@ jprx:census_RXI6-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_124 ;
     jprx:hasCensusId "RXI6-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -1979,7 +1927,6 @@ jprx:census_RXI7-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_052 ;
     jprx:hasCensusId "RXI7-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -1997,7 +1944,6 @@ jprx:census_RXI8-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_032 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI8-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -2017,7 +1963,6 @@ jprx:census_RXI9-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_108 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXI9-1" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -2040,7 +1985,6 @@ jprx:census_RXM1-1 a jprx:CensusRecord ;
         jprx:Firm_041,
         jprx:Firm_045 ;
     jprx:hasManufacturer jprx:Firm_051 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:mobileRobot true ;
@@ -2063,7 +2007,6 @@ jprx:census_RXM1-2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM1-2" ;
     jprx:hasManufacturer jprx:Firm_010 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation" ;
     jprx:mobileRobot true ;
@@ -2086,7 +2029,6 @@ jprx:census_RXM1-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM1-3" ;
     jprx:hasManufacturer jprx:Firm_010,
         jprx:Firm_081 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -2113,7 +2055,6 @@ jprx:census_RXM10-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM10-1" ;
     jprx:hasManufacturer jprx:Firm_139 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2133,7 +2074,6 @@ jprx:census_RXM10-2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM10-2" ;
     jprx:hasManufacturer jprx:Firm_139 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2153,7 +2093,6 @@ jprx:census_RXM10-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM10-3" ;
     jprx:hasManufacturer jprx:Firm_080,
         jprx:Firm_139 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2174,7 +2113,6 @@ jprx:census_RXM11-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM11-2" ;
     jprx:hasManufacturer jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2201,7 +2139,6 @@ jprx:census_RXM11-4 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM11-4" ;
     jprx:hasManufacturer jprx:Firm_077,
         jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -2231,7 +2168,6 @@ jprx:census_RXM11-6 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM11-6" ;
     jprx:hasManufacturer jprx:Firm_020,
         jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -2254,7 +2190,6 @@ jprx:census_RXM13-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM13-1" ;
     jprx:hasManufacturer jprx:Firm_165 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2275,7 +2210,6 @@ jprx:census_RXM13-3 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_099,
         jprx:Firm_123,
         jprx:Firm_165 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -2298,7 +2232,6 @@ jprx:census_RXM16-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM16-2" ;
     jprx:hasManufacturer jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -2319,7 +2252,6 @@ jprx:census_RXM16-4 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM16-4" ;
     jprx:hasManufacturer jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -2345,7 +2277,6 @@ jprx:census_RXM16-5 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM16-5" ;
     jprx:hasManufacturer jprx:Firm_168,
         jprx:Firm_186 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2367,7 +2298,6 @@ jprx:census_RXM16-6 a jprx:CensusRecord ;
     jprx:hasDistributor jprx:Firm_001 ;
     jprx:hasManufacturer jprx:Firm_054,
         jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -2390,7 +2320,6 @@ jprx:census_RXM17-1 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_056,
         jprx:Firm_168,
         jprx:Firm_169 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 2 ;
@@ -2411,7 +2340,6 @@ jprx:census_RXM17-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM17-2" ;
     jprx:hasManufacturer jprx:Firm_120,
         jprx:Firm_169 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -2434,7 +2362,6 @@ jprx:census_RXM17-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM17-3" ;
     jprx:hasManufacturer jprx:Firm_169,
         jprx:Firm_195 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -2457,7 +2384,6 @@ jprx:census_RXM19-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM19-2" ;
     jprx:hasManufacturer jprx:Firm_172 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:stakeholderGC 1 ;
     jprx:stakeholderRobotManufacturer 1 ;
@@ -2475,7 +2401,6 @@ jprx:census_RXM20-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM20-1" ;
     jprx:hasManufacturer jprx:Firm_175 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -2502,7 +2427,6 @@ jprx:census_RXM21-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM21-1" ;
     jprx:hasDistributor jprx:Firm_182 ;
     jprx:hasManufacturer jprx:Firm_178 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2527,7 +2451,6 @@ jprx:census_RXM21-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM21-2" ;
     jprx:hasManufacturer jprx:Firm_182 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -2550,7 +2473,6 @@ jprx:census_RXM22-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM22-2" ;
     jprx:hasManufacturer jprx:Firm_184 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -2570,7 +2492,6 @@ jprx:census_RXM23-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM23-1" ;
     jprx:hasManufacturer jprx:Firm_177 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2592,7 +2513,6 @@ jprx:census_RXM23-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM23-2" ;
     jprx:hasManufacturer jprx:Firm_177 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -2618,7 +2538,6 @@ jprx:census_RXM23-3 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM23-3" ;
     jprx:hasManufacturer jprx:Firm_177 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2639,7 +2558,6 @@ jprx:census_RXM23-4 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM23-4" ;
     jprx:hasManufacturer jprx:Firm_177 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2666,7 +2584,6 @@ jprx:census_RXM23-5 a jprx:CensusRecord ;
         jprx:Firm_134,
         jprx:Firm_177,
         jprx:Firm_209 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:physicalRobot true ;
@@ -2688,7 +2605,6 @@ jprx:census_RXM24-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM24-1" ;
     jprx:hasManufacturer jprx:Firm_176 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation",
         "Structural Construction" ;
@@ -2714,7 +2630,6 @@ jprx:census_RXM26-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM26-2" ;
     jprx:hasManufacturer jprx:Firm_111,
         jprx:Firm_112 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2736,7 +2651,6 @@ jprx:census_RXM29-2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM29-2" ;
     jprx:hasManufacturer jprx:Firm_033 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2755,7 +2669,6 @@ jprx:census_RXM29-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM29-3" ;
     jprx:hasManufacturer jprx:Firm_033,
         jprx:Firm_147 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation",
         "Structural Construction" ;
@@ -2781,7 +2694,6 @@ jprx:census_RXM29-4 a jprx:CensusRecord ;
         jprx:Firm_060,
         jprx:Firm_115,
         jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -2802,7 +2714,6 @@ jprx:census_RXM3-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM3-1" ;
     jprx:hasManufacturer jprx:Firm_009,
         jprx:Firm_194 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation",
         "Structural Construction" ;
@@ -2829,7 +2740,6 @@ jprx:census_RXM30-1 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_034,
         jprx:Firm_088,
         jprx:Firm_089 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -2852,7 +2762,6 @@ jprx:census_RXM33-2 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_066 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM33-2" ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -2875,7 +2784,6 @@ jprx:census_RXM4-2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM4-2" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2899,7 +2807,6 @@ jprx:census_RXM4-4 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM4-4" ;
     jprx:hasManufacturer jprx:Firm_115,
         jprx:Firm_121 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -2927,7 +2834,6 @@ jprx:census_RXM4-5 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM4-5" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2945,7 +2851,6 @@ jprx:census_RXM4-6 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM4-6" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -2966,7 +2871,6 @@ jprx:census_RXM4-7 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM4-7" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
     jprx:physicalRobot true ;
@@ -2987,7 +2891,6 @@ jprx:census_RXM4-8 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM4-8" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -3006,7 +2909,6 @@ jprx:census_RXM5-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM5-1" ;
     jprx:hasManufacturer jprx:Firm_117 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3028,7 +2930,6 @@ jprx:census_RXM5-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM5-2" ;
     jprx:hasManufacturer jprx:Firm_049,
         jprx:Firm_117 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -3052,7 +2953,6 @@ jprx:census_RXM5-3 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_076,
         jprx:Firm_117,
         jprx:Firm_206 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -3258,7 +3158,6 @@ jprx:census_RXM6-5 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_060,
         jprx:Firm_151,
         jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
         "Structural Construction" ;
@@ -3365,7 +3264,6 @@ jprx:census_RXM7-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM7-1" ;
     jprx:hasManufacturer jprx:Firm_085 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Maintenance",
         "Operation",
         "Structural Construction" ;
@@ -3391,7 +3289,6 @@ jprx:census_RXM7-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM7-2" ;
     jprx:hasManufacturer jprx:Firm_085,
         jprx:Firm_135 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation" ;
     jprx:mobileRobot true ;
     jprx:physicalRobot true ;
@@ -3411,7 +3308,6 @@ jprx:census_RXM8-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-1" ;
     jprx:hasManufacturer jprx:Firm_003,
         jprx:Firm_082 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3432,7 +3328,6 @@ jprx:census_RXM8-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-2" ;
     jprx:hasManufacturer jprx:Firm_055,
         jprx:Firm_082 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Maintenance" ;
     jprx:physicalRobot true ;
     jprx:stakeholderGC 1 ;
@@ -3453,7 +3348,6 @@ jprx:census_RXM8-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-3" ;
     jprx:hasManufacturer jprx:Firm_072,
         jprx:Firm_082 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3475,7 +3369,6 @@ jprx:census_RXM8-4 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-4" ;
     jprx:hasManufacturer jprx:Firm_082,
         jprx:Firm_127 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -3497,7 +3390,6 @@ jprx:census_RXM8-5 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-5" ;
     jprx:hasManufacturer jprx:Firm_082,
         jprx:Firm_127 ;
-    jprx:icStatus "N" ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3518,7 +3410,6 @@ jprx:census_RXM9-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM9-2" ;
     jprx:hasManufacturer jprx:Firm_126,
         jprx:Firm_131 ;
-    jprx:icStatus "C" ;
     jprx:lifecyclePhase "Operation",
         "Site Preparation" ;
     jprx:mobileRobot true ;
@@ -3542,7 +3433,6 @@ jprx:census_RXT1-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_128 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT1-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3563,7 +3453,6 @@ jprx:census_RXT1-2 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_128 ;
     jprx:hasCensusId "RXT1-2" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3585,7 +3474,6 @@ jprx:census_RXT10-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_046 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT10-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3607,7 +3495,6 @@ jprx:census_RXT11-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_205 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT11-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3629,7 +3516,6 @@ jprx:census_RXT12-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_087 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT12-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3653,7 +3539,6 @@ jprx:census_RXT13-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_181 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT13-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3679,7 +3564,6 @@ jprx:census_RXT15-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_019 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT15-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3702,7 +3586,6 @@ jprx:census_RXT16-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_026 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT16-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3724,7 +3607,6 @@ jprx:census_RXT17-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_188 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT17-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3745,7 +3627,6 @@ jprx:census_RXT18-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_043 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT18-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3768,7 +3649,6 @@ jprx:census_RXT19-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_152 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT19-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3792,7 +3672,6 @@ jprx:census_RXT2-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_042 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT2-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Site Preparation",
         "Structural Construction" ;
@@ -3815,7 +3694,6 @@ jprx:census_RXT20-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_053 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT20-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3837,7 +3715,6 @@ jprx:census_RXT21-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_011 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT21-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3858,7 +3735,6 @@ jprx:census_RXT22-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_193 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT22-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3881,7 +3757,6 @@ jprx:census_RXT23-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_201 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT23-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3902,7 +3777,6 @@ jprx:census_RXT24-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_092 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT24-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3925,7 +3799,6 @@ jprx:census_RXT25-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_189 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT25-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3947,7 +3820,6 @@ jprx:census_RXT26-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_175 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT26-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -3972,7 +3844,6 @@ jprx:census_RXT27-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_036 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT27-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -3995,7 +3866,6 @@ jprx:census_RXT28-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_091 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT28-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4017,7 +3887,6 @@ jprx:census_RXT29-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_180 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT29-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4039,7 +3908,6 @@ jprx:census_RXT3-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_146 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT3-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4061,7 +3929,6 @@ jprx:census_RXT30-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_208 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT30-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4083,7 +3950,6 @@ jprx:census_RXT31-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_086 ;
     jprx:hasCensusId "RXT31-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -4106,7 +3972,6 @@ jprx:census_RXT32-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_187 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT32-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4128,7 +3993,6 @@ jprx:census_RXT33-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_039 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT33-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4151,7 +4015,6 @@ jprx:census_RXT34-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_130 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT34-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4174,7 +4037,6 @@ jprx:census_RXT35-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_109 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT35-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -4197,7 +4059,6 @@ jprx:census_RXT36-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_202 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT36-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4218,7 +4079,6 @@ jprx:census_RXT37-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_065 ;
     jprx:hasCensusId "RXT37-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4240,7 +4100,6 @@ jprx:census_RXT38-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_197 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT38-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4262,7 +4121,6 @@ jprx:census_RXT39-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_104 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT39-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4285,7 +4143,6 @@ jprx:census_RXT4-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_174 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT4-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -4308,7 +4165,6 @@ jprx:census_RXT40-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_137 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT40-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4330,7 +4186,6 @@ jprx:census_RXT41-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_075 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT41-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4351,7 +4206,6 @@ jprx:census_RXT42-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_022 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT42-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -4374,7 +4228,6 @@ jprx:census_RXT43-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_093 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT43-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4396,7 +4249,6 @@ jprx:census_RXT44-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_138 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT44-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4418,7 +4270,6 @@ jprx:census_RXT47-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_192 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT47-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -4443,7 +4294,6 @@ jprx:census_RXT48-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_012,
         jprx:Firm_179 ;
     jprx:hasCensusId "RXT48-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -4465,7 +4315,6 @@ jprx:census_RXT5-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_199 ;
     jprx:hasCensusId "RXT5-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4486,7 +4335,6 @@ jprx:census_RXT6-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_119 ;
     jprx:hasCensusId "RXT6-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -4509,7 +4357,6 @@ jprx:census_RXT7-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_006 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT7-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -4531,7 +4378,6 @@ jprx:census_RXT8-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_044 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXT8-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -4553,7 +4399,6 @@ jprx:census_RXT9-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_171 ;
     jprx:hasCensusId "RXT9-1" ;
-    jprx:icStatus "Y" ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
         "Structural Construction" ;
@@ -46789,6 +46634,13 @@ jprx:deployOnsiteOutdoor a owl:DatatypeProperty ;
     rdfs:range xsd:boolean ;
     skos:definition "True where the census record is coded 'Onsite Outdoor'."@en .
 
+jprx:developedBy a owl:ObjectProperty ;
+    rdfs:label "developed by"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
+    skos:definition "Firm credited with developing the robotic process in the census record."@en .
+
 jprx:digitalRobot a owl:DatatypeProperty ;
     rdfs:label "digital robot"@en ;
     rdfs:domain jprx:CensusRecord ;
@@ -46909,7 +46761,7 @@ jprx:hasDistributor a owl:ObjectProperty ;
     rdfs:label "has distributor"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range jprx:Firm ;
-    rdfs:subPropertyOf jprx:developedBy ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
     skos:definition "Firm that distributes or rents out the robot in the census record."@en .
 
 jprx:hasEnablerId a owl:DatatypeProperty ;
@@ -46934,7 +46786,7 @@ jprx:hasManufacturer a owl:ObjectProperty ;
     rdfs:label "has manufacturer"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range jprx:Firm ;
-    rdfs:subPropertyOf jprx:developedBy ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
     skos:definition "Firm that manufactures the robot in the census record."@en .
 
 jprx:hasMaterial a owl:DatatypeProperty ;
@@ -47002,12 +46854,6 @@ jprx:hasWebsite a owl:DatatypeProperty ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range xsd:string ;
     skos:definition "Census column 'Website(s)'."@en .
-
-jprx:icStatus a owl:DatatypeProperty ;
-    rdfs:label "IC?"@en ;
-    rdfs:domain jprx:CensusRecord ;
-    rdfs:range xsd:string ;
-    skos:definition "Census column 'IC?'."@en .
 
 jprx:isMobileRobot a owl:DatatypeProperty ;
     rdfs:label "is mobile robot"@en ;
@@ -53852,7 +53698,6 @@ jprx:census_RX13 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_072 ;
     jprx:hasCensusId "RX13" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP40 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -53878,7 +53723,6 @@ jprx:census_RX15 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP24/RX15)" ;
     jprx:hasCensusId "RX15" ;
-    jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP24 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
@@ -53906,7 +53750,6 @@ jprx:census_RX2 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:developedBy jprx:Firm_005 ;
     jprx:hasCensusId "RX2" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP41 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation",
@@ -53930,7 +53773,6 @@ jprx:census_RX20 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_159 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX20" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP38 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
@@ -53954,7 +53796,6 @@ jprx:census_RX21 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_161 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX21" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP44 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -53978,7 +53819,6 @@ jprx:census_RX22 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_147 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX22" ;
-    jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP35 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -53999,7 +53839,6 @@ jprx:census_RX30 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:developedBy jprx:Firm_113 ;
     jprx:hasCensusId "RX30" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP48 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -54021,7 +53860,6 @@ jprx:census_RX32 a jprx:CensusRecord ;
     jprx:deployOnsiteIndoor true ;
     jprx:developedBy jprx:Firm_048 ;
     jprx:hasCensusId "RX32" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP39 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation" ;
@@ -54043,7 +53881,6 @@ jprx:census_RX47 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP13/RX47)" ;
     jprx:hasCensusId "RX47" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP13 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation" ;
@@ -54068,7 +53905,6 @@ jprx:census_RX5 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_107 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RX5" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP42 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -54093,7 +53929,6 @@ jprx:census_RXH15-1 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP9/RXH15-1)" ;
     jprx:hasCensusId "RXH15-1" ;
     jprx:hasManufacturer jprx:Firm_050 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP9 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54121,7 +53956,6 @@ jprx:census_RXH2-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXH2-1" ;
     jprx:hasManufacturer jprx:Firm_069,
         jprx:Firm_141 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP2 ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
@@ -54146,7 +53980,6 @@ jprx:census_RXH3-3 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_145 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH3-3" ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP50 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -54169,7 +54002,6 @@ jprx:census_RXH3-4 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP8/RXH3-4)" ;
     jprx:hasCensusId "RXH3-4" ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP8 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54217,7 +54049,6 @@ jprx:census_RXH5-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH5-2" ;
     jprx:hasManufacturer jprx:Firm_027 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP32 ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
@@ -54240,7 +54071,6 @@ jprx:census_RXH7-2 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH7-2" ;
     jprx:hasManufacturer jprx:Firm_125 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP29 ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:physicalRobot true ;
@@ -54263,7 +54093,6 @@ jprx:census_RXH8-1 a jprx:CensusRecord ;
     jprx:deployOffsite true ;
     jprx:hasCensusId "RXH8-1" ;
     jprx:hasManufacturer jprx:Firm_097 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP49 ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout",
@@ -54285,7 +54114,6 @@ jprx:census_RXH9-1 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP6/RXH9-1)" ;
     jprx:hasCensusId "RXH9-1" ;
     jprx:hasManufacturer jprx:Firm_160 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP6 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54307,7 +54135,6 @@ jprx:census_RXH9-1b a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP5/RXH9-1b)" ;
     jprx:hasCensusId "RXH9-1b" ;
     jprx:hasManufacturer jprx:Firm_160 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP5 ;
     jprx:lifecyclePhase "Design" ;
     jprx:stakeholderHouseMaker 1 ;
@@ -54327,7 +54154,6 @@ jprx:census_RXH9-3 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXH9-3" ;
     jprx:hasManufacturer jprx:Firm_160 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP45 ;
     jprx:lifecyclePhase "Planning" ;
     jprx:physicalRobot true ;
@@ -54350,7 +54176,6 @@ jprx:census_RXM11-1 a jprx:CensusRecord ;
     jprx:deployOnsiteOutdoor true ;
     jprx:hasCensusId "RXM11-1" ;
     jprx:hasManufacturer jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP34 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
@@ -54376,7 +54201,6 @@ jprx:census_RXM11-3 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP20/RXM11-3)" ;
     jprx:hasCensusId "RXM11-3" ;
     jprx:hasManufacturer jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP20 ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:mobileRobot true ;
@@ -54404,7 +54228,6 @@ jprx:census_RXM11-5 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM11-5" ;
     jprx:hasManufacturer jprx:Firm_151 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP47 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54435,7 +54258,6 @@ jprx:census_RXM13-2 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM13-2" ;
     jprx:hasManufacturer jprx:Firm_021,
         jprx:Firm_165 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP11 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -54464,7 +54286,6 @@ jprx:census_RXM15-2 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_010,
         jprx:Firm_045,
         jprx:Firm_167 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP37 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -54494,7 +54315,6 @@ jprx:census_RXM16-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM16-1" ;
     jprx:hasDistributor jprx:Firm_168 ;
     jprx:hasManufacturer jprx:Firm_016 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP27 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Operation",
@@ -54522,7 +54342,6 @@ jprx:census_RXM16-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM16-3" ;
     jprx:hasManufacturer jprx:Firm_147,
         jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP28 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Operation",
@@ -54554,7 +54373,6 @@ jprx:census_RXM16-7 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM16-7" ;
     jprx:hasManufacturer jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP31 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -54580,7 +54398,6 @@ jprx:census_RXM21-3 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM21-3" ;
     jprx:hasManufacturer jprx:Firm_182,
         jprx:Firm_195 ;
-    jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP21 ;
     jprx:lifecyclePhase "Demolition" ;
     jprx:physicalRobot true ;
@@ -54604,7 +54421,6 @@ jprx:census_RXM26-1 a jprx:CensusRecord ;
         jprx:Firm_100,
         jprx:Firm_105,
         jprx:Firm_111 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP25 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -54627,7 +54443,6 @@ jprx:census_RXM28-1 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM28-1" ;
     jprx:hasManufacturer jprx:Firm_057,
         jprx:Firm_122 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP46 ;
     jprx:lifecyclePhase "Design",
         "Planning" ;
@@ -54649,7 +54464,6 @@ jprx:census_RXM29-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM29-1" ;
     jprx:hasManufacturer jprx:Firm_033 ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP30 ;
     jprx:lifecyclePhase "Finishing Fitout" ;
     jprx:mobileRobot true ;
@@ -54674,7 +54488,6 @@ jprx:census_RXM31-1 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP16/RXM31-1)" ;
     jprx:hasCensusId "RXM31-1" ;
     jprx:hasManufacturer jprx:Firm_103 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP16 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:physicalRobot true ;
@@ -54699,7 +54512,6 @@ jprx:census_RXM33-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP10/RXM33-1)" ;
     jprx:hasCensusId "RXM33-1" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP10 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54724,7 +54536,6 @@ jprx:census_RXM34-2 a jprx:CensusRecord ;
         jprx:Firm_182 ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM34-2" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP26 ;
     jprx:lifecyclePhase "Design",
         "Finishing Fitout" ;
@@ -54747,7 +54558,6 @@ jprx:census_RXM35-1 a jprx:CensusRecord ;
     jprx:developedBy jprx:Firm_136 ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP4/RXM35-1)" ;
     jprx:hasCensusId "RXM35-1" ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP4 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -54772,7 +54582,6 @@ jprx:census_RXM4-1 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP18/RXM4-1)" ;
     jprx:hasCensusId "RXM4-1" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP18 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -54799,7 +54608,6 @@ jprx:census_RXM4-3 a jprx:CensusRecord ;
     jprx:enrValidationTier "HIGH (MLIT cert + peer-reviewed report + intl award)" ;
     jprx:hasCensusId "RXM4-3" ;
     jprx:hasManufacturer jprx:Firm_115 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP15 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -54868,7 +54676,6 @@ jprx:census_RXM6-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM6-1" ;
     jprx:hasManufacturer jprx:Firm_060 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP33 ;
     jprx:lifecyclePhase "Finishing Fitout",
         "Site Preparation",
@@ -54892,7 +54699,6 @@ jprx:census_RXM6-2 a jprx:CensusRecord ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP19/RXM6-2)" ;
     jprx:hasCensusId "RXM6-2" ;
     jprx:hasManufacturer jprx:Firm_060 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP19 ;
     jprx:lifecyclePhase "Structural Construction" ;
     jprx:mobileRobot true ;
@@ -54918,7 +54724,6 @@ jprx:census_RXM6-3 a jprx:CensusRecord ;
     jprx:enrValidationTier "HIGH (MLIT-client project + JSCE paper + Nikkei)" ;
     jprx:hasCensusId "RXM6-3" ;
     jprx:hasManufacturer jprx:Firm_060 ;
-    jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP12 ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
@@ -54947,7 +54752,6 @@ jprx:census_RXM6-4 a jprx:CensusRecord ;
     jprx:hasManufacturer jprx:Firm_008,
         jprx:Firm_060,
         jprx:Firm_168 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP14 ;
     jprx:lifecyclePhase "Site Preparation",
         "Structural Construction" ;
@@ -54971,7 +54775,6 @@ jprx:census_RXM8-6 a jprx:CensusRecord ;
     jprx:hasCensusId "RXM8-6" ;
     jprx:hasManufacturer jprx:Firm_082,
         jprx:Firm_195 ;
-    jprx:icStatus "N" ;
     jprx:isCensusRecordOf jprx:RP43 ;
     jprx:lifecyclePhase "Maintenance",
         "Site Preparation" ;
@@ -54996,7 +54799,6 @@ jprx:census_RXM9-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:hasCensusId "RXM9-1" ;
     jprx:hasManufacturer jprx:Firm_126 ;
-    jprx:icStatus "C" ;
     jprx:isCensusRecordOf jprx:RP36 ;
     jprx:lifecyclePhase "Maintenance",
         "Operation" ;
@@ -55020,7 +54822,6 @@ jprx:census_RXT45-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP7/RXT45-1)" ;
     jprx:hasCensusId "RXT45-1" ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP7 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -55044,7 +54845,6 @@ jprx:census_RXT46-1 a jprx:CensusRecord ;
     jprx:digitalRobot true ;
     jprx:enrSelectedReconciled "Y (in 140 subset as RP3/RXT46-1)" ;
     jprx:hasCensusId "RXT46-1" ;
-    jprx:icStatus "Y" ;
     jprx:isCensusRecordOf jprx:RP3 ;
     jprx:lifecyclePhase "Design",
         "Structural Construction" ;
@@ -55245,12 +55045,6 @@ jprx:SRC7 a jprx:Source ;
     rdfs:seeAlso <https://doi.org/10.1115/1.4056924>,
         <https://doi.org/10.4324/9780203634561-8> .
 
-jprx:developedBy a owl:ObjectProperty ;
-    rdfs:label "developed by"@en ;
-    rdfs:domain jprx:CensusRecord ;
-    rdfs:range jprx:Firm ;
-    skos:definition "Firm credited with developing the robotic process in the census record."@en .
-
 jprx:Firm_072 a jprx:Firm ;
     rdfs:label "Firm_072" .
 
@@ -55313,6 +55107,12 @@ jprx:activates a owl:ObjectProperty ;
     rdfs:domain jprx:RoboticProcess ;
     rdfs:range jprx:Enabler ;
     skos:definition "The robotic process draws on the enabler, as coded in the case."@en .
+
+jprx:involvesFirm a owl:ObjectProperty ;
+    rdfs:label "involves firm"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    skos:definition "A firm takes part in the robotic process of the census record, as developer, manufacturer or distributor; the super-property of developedBy, hasManufacturer and hasDistributor."@en .
 
 jprx:EvidenceGradeScheme a skos:ConceptScheme ;
     rdfs:label "evidence grades"@en ;
@@ -60559,10 +60359,6 @@ jprx:CO11 a jprx:Condition,
     jprx:hasPhaseSpan "Design",
         "Structural Construction" .
 
-jprx:Firm a owl:Class ;
-    rdfs:label "Firm"@en ;
-    skos:definition "Organisation that develops, manufactures or distributes a robot in the census. Identified in the private graph; pseudonymised (Firm_NNN) in the public one."@en .
-
 jprx:AC5 a jprx:Actor,
         jprx:Enabler ;
     rdfs:label "GC/Trade contractor"@en ;
@@ -60704,6 +60500,10 @@ jprx:AC5 a jprx:Actor,
     jprx:hasPhaseRole "incurs" ;
     jprx:hasPhaseSpan "Design",
         "Structural Construction" .
+
+jprx:Firm a owl:Class ;
+    rdfs:label "Firm"@en ;
+    skos:definition "Organisation that develops, manufactures or distributes a robot in the census. Identified in the private graph; pseudonymised (Firm_NNN) in the public one."@en .
 
 jprx:CO13 a jprx:Condition,
         jprx:Enabler ;
@@ -65326,8 +65126,8 @@ jprx:CoOccurrence a owl:Class ;
     skos:definition "An undirected pair of enablers with the number of polar cases that activate both."@en .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( jprx:Actor jprx:Resource jprx:Condition jprx:Attribute jprx:Process jprx:Artefact jprx:Value jprx:Risk ) .
+    owl:members ( jprx:Enabler jprx:RoboticProcess jprx:CensusRecord jprx:Dependency jprx:CoOccurrence jprx:Source ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( jprx:Enabler jprx:RoboticProcess jprx:CensusRecord jprx:Dependency jprx:CoOccurrence jprx:Source ) .
+    owl:members ( jprx:Actor jprx:Resource jprx:Condition jprx:Attribute jprx:Process jprx:Artefact jprx:Value jprx:Risk ) .
 

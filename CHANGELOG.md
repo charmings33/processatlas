@@ -25,16 +25,33 @@
 - Counts unchanged: 140 enablers, 50 cases, 217 census records, 100 dependencies, 8,426 co-occurrence pairs.
 
 ### Public release
-- The anonymised graph (`ontology/jprx_kg_public.ttl`, 56,015 triples) carries, besides the
+- The anonymised graph (`ontology/jprx_kg_public.ttl`, 55,815 triples) carries, besides the
   layers above, the firm layer (`jprx:Firm`, pseudonyms `Firm_NNN`, linked by `developedBy`,
   `hasManufacturer`, `hasDistributor`), the typed case-to-enabler links (`usesEnabler` and its
   six subproperties, `achieves`, `exposesTo`), materials, deployment and transition codes, and
-  the direct `coOccursWith` edges. Each is declared in `ontology/jprx_ontology.ttl` with a label,
+  the direct `coOccursWith` edges. The three firm links share the super-property `involvesFirm`;
+  a manufacturer or distributor is not a subproperty of developer. Each layer is declared in
+  `ontology/jprx_ontology.ttl` (636 triples) with a label,
   definition, domain and range. HermiT reports the released graph consistent; the negative test
   above makes it inconsistent.
 - Census technology readiness is read from `censusTRL`, the workbook coding. An older text field,
   kept as `censusTRLText`, disagrees with it on 21 records.
+- The census screening column 'IC?' (`icStatus`) is no longer used and is not released.
 - Example answers: relation names rewritten in place to the v2 names (`dependsOn` -> `requires`,
   `enablesCapability` -> `enables`, `hasPrecondition` -> `presupposes`); no answer was
   regenerated. One correction: example 8 gave census_RXM29-4 technology readiness level 5,
   from the older text field; the workbook coding is 6, and the answer now says 6.
+
+### Amended in place (22 October 2026, before 2.0.0 was cited or registered)
+2.0.0 was first published earlier the same day; these corrections replace the files under
+`ontology/2.0.0/` rather than starting 2.0.1, because nothing cited that version yet.
+- `jprx:involvesFirm` added (CensusRecord -> Firm), the super-property of `developedBy`,
+  `hasManufacturer` and `hasDistributor`; manufacturer and distributor are no longer
+  subproperties of `developedBy`. The ontology has 636 triples (was 635).
+- `icStatus` (census 'IC?') deprecated and left out of the release; the public graph has
+  55,815 triples (was 56,015).
+- Definition of `adoptionDriver` corrected ("An adoption driver").
+- Records with two or more firms credited (as developer, manufacturer or distributor) are
+  called multi-firm involvement, not co-development; the count is unchanged (61 records).
+  Example 6 is reworded accordingly, including its question, and its sources are labelled
+  "multi-firm involvement".

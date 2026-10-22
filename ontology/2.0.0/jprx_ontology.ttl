@@ -84,7 +84,7 @@ jprx:adoptionDriver a owl:DatatypeProperty ;
     rdfs:label "adoption driver"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range xsd:string ;
-    skos:definition "A adoption driver coded for the census record."@en .
+    skos:definition "An adoption driver coded for the census record."@en .
 
 jprx:buildingSystem a owl:DatatypeProperty ;
     rdfs:label "building system"@en ;
@@ -200,6 +200,13 @@ jprx:deployOnsiteOutdoor a owl:DatatypeProperty ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range xsd:boolean ;
     skos:definition "True where the census record is coded 'Onsite Outdoor'."@en .
+
+jprx:developedBy a owl:ObjectProperty ;
+    rdfs:label "developed by"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
+    skos:definition "Firm credited with developing the robotic process in the census record."@en .
 
 jprx:digitalRobot a owl:DatatypeProperty ;
     rdfs:label "digital robot"@en ;
@@ -321,7 +328,7 @@ jprx:hasDistributor a owl:ObjectProperty ;
     rdfs:label "has distributor"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range jprx:Firm ;
-    rdfs:subPropertyOf jprx:developedBy ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
     skos:definition "Firm that distributes or rents out the robot in the census record."@en .
 
 jprx:hasEnablerId a owl:DatatypeProperty ;
@@ -346,7 +353,7 @@ jprx:hasManufacturer a owl:ObjectProperty ;
     rdfs:label "has manufacturer"@en ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range jprx:Firm ;
-    rdfs:subPropertyOf jprx:developedBy ;
+    rdfs:subPropertyOf jprx:involvesFirm ;
     skos:definition "Firm that manufactures the robot in the census record."@en .
 
 jprx:hasMaterial a owl:DatatypeProperty ;
@@ -414,12 +421,6 @@ jprx:hasWebsite a owl:DatatypeProperty ;
     rdfs:domain jprx:CensusRecord ;
     rdfs:range xsd:string ;
     skos:definition "Census column 'Website(s)'."@en .
-
-jprx:icStatus a owl:DatatypeProperty ;
-    rdfs:label "IC?"@en ;
-    rdfs:domain jprx:CensusRecord ;
-    rdfs:range xsd:string ;
-    skos:definition "Census column 'IC?'."@en .
 
 jprx:isMobileRobot a owl:DatatypeProperty ;
     rdfs:label "is mobile robot"@en ;
@@ -652,12 +653,6 @@ jprx:Resource a owl:Class ;
     rdfs:subClassOf jprx:Enabler ;
     skos:definition "An enabler that is a means the process draws on: equipment, software, algorithm, data standard, platform or human labour."@en .
 
-jprx:developedBy a owl:ObjectProperty ;
-    rdfs:label "developed by"@en ;
-    rdfs:domain jprx:CensusRecord ;
-    rdfs:range jprx:Firm ;
-    skos:definition "Firm credited with developing the robotic process in the census record."@en .
-
 jprx:RT_Enablement a skos:Concept ;
     skos:definition "A relation by which one enabler enables, requires or presupposes another."@en ;
     skos:inScheme jprx:RelationTypeScheme ;
@@ -686,6 +681,12 @@ jprx:activates a owl:ObjectProperty ;
     rdfs:range jprx:Enabler ;
     skos:definition "The robotic process draws on the enabler, as coded in the case."@en .
 
+jprx:involvesFirm a owl:ObjectProperty ;
+    rdfs:label "involves firm"@en ;
+    rdfs:domain jprx:CensusRecord ;
+    rdfs:range jprx:Firm ;
+    skos:definition "A firm takes part in the robotic process of the census record, as developer, manufacturer or distributor; the super-property of developedBy, hasManufacturer and hasDistributor."@en .
+
 jprx:CoOccurrence a owl:Class ;
     rdfs:label "co-occurrence"@en ;
     skos:definition "An undirected pair of enablers with the number of polar cases that activate both."@en .
@@ -694,14 +695,14 @@ jprx:EvidenceGradeScheme a skos:ConceptScheme ;
     rdfs:label "evidence grades"@en ;
     skos:definition "Grades for the source type of a dependency."@en .
 
-jprx:Firm a owl:Class ;
-    rdfs:label "Firm"@en ;
-    skos:definition "Organisation that develops, manufactures or distributes a robot in the census. Identified in the private graph; pseudonymised (Firm_NNN) in the public one."@en .
-
 jprx:Dependency a owl:Class ;
     rdfs:label "dependency"@en ;
     rdfs:subClassOf prov:Entity ;
     skos:definition "A directed, cited relation between two enablers, reified so that it can carry a relation type, an evidence grade, a note and its source."@en .
+
+jprx:Firm a owl:Class ;
+    rdfs:label "Firm"@en ;
+    skos:definition "Organisation that develops, manufactures or distributes a robot in the census. Identified in the private graph; pseudonymised (Firm_NNN) in the public one."@en .
 
 jprx:dependsOnEnabler a owl:ObjectProperty ;
     rdfs:label "dependency relation"@en ;
@@ -733,8 +734,8 @@ jprx:CensusRecord a owl:Class ;
     skos:definition "One of the 217 documented robotic construction deployments in Japan, with company, robot and deployment data."@en .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( jprx:Actor jprx:Resource jprx:Condition jprx:Attribute jprx:Process jprx:Artefact jprx:Value jprx:Risk ) .
+    owl:members ( jprx:Enabler jprx:RoboticProcess jprx:CensusRecord jprx:Dependency jprx:CoOccurrence jprx:Source ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( jprx:Enabler jprx:RoboticProcess jprx:CensusRecord jprx:Dependency jprx:CoOccurrence jprx:Source ) .
+    owl:members ( jprx:Actor jprx:Resource jprx:Condition jprx:Attribute jprx:Process jprx:Artefact jprx:Value jprx:Risk ) .
 

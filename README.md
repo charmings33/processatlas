@@ -31,7 +31,7 @@ The namespace is `https://w3id.org/jprx/ontology#`.
 Company and robot identities are removed, not obscured: firm names (EN and JP),
 robot names, free-text robot descriptions, websites and source URLs are absent
 from the released graph. Firms appear as stable pseudonyms (`Firm_NNN`) so that
-co-development structure stays analysable. The mapping from pseudonym to firm
+multi-firm involvement stays analysable. The mapping from pseudonym to firm
 is held privately by the authors and is not part of any release.
 
 Two honest limits. First, the categorical attributes are released unchanged, and
